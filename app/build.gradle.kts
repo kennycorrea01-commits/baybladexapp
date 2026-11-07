@@ -18,6 +18,17 @@ android {
         versionName = "0.2.0"
     }
 
+    signingConfigs {
+        // A debug key that lives in the repo, so builds from this PC and from GitHub Actions share one
+        // signature and can update each other on a phone. It's only for test builds, not for the Play Store.
+        getByName("debug") {
+            storeFile = file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false

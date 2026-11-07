@@ -2,6 +2,21 @@
 
 An Android app to track your Beyblade X parts, combos, 3on3 decks, matches and tournaments.
 
+## Download
+
+Get the latest APK from the [Releases page](https://github.com/kennycorrea01-commits/baybladexapp/releases/latest) (Android 8.0 or newer). Open the `.apk` on your phone, allow installs from your browser or file manager when Android asks, then tap Install.
+
+These are test builds signed with the project's debug key (`app/debug.keystore`), not Play Store builds.
+
+**Publishing a new version:** bump `versionCode` and `versionName` in `app/build.gradle.kts`, commit, then tag and push:
+
+```
+git tag v0.2.1
+git push origin v0.2.1
+```
+
+GitHub Actions (`.github/workflows/release.yml`) runs the tests, builds the APK and attaches it to a new release.
+
 ## Open it in Android Studio
 
 1. Open Android Studio and choose **File › Open**, then pick this folder (the one with `settings.gradle.kts`).
