@@ -91,6 +91,7 @@ import com.bxtracker.app.data.totalRounds
 import com.bxtracker.app.ui.pickedDay
 import com.bxtracker.app.ui.placingText
 import com.bxtracker.app.ui.shortDate
+import com.bxtracker.app.ui.components.FitText
 import com.bxtracker.app.ui.components.AppCard
 import com.bxtracker.app.ui.components.BxTopBar
 import com.bxtracker.app.ui.components.EmptyState
@@ -190,7 +191,7 @@ fun BattlesScreen(
                             onClick = { tab = i },
                             shape = SegmentedButtonDefaults.itemShape(i, battleTabs.size),
                             icon = {},
-                        ) { Text(stringResource(name), maxLines = 1) }
+                        ) { FitText(stringResource(name)) }
                     }
                 }
             }
@@ -457,7 +458,7 @@ fun NewMatchScreen(vm: AppViewModel, onBack: () -> Unit, onStarted: (Long) -> Un
                                 onClick = { useDeck = value },
                                 shape = SegmentedButtonDefaults.itemShape(i, 2),
                                 icon = {},
-                            ) { Text(label) }
+                            ) { FitText(label) }
                         }
                     }
                 }

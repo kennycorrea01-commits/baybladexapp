@@ -94,6 +94,7 @@ import com.bxtracker.app.data.Standing
 import com.bxtracker.app.data.Tournament
 import com.bxtracker.app.data.TournamentEngine
 import com.bxtracker.app.data.TournamentEngine.EventView
+import com.bxtracker.app.ui.components.FitText
 import com.bxtracker.app.ui.components.AppCard
 import com.bxtracker.app.ui.components.BxTopBar
 import com.bxtracker.app.ui.components.EmptyState
@@ -295,7 +296,7 @@ fun EventScreen(
                             onClick = { tab = each },
                             shape = SegmentedButtonDefaults.itemShape(i, tabs.size),
                             icon = {},
-                        ) { Text(stringResource(each.label), maxLines = 1) }
+                        ) { FitText(stringResource(each.label)) }
                     }
                 }
             }

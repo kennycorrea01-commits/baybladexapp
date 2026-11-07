@@ -86,6 +86,7 @@ import com.bxtracker.app.data.partFor
 import com.bxtracker.app.data.shape
 import com.bxtracker.app.data.partIds
 import com.bxtracker.app.data.usageCounts
+import com.bxtracker.app.ui.components.FitText
 import com.bxtracker.app.ui.components.AppCard
 import com.bxtracker.app.ui.components.BxTopBar
 import com.bxtracker.app.ui.components.EmptyState
@@ -399,7 +400,7 @@ fun ComboBuilderScreen(
                             onClick = { shape = s; active = firstEmpty() },
                             shape = SegmentedButtonDefaults.itemShape(i, ComboShape.entries.size),
                             icon = {},
-                        ) { Text(if (s == ComboShape.BASIC) stringResource(R.string.combo_basic) else s.label, maxLines = 1) }
+                        ) { FitText(if (s == ComboShape.BASIC) stringResource(R.string.combo_basic) else s.label) }
                     }
                 }
             }

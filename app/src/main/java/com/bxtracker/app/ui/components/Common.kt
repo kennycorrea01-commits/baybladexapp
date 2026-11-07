@@ -67,6 +67,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import coil.compose.AsyncImage
+import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.text.TextAutoSize
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.LocalTextStyle
+import androidx.compose.ui.graphics.takeOrElse
+import androidx.compose.ui.graphics.isSpecified
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.isSpecified
 import com.bxtracker.app.data.BeyType
 import com.bxtracker.app.data.Finish
 import com.bxtracker.app.data.Record
@@ -381,4 +390,30 @@ fun EmptyState(
             TextButton(onClick = onAction) { Text(actionLabel) }
         }
     }
+}
+
+/**
+ * One line of text that shrinks (down to [minFontSize]) instead of wrapping or clipping, for labels in
+ * fixed-width tabs and tiles. Narrow phones (360 dp) and Spanish labels need it.
+ */
+@Composable
+fun FitText(
+    text: String,
+    modifier: Modifier = Modifier,
+    fontSize: TextUnit = TextUnit.Unspecified,
+    fontWeight: FontWeight? = null,
+    color: Color = Color.Unspecified,
+    minFontSize: TextUnit = 9.sp,
+) {
+    val base = LocalTextStyle.current
+    val max = if (fontSize.isSpecified) fontSize else if (base.fontSize.isSpecified) base.fontSize else 14.sp
+    val resolved = if (color.isSpecified) color else base.color.takeOrElse { LocalContentColor.current }
+    BasicText(
+        text = text,
+        modifier = modifier,
+        style = base.merge(TextStyle(color = resolved, fontWeight = fontWeight)),
+        maxLines = 1,
+        softWrap = false,
+        autoSize = TextAutoSize.StepBased(minFontSize = minFontSize, maxFontSize = max, stepSize = 0.5.sp),
+    )
 }

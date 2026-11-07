@@ -94,6 +94,7 @@ import com.bxtracker.app.data.comboName
 import com.bxtracker.app.data.comboRecords
 import com.bxtracker.app.data.partIds
 import com.bxtracker.app.data.usageCounts
+import com.bxtracker.app.ui.components.FitText
 import com.bxtracker.app.ui.components.AppCard
 import com.bxtracker.app.ui.components.BxTopBar
 import com.bxtracker.app.ui.components.EmptyState
@@ -204,7 +205,7 @@ fun PartsScreen(vm: AppViewModel, onPart: (Long) -> Unit, onAdd: () -> Unit, onS
                                 parts.filter { it.kind in kinds }.sumOf { it.copies }.toString(),
                                 fontSize = 20.sp, fontWeight = FontWeight.ExtraBold,
                             )
-                            Text(tabNames[i], fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                            FitText(tabNames[i], fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         }
                     }
                 }
@@ -217,7 +218,7 @@ fun PartsScreen(vm: AppViewModel, onPart: (Long) -> Unit, onAdd: () -> Unit, onS
                             onClick = { tab = i },
                             shape = SegmentedButtonDefaults.itemShape(i, tabNames.size),
                             icon = {},
-                        ) { Text(name, maxLines = 1) }
+                        ) { FitText(name) }
                     }
                 }
             }
