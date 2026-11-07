@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Battles home, quick battle, live match scoring and tournaments. Game terms (Swiss, Top N, 3on3, R1/QF/SF/F,
+     Spin/Over/Burst/Xtreme, Attack/Defense/Stamina/Balance) are passed in as arguments, never stored here. -->
+<resources>
+    <!-- Battles home -->
+    <string name="battle_tab_overview">Overview</string>
+    <string name="battle_tab_matches">Matches</string>
+    <string name="battle_tab_tournaments">Tournaments</string>
+    <string name="battle_header_season">%1$s this season</string>
+    <string name="battle_header_all_time">%1$s all time</string>
+    <string name="battle_cd_stats">Stats</string>
+    <string name="battle_quick">Quick battle</string>
+    <string name="battle_empty_title">No matches yet</string>
+    <string name="battle_empty_no_combos">Build a combo first, then log your matches here.</string>
+    <string name="battle_empty_body">Start a quick battle and tap who scored each battle. Win rates update on their own.</string>
+    <string name="battle_matches_empty_body">Quick battles and tournament rounds show up here.</string>
+    <string name="battle_win_rate">Battle win rate</string>
+    <string name="battle_how_you_score">How you score</string>
+    <string name="battle_most_against">Most points against you: %1$s finishes (%2$d%%)</string>
+    <string name="battle_best_combos">Best combos</string>
+    <string name="battle_all_stats">All stats</string>
+    <string name="battle_recent_matches">Recent matches</string>
+    <string name="battle_see_all">See all</string>
+    <string name="battle_quick_subtitle">Casual match, outside any tournament</string>
+    <string name="battle_deck_combo_count">%1$d of 3 combos</string>
+
+    <!-- Quick battle setup -->
+    <string name="match_opponent">Opponent</string>
+    <string name="match_label_hint">Label (optional), e.g. Game 2</string>
+    <string name="match_points_to_win">Points to win</string>
+    <string name="match_points_unit">points</string>
+    <string name="match_mode_deck">%1$s deck</string>
+    <string name="match_mode_single">Single combo</string>
+    <string name="match_no_decks">No decks yet. Make one in the Decks tab, or play a single combo.</string>
+    <string name="match_start">Start match</string>
+
+    <!-- Match rows and live scoring -->
+    <string name="match_title">Match</string>
+    <string name="match_vs">vs %1$s</string>
+    <string name="match_x_vs_y">%1$s vs %2$s</string>
+    <plurals name="match_first_to">
+        <item quantity="one">first to %1$d</item>
+        <item quantity="other">first to %1$d</item>
+    </plurals>
+    <string name="match_cd_undo">Undo last battle</string>
+    <string name="match_cd_delete">Delete match</string>
+    <string name="match_you">You</string>
+    <string name="match_battle_n">Battle %1$d</string>
+    <string name="match_battle_short">B%1$d</string>
+    <string name="match_you_won">You won %1$d–%2$d</string>
+    <string name="match_you_lost">You lost %1$d–%2$d</string>
+    <string name="match_saved_hint">Saved. Tap undo if a point was wrong.</string>
+    <string name="match_your_combo">Your combo this battle</string>
+    <string name="match_playing">Playing %1$s</string>
+    <string name="match_their_combo">Their combo (optional)</string>
+    <string name="match_their_type">Their type</string>
+    <string name="match_you_scored">You scored</string>
+    <string name="match_they_scored">They scored</string>
+    <string name="match_draw_button">Draw · no points</string>
+    <string name="match_this_match">This match</string>
+    <string name="match_point_you">%1$s · you +%2$d</string>
+    <string name="match_point_them">%1$s · them +%2$d</string>
+    <string name="match_draw">Draw</string>
+    <string name="match_delete_title">Delete this match?</string>
+    <string name="match_delete_body">Its battles are removed from your combo records.</string>
+
+    <!-- Tournaments -->
+    <string name="tourn_new">New tournament</string>
+    <string name="tourn_edit">Edit tournament</string>
+    <string name="tourn_title">Tournament</string>
+    <string name="tourn_default_name">Tournament</string>
+    <string name="tourn_empty_title">No tournaments yet</string>
+    <string name="tourn_empty_body">Add one before the event. Each round you start becomes a match with your deck, named R1, R2… then QF, SF, F.</string>
+    <string name="tourn_live_badge">IN PROGRESS</string>
+    <string name="tourn_live_line">Round %1$d of %2$d · %3$s · you\'re %4$d–%5$d</string>
+    <string name="tourn_round_in_progress">Round in progress</string>
+    <string name="tourn_start_round_n">Start round %1$d</string>
+    <string name="tourn_start_round">Start %1$s</string>
+    <string name="tourn_start">Start</string>
+    <string name="tourn_view">View</string>
+    <string name="tourn_placed">Placed %1$s</string>
+    <string name="tourn_no_deck_warning">This tournament has no deck set. Edit it to pick the deck you brought.</string>
+
+    <!-- Tournament edit -->
+    <string name="tourn_create">Create tournament</string>
+    <string name="tourn_name">Name</string>
+    <string name="tourn_date">Date</string>
+    <string name="tourn_location">Location (optional)</string>
+    <string name="tourn_format">Format</string>
+    <string name="tourn_swiss_rounds">Swiss rounds</string>
+    <string name="tourn_top_cut">Top cut</string>
+    <string name="tourn_top_cut_none">None</string>
+    <string name="tourn_top_n">Top %1$d</string>
+    <string name="tourn_players_optional">Number of players (optional)</string>
+    <string name="tourn_deck_bringing">Deck you\'re bringing</string>
+    <string name="tourn_no_decks">No decks yet. You can add one later from the Decks tab.</string>
+
+    <!-- Tournament results -->
+    <string name="tourn_share_results">Share results</string>
+    <string name="tourn_cd_delete">Delete tournament</string>
+    <string name="tourn_stat_matches_wl">Matches W–L</string>
+    <string name="tourn_stat_points">Points for–against</string>
+    <string name="tourn_finish">Finish</string>
+    <plurals name="tourn_all_rounds_played">
+        <item quantity="one">%1$d round played. Tap Finish to set your placing.</item>
+        <item quantity="other">All %1$d rounds played. Tap Finish to set your placing.</item>
+    </plurals>
+    <string name="tourn_change_placing">Change placing</string>
+    <string name="tourn_rounds">Rounds</string>
+    <string name="tourn_no_rounds_title">No rounds yet</string>
+    <string name="tourn_no_rounds_body">Start round 1 when pairings go up.</string>
+    <string name="tourn_deck_brought">Deck you brought</string>
+    <string name="tourn_no_deck_set">No deck set.</string>
+    <string name="tourn_deck_no_combos">%1$s has no combos yet.</string>
+    <string name="tourn_pick_deck">Pick a deck</string>
+    <string name="tourn_change_deck">Change deck</string>
+    <string name="tourn_combos_played">Combos played</string>
+    <string name="tourn_battles_won_per_combo">Battles won per combo</string>
+    <string name="tourn_notes">Notes</string>
+    <string name="tourn_notes_placeholder">What worked, what to change, who to watch for</string>
+    <string name="tourn_save_note">Save note</string>
+    <string name="tourn_delete_title">Delete %1$s?</string>
+    <plurals name="tourn_delete_body">
+        <item quantity="one">Its %1$d round and its battles are deleted too, so they stop counting toward your stats.</item>
+        <item quantity="other">Its %1$d rounds and their battles are deleted too, so they stop counting toward your stats.</item>
+    </plurals>
+
+    <!-- Share text -->
+    <string name="tourn_share_record">Record %1$d–%2$d · points %3$d–%4$d · %5$s</string>
+    <string name="tourn_share_win">W</string>
+    <string name="tourn_share_loss">L</string>
+    <string name="tourn_share_round">%1$s %2$s vs %3$s %4$d–%5$d</string>
+    <string name="tourn_share_deck">Deck: %1$s</string>
+
+    <!-- Finish dialog -->
+    <string name="tourn_finish_title">Finish tournament</string>
+    <string name="tourn_finish_question">Where did you place?</string>
+    <string name="tourn_placing">Placing</string>
+    <string name="tourn_players">Players</string>
+    <string name="battle_cd_organize">Organize a tournament</string>
+    <string name="tourn_organizing_badge">ORGANIZING</string>
+    <string name="tourn_open_event">Open event</string>
+    <string name="tourn_managed_by_event">You\'re organizing this event. Rounds, scores and placings are run from the event screen.</string>
+</resources>

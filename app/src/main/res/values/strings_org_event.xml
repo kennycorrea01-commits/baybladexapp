@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Organizer mode: the running event (round, standings, bracket). Game terms (Swiss, Top N, bye, F/SF/QF/T16)
+     stay in English in every language. -->
+<resources>
+    <!-- Screen, tabs and top bar -->
+    <string name="org_event_title">Event</string>
+    <string name="org_event_tab_round">Round</string>
+    <string name="org_event_tab_standings">Standings</string>
+    <string name="org_event_tab_bracket">Bracket</string>
+    <string name="org_event_players">Players</string>
+    <string name="org_event_share">Share results</string>
+    <string name="org_event_my_results">My results</string>
+    <string name="org_event_cd_more">More options</string>
+    <string name="org_event_delete">Delete event</string>
+    <string name="org_event_delete_title">Delete %1$s?</string>
+    <string name="org_event_delete_body">Its players, pairings and results are deleted. Your own matches in it are removed from your stats too.</string>
+
+    <!-- Header subtitle -->
+    <string name="org_event_sub_done">Finished</string>
+    <string name="org_event_sub_setup">Adding players</string>
+    <string name="org_event_sub_swiss_cut">Swiss round %1$d of %2$d · then Top %3$d</string>
+    <string name="org_event_sub_swiss">Swiss round %1$d of %2$d</string>
+    <string name="org_event_sub_rr">Round %1$d of %2$d</string>
+    <string name="org_event_sub_top">Top %1$d · %2$s</string>
+    <string name="org_event_sub_elim">Elimination · %1$s</string>
+
+    <!-- Footer: next step -->
+    <string name="org_event_add_players">Add players</string>
+    <string name="org_event_pair_round">Pair round %1$d</string>
+    <string name="org_event_start_top">Start Top %1$d</string>
+    <string name="org_event_start_bracket">Start bracket</string>
+    <string name="org_event_pair_final">Pair the final</string>
+    <string name="org_event_pair_semis">Pair the semifinals</string>
+    <string name="org_event_pair_quarters">Pair the quarterfinals</string>
+    <string name="org_event_pair_t16">Pair the round of 16</string>
+    <string name="org_event_pair_next">Pair next round</string>
+    <string name="org_event_finish">Finish the event</string>
+    <plurals name="org_event_wait_round">
+        <item quantity="one">Finish %1$d match to pair round %2$d</item>
+        <item quantity="other">Finish %1$d matches to pair round %2$d</item>
+    </plurals>
+    <plurals name="org_event_wait_cut">
+        <item quantity="one">Finish %1$d match to start Top %2$d</item>
+        <item quantity="other">Finish %1$d matches to start Top %2$d</item>
+    </plurals>
+    <plurals name="org_event_wait_bracket">
+        <item quantity="one">Finish %1$d match to pair the next round</item>
+        <item quantity="other">Finish %1$d matches to pair the next round</item>
+    </plurals>
+    <plurals name="org_event_wait_finish">
+        <item quantity="one">Finish %1$d match to finish the event</item>
+        <item quantity="other">Finish %1$d matches to finish the event</item>
+    </plurals>
+
+    <!-- Round names -->
+    <string name="org_event_round_n">Round %1$d</string>
+    <string name="org_event_swiss_round_n">Swiss round %1$d</string>
+    <string name="org_event_round_final">Final</string>
+    <string name="org_event_round_semis">Semifinals</string>
+    <string name="org_event_round_quarters">Quarterfinals</string>
+    <string name="org_event_round_t16">Round of 16</string>
+
+    <!-- Round tab -->
+    <string name="org_event_progress">%1$d of %2$d done</string>
+    <string name="org_event_swap_hint">Tap a match that hasn\'t started to swap players.</string>
+    <string name="org_event_no_round_title">No pairings yet</string>
+    <string name="org_event_no_round_body">Add players, then pair round 1 from the Players screen.</string>
+    <string name="org_event_table_n">Table %1$d</string>
+    <string name="org_event_third_place">3rd place match</string>
+    <string name="org_event_cd_match_menu">Options for table %1$d</string>
+    <string name="org_event_swap_players">Swap players</string>
+    <string name="org_event_enter_final">Enter final score</string>
+    <string name="org_event_clear_typed">Clear typed score</string>
+    <string name="org_event_open_scoring">Open scoring</string>
+    <string name="org_event_typed_score">Score typed in by hand</string>
+    <string name="org_event_score_match">Score this match</string>
+    <string name="org_event_resume_scoring">Resume scoring</string>
+    <string name="org_event_score_final">Score the final</string>
+    <string name="org_event_resume_final">Resume the final</string>
+    <string name="org_event_bye_line">Bye</string>
+    <string name="org_event_tbd">TBD</string>
+    <string name="org_event_you">you</string>
+    <string name="org_event_dropped">dropped</string>
+    <string name="org_event_status_bye">Bye</string>
+    <string name="org_event_status_done">Done</string>
+    <string name="org_event_status_live">Live</string>
+    <string name="org_event_live_battle">Live · battle %1$d</string>
+    <string name="org_event_status_not_started">Not started</string>
+    <string name="org_event_cd_seed">Seed %1$d</string>
+
+    <!-- Swap players -->
+    <string name="org_event_swap_title">Swap players · table %1$d</string>
+    <string name="org_event_swap_pick_player">Who do you want to move?</string>
+    <string name="org_event_swap_pick_other">Swap %1$s with:</string>
+    <string name="org_event_swap_none">No other match in this round is still unstarted.</string>
+    <string name="org_event_swap_candidate">Table %1$d · vs %2$s</string>
+
+    <!-- Final placings and sharing -->
+    <string name="org_event_final_placings">Final placings</string>
+    <string name="org_event_share_champion">Champion: %1$s</string>
+    <string name="org_event_share_mine">My placing: %1$s</string>
+    <plurals name="org_event_players_count">
+        <item quantity="one">%1$d player</item>
+        <item quantity="other">%1$d players</item>
+    </plurals>
+    <plurals name="org_event_format_swiss_cut">
+        <item quantity="one">%1$d Swiss round + Top %2$d</item>
+        <item quantity="other">%1$d Swiss rounds + Top %2$d</item>
+    </plurals>
+    <plurals name="org_event_format_swiss">
+        <item quantity="one">%1$d Swiss round</item>
+        <item quantity="other">%1$d Swiss rounds</item>
+    </plurals>
+    <string name="org_event_format_elim">Single elimination</string>
+    <string name="org_event_format_rr">Round robin</string>
+
+    <!-- Standings tab -->
+    <string name="org_event_elim_standings_note">Elimination events have no standings. Players are listed by final placing, or by seed while the event runs.</string>
+    <string name="org_event_no_players_title">No players yet</string>
+    <string name="org_event_no_players_body">Add players to see the standings.</string>
+    <string name="org_event_col_rank">#</string>
+    <string name="org_event_col_player">Player</string>
+    <string name="org_event_col_wl">W–L</string>
+    <string name="org_event_col_diff">Pts ±</string>
+    <string name="org_event_col_opp" formatted="false">Opp %</string>
+    <string name="org_event_drop">Drop</string>
+    <string name="org_event_undo_drop">Undo drop</string>
+    <string name="org_event_cd_player_menu">Options for %1$s</string>
+    <string name="org_event_cut_line">Top %1$d cut</string>
+    <string name="org_event_tb_title">Tiebreakers</string>
+    <string name="org_event_tb_line">%1$d. %2$s</string>
+    <string name="org_event_tb_1">Match wins</string>
+    <string name="org_event_tb_2">Point difference (points scored minus points conceded)</string>
+    <string name="org_event_tb_3" formatted="false">Opponents\' win % (each floored at 33%, byes excluded)</string>
+    <string name="org_event_tb_4">Head-to-head</string>
+    <string name="org_event_tb_5">Points scored</string>
+    <string name="org_event_tb_bye">A bye counts as a %1$d–0 win.</string>
+    <string name="org_event_cut_title">Who missed the cut</string>
+    <string name="org_event_cut_everyone">Everyone still in the event makes the cut.</string>
+    <string name="org_event_cut_missed_wins">%1$s missed the cut with %4$d match wins; %2$s (#%3$d) has %5$d.</string>
+    <string name="org_event_cut_missed_diff">%1$s has the same match wins as %2$s (#%3$d) but a lower point difference (%4$s vs %5$s).</string>
+    <string name="org_event_cut_missed_opp">%1$s ties %2$s (#%3$d) on wins and point difference but has a lower opponents\' win %% (%4$d%% vs %5$d%%).</string>
+    <string name="org_event_cut_missed_h2h">%1$s ties %2$s (#%3$d) on wins, point difference and opponents\' win %% but lost to them head-to-head.</string>
+    <string name="org_event_cut_missed_points">%1$s ties %2$s (#%3$d) on every tiebreaker down to points scored (%4$d vs %5$d).</string>
+    <string name="org_event_cut_missed_order">%1$s ties %2$s (#%3$d) on every tiebreaker; registration order decided it.</string>
+
+    <!-- Bracket tab -->
+    <string name="org_event_bracket_empty_title">No bracket yet</string>
+    <string name="org_event_bracket_empty_body">The bracket is seeded from the standings after the last Swiss round.</string>
+    <string name="org_event_bracket_empty_elim">The bracket is drawn when the event starts.</string>
+    <string name="org_event_seed_title">How seeding works</string>
+    <string name="org_event_seed_standings">Seeded from the Swiss standings, best against worst: %1$s. Winners advance automatically.</string>
+    <string name="org_event_seed_pair">%1$d v %2$d</string>
+    <string name="org_event_seed_random">Seeded at random. If the bracket isn\'t full, the top seeds get a bye. Winners advance automatically.</string>
+    <string name="org_event_seed_registration">Seeded by registration order. If the bracket isn\'t full, the top seeds get a bye. Winners advance automatically.</string>
+    <string name="org_event_seed_third">The semifinal losers play a 3rd place match.</string>
+    <string name="org_event_champion">Champion</string>
+    <string name="org_event_champion_beat">Beat %1$s %2$d–%3$d in the final</string>
+
+    <!-- Final score dialog -->
+    <string name="org_event_final_title">Final score</string>
+    <plurals name="org_event_first_to">
+        <item quantity="one">First to %1$d point wins.</item>
+        <item quantity="other">First to %1$d points wins.</item>
+    </plurals>
+    <string name="org_event_final_wins">%1$s wins %2$d–%3$d</string>
+    <plurals name="org_event_final_hint">
+        <item quantity="one">One player needs %1$d point and more than the other.</item>
+        <item quantity="other">One player needs %1$d points and more than the other.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common components: one-letter result badge -->
+    <string name="common_badge_win">W</string>
+    <string name="common_badge_loss">L</string>
+
+    <!-- In-app camera -->
+    <string name="camera_hint">Shoot from the top, part centered in the circle. Plain background works best.</string>
+    <string name="camera_close">Close camera</string>
+    <string name="camera_flash_on">Flash on</string>
+    <string name="camera_flash_off">Flash off</string>
+    <string name="camera_pick_gallery">Pick from gallery</string>
+    <string name="camera_skip">Skip</string>
+    <string name="camera_cx_part">CX part</string>
+    <string name="camera_access_off">Camera access is off. Allow it to shoot parts here, or use the gallery.</string>
+    <string name="camera_waiting_access">Waiting for camera access…</string>
+    <string name="camera_error_start">The camera couldn\'t start (%1$s).</string>
+    <string name="camera_error_capture">Couldn\'t take the photo (%1$s).</string>
+    <string name="camera_allow">Allow camera</string>
+    <string name="camera_use_system_app">Use the phone\'s camera app</string>
+</resources>

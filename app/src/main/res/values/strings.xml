@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared strings. Each screen group has its own strings_*.xml. Game terms (Blade, Ratchet, Bit, Lock Chip,
+     Main Blade, Assist Blade, Attack/Defense/Stamina/Balance, Spin/Over/Burst/Xtreme, 3on3, Swiss) stay in
+     English in every language and are not in these files. -->
+<resources>
+    <string name="app_name">BX Tracker</string>
+
+    <!-- Bottom tabs -->
+    <string name="tab_parts">Parts</string>
+    <string name="tab_combos">Combos</string>
+    <string name="tab_decks">Decks</string>
+    <string name="tab_battles">Battles</string>
+
+    <!-- Common -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="ok">OK</string>
+    <string name="clear">Clear</string>
+    <string name="done">Done</string>
+    <string name="settings">Settings</string>
+    <string name="not_set">Not set</string>
+    <string name="choose_x">Choose %1$s</string>
+    <string name="less_x">Less %1$s</string>
+    <string name="more_x">More %1$s</string>
+    <string name="no_photo">No photo</string>
+    <string name="photo_add">Add</string>
+    <string name="result_won">Won</string>
+    <string name="result_lost">Lost</string>
+    <string name="result_in_progress">In progress</string>
+    <string name="default_opponent">Opponent</string>
+    <string name="casual">Casual</string>
+    <string name="placing_of">%1$s of %2$d</string>
+    <string name="record_wl">%1$dW %2$dL</string>
+
+    <!-- Tournament status -->
+    <string name="status_planned">Planned</string>
+    <string name="status_in_progress">In progress</string>
+    <string name="status_done">Done</string>
+
+    <!-- Stats periods -->
+    <string name="period_season">This season</string>
+    <string name="period_tournaments">Tournaments only</string>
+    <string name="period_all">All time</string>
+
+    <!-- Theme -->
+    <string name="theme_system">Match phone setting</string>
+    <string name="theme_system_desc">Follows Android\'s dark theme switch</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_light_desc">Easier to read outdoors and at events</string>
+    <string name="theme_oled">Dark · true black</string>
+    <string name="theme_oled_desc">Black pixels are off on OLED screens, so it saves battery</string>
+
+    <!-- Photo size -->
+    <string name="photo_small">Small</string>
+    <string name="photo_small_desc">About 720 px. Uses less space.</string>
+    <string name="photo_standard">Standard</string>
+    <string name="photo_standard_desc">About 1080 px. Sharper close-ups.</string>
+
+    <!-- Language -->
+    <string name="language_system">Match phone language</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Español (Latinoamérica)</string>
+</resources>

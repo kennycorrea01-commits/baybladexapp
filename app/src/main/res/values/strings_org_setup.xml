@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Organizer mode: event format (screen 15) and players (screen 16). Game terms (Swiss, Top 4/8/16, 3on3, 1on1,
+     bye) stay in English in every language. -->
+<resources>
+    <!-- Screen 15: format -->
+    <string name="org_setup_title_new">Organize</string>
+    <string name="org_setup_step">Step 1 of 2 · Format</string>
+    <string name="org_setup_title_edit">Event format</string>
+    <string name="org_setup_section_event">Event</string>
+    <string name="org_setup_name">Event name</string>
+    <string name="org_setup_date">Date</string>
+    <string name="org_setup_place">Place (optional)</string>
+    <string name="org_setup_section_format">Format</string>
+    <string name="org_setup_format_swiss">Swiss + cut</string>
+    <string name="org_setup_format_swiss_sub">Swiss rounds, then an optional top cut bracket</string>
+    <string name="org_setup_format_elim">Elimination</string>
+    <string name="org_setup_format_elim_sub">One bracket. Lose once and you\'re out</string>
+    <string name="org_setup_format_rr">Round robin</string>
+    <string name="org_setup_format_rr_sub">Everyone plays everyone once</string>
+    <string name="org_setup_swiss_rounds">Swiss rounds</string>
+    <string name="org_setup_suggested_for">Suggested for %1$d players: %2$d</string>
+    <string name="org_setup_use_n">Use %1$d</string>
+    <string name="org_setup_suggest_later">The suggested number shows up once you add players.</string>
+    <string name="org_setup_top_cut">Top cut</string>
+    <string name="org_setup_top_cut_none">None</string>
+    <string name="org_setup_top_n">Top %1$d</string>
+    <string name="org_setup_third_place">3rd place match</string>
+    <string name="org_setup_third_place_sub">The semifinal losers play for 3rd</string>
+    <string name="org_setup_seeding">Seeding</string>
+    <string name="org_setup_seed_order">Registration order</string>
+    <string name="org_setup_seed_order_sub">The first player added is seed 1</string>
+    <string name="org_setup_seed_random">Random</string>
+    <string name="org_setup_seed_random_sub">Shuffled when the bracket starts</string>
+    <string name="org_setup_section_match">Match</string>
+    <string name="org_setup_first_to">First to</string>
+    <string name="org_setup_section_scoring">Scoring</string>
+    <string name="org_setup_scoring_battles">Battle by battle</string>
+    <string name="org_setup_scoring_battles_sub">Tap who scored each battle. Full stats for every player.</string>
+    <string name="org_setup_scoring_final">Final score only</string>
+    <string name="org_setup_scoring_final_sub">Faster. Just type the final score of each match.</string>
+    <string name="org_setup_section_you">You</string>
+    <string name="org_setup_playing">I\'m playing too</string>
+    <string name="org_setup_playing_sub">Adds you to the player list</string>
+    <string name="org_setup_my_name">Your name</string>
+    <string name="org_setup_default_me">Me</string>
+    <string name="org_setup_my_matches_note">Your own matches are always scored battle by battle, so your stats stay complete.</string>
+    <string name="org_setup_my_deck">Your deck</string>
+    <string name="org_setup_no_decks">No decks yet. You can add one later from the Decks tab.</string>
+    <string name="org_setup_next">Next: add players</string>
+    <string name="org_setup_locked">This event has already started, so its format can\'t be changed.</string>
+    <string name="org_setup_back">Back</string>
+
+    <!-- Screen 16: players -->
+    <string name="org_setup_players_title">Players · %1$d</string>
+    <string name="org_setup_cd_edit_format">Edit format</string>
+    <string name="org_setup_add_label">Player name</string>
+    <string name="org_setup_cd_add_player">Add player</string>
+    <string name="org_setup_already_added">Already in this event</string>
+    <string name="org_setup_past_players">Played before. Tap to add:</string>
+    <string name="org_setup_empty_title">No players yet</string>
+    <string name="org_setup_empty_body">Type a name and tap +. Names from past events show up as you type.</string>
+    <plurals name="org_setup_checked_in_count">
+        <item quantity="one">%1$d of %2$d checked in</item>
+        <item quantity="other">%1$d of %2$d checked in</item>
+    </plurals>
+    <string name="org_setup_check_in_all">Check in everyone</string>
+    <string name="org_setup_edit_player">Edit player</string>
+    <string name="org_setup_cd_check_in">%1$s checked in</string>
+    <string name="org_setup_cd_remove">Remove %1$s</string>
+    <string name="org_setup_you_tag">you</string>
+    <string name="org_setup_dropped">dropped</string>
+    <string name="org_setup_no_deck_note">Tap to add a deck note</string>
+    <string name="org_setup_player_name">Name</string>
+    <string name="org_setup_deck_note">Deck note</string>
+    <string name="org_setup_deck_note_hint">e.g. Dran Buster, Wizard Rod</string>
+    <string name="org_setup_remove_me_title">Remove yourself?</string>
+    <string name="org_setup_remove_me_body">You won\'t play in this event and your matches won\'t be tracked.</string>
+    <string name="org_setup_remove">Remove</string>
+    <string name="org_setup_suggested_rounds">Suggested Swiss rounds for %1$d players: %2$d</string>
+    <string name="org_setup_rounds_now">Your event is set to %1$d.</string>
+    <string name="org_setup_rounds_ok">That\'s what your event uses.</string>
+    <string name="org_setup_notes_title">Good to know</string>
+    <string name="org_setup_note_bye">With an odd number of players, one player gets a bye each round. A bye counts as a win.</string>
+    <string name="org_setup_note_bye_bracket">If the count isn\'t 4, 8, 16…, the bracket is filled with byes.</string>
+    <string name="org_setup_note_drop">Players can be dropped mid-event. Their finished matches still count.</string>
+    <string name="org_setup_note_checkin_off">Check-in is optional. Once anyone is checked in, only checked-in players get paired.</string>
+    <string name="org_setup_note_checkin_on">Only checked-in players get paired. Anyone not checked in is dropped when you start (you can bring them back later).</string>
+    <string name="org_setup_pair_round_1">Pair round 1</string>
+    <string name="org_setup_start_bracket">Start bracket</string>
+    <string name="org_setup_need_two">Add at least 2 players to start.</string>
+    <string name="org_setup_need_two_checked_in">Check in at least 2 players to start.</string>
+    <string name="org_setup_start_title">Start without everyone?</string>
+    <plurals name="org_setup_start_body">
+        <item quantity="one">%1$d player isn\'t checked in and won\'t be paired. You can bring them back later.</item>
+        <item quantity="other">%1$d players aren\'t checked in and won\'t be paired. You can bring them back later.</item>
+    </plurals>
+    <string name="org_setup_started_note">This event has started. Players are managed from the rounds screen.</string>
+    <string name="org_setup_bye_points">Bye points</string>
+    <string name="org_setup_bye_points_sub">A bye counts as a %1$d–0 win in point difference.</string>
+</resources>

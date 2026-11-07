@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo organizador: formato del torneo (pantalla 15) y jugadores (pantalla 16). Los términos del juego (Swiss,
+     Top 4/8/16, 3on3, 1on1, bye) quedan en inglés. -->
+<resources>
+    <!-- Pantalla 15: formato -->
+    <string name="org_setup_title_new">Organizar</string>
+    <string name="org_setup_step">Paso 1 de 2 · Formato</string>
+    <string name="org_setup_title_edit">Formato del torneo</string>
+    <string name="org_setup_section_event">Torneo</string>
+    <string name="org_setup_name">Nombre del torneo</string>
+    <string name="org_setup_date">Fecha</string>
+    <string name="org_setup_place">Lugar (opcional)</string>
+    <string name="org_setup_section_format">Formato</string>
+    <string name="org_setup_format_swiss">Swiss + top cut</string>
+    <string name="org_setup_format_swiss_sub">Rondas Swiss y luego un top cut opcional</string>
+    <string name="org_setup_format_elim">Eliminación directa</string>
+    <string name="org_setup_format_elim_sub">Una sola llave. Si pierdes una vez, quedas fuera</string>
+    <string name="org_setup_format_rr">Todos contra todos</string>
+    <string name="org_setup_format_rr_sub">Cada jugador se enfrenta una vez a todos los demás</string>
+    <string name="org_setup_swiss_rounds">Rondas Swiss</string>
+    <string name="org_setup_suggested_for">Sugerido para %1$d jugadores: %2$d</string>
+    <string name="org_setup_use_n">Usar %1$d</string>
+    <string name="org_setup_suggest_later">El número sugerido aparece cuando agregues jugadores.</string>
+    <string name="org_setup_top_cut">Top cut</string>
+    <string name="org_setup_top_cut_none">Ninguno</string>
+    <string name="org_setup_top_n">Top %1$d</string>
+    <string name="org_setup_third_place">Partida por el 3.er lugar</string>
+    <string name="org_setup_third_place_sub">Quienes pierden en semifinales juegan por el 3.er lugar</string>
+    <string name="org_setup_seeding">Orden de la llave</string>
+    <string name="org_setup_seed_order">Orden de inscripción</string>
+    <string name="org_setup_seed_order_sub">El primer jugador que agregues es el número 1</string>
+    <string name="org_setup_seed_random">Al azar</string>
+    <string name="org_setup_seed_random_sub">Se sortea al iniciar la llave</string>
+    <string name="org_setup_section_match">Partida</string>
+    <string name="org_setup_first_to">Primero en llegar a</string>
+    <string name="org_setup_section_scoring">Puntuación</string>
+    <string name="org_setup_scoring_battles">Batalla por batalla</string>
+    <string name="org_setup_scoring_battles_sub">Toca quién anotó en cada batalla. Estadísticas completas para todos.</string>
+    <string name="org_setup_scoring_final">Solo marcador final</string>
+    <string name="org_setup_scoring_final_sub">Más rápido. Solo escribe el marcador final de cada partida.</string>
+    <string name="org_setup_section_you">Tú</string>
+    <string name="org_setup_playing">Yo también juego</string>
+    <string name="org_setup_playing_sub">Te agrega a la lista de jugadores</string>
+    <string name="org_setup_my_name">Tu nombre</string>
+    <string name="org_setup_default_me">Yo</string>
+    <string name="org_setup_my_matches_note">Tus partidas siempre se registran batalla por batalla, así tus estadísticas quedan completas.</string>
+    <string name="org_setup_my_deck">Tu deck</string>
+    <string name="org_setup_no_decks">Aún no tienes decks. Puedes agregar uno después desde la pestaña Decks.</string>
+    <string name="org_setup_next">Siguiente: agregar jugadores</string>
+    <string name="org_setup_locked">Este torneo ya empezó, así que su formato no se puede cambiar.</string>
+    <string name="org_setup_back">Volver</string>
+
+    <!-- Pantalla 16: jugadores -->
+    <string name="org_setup_players_title">Jugadores · %1$d</string>
+    <string name="org_setup_cd_edit_format">Editar formato</string>
+    <string name="org_setup_add_label">Nombre del jugador</string>
+    <string name="org_setup_cd_add_player">Agregar jugador</string>
+    <string name="org_setup_already_added">Ya está en este torneo</string>
+    <string name="org_setup_past_players">Ya jugaron antes. Toca para agregar:</string>
+    <string name="org_setup_empty_title">Aún no hay jugadores</string>
+    <string name="org_setup_empty_body">Escribe un nombre y toca +. Los nombres de torneos anteriores aparecen mientras escribes.</string>
+    <plurals name="org_setup_checked_in_count">
+        <item quantity="one">%1$d de %2$d presente</item>
+        <item quantity="many">%1$d de %2$d presentes</item>
+        <item quantity="other">%1$d de %2$d presentes</item>
+    </plurals>
+    <string name="org_setup_check_in_all">Marcar a todos</string>
+    <string name="org_setup_edit_player">Editar jugador</string>
+    <string name="org_setup_cd_check_in">%1$s presente</string>
+    <string name="org_setup_cd_remove">Quitar a %1$s</string>
+    <string name="org_setup_you_tag">tú</string>
+    <string name="org_setup_dropped">retirado</string>
+    <string name="org_setup_no_deck_note">Toca para agregar una nota del deck</string>
+    <string name="org_setup_player_name">Nombre</string>
+    <string name="org_setup_deck_note">Nota del deck</string>
+    <string name="org_setup_deck_note_hint">ej.: Dran Buster, Wizard Rod</string>
+    <string name="org_setup_remove_me_title">¿Quitarte del torneo?</string>
+    <string name="org_setup_remove_me_body">No jugarás en este torneo y tus partidas no se registrarán.</string>
+    <string name="org_setup_remove">Quitar</string>
+    <string name="org_setup_suggested_rounds">Rondas Swiss sugeridas para %1$d jugadores: %2$d</string>
+    <string name="org_setup_rounds_now">Tu torneo tiene %1$d.</string>
+    <string name="org_setup_rounds_ok">Es lo que usa tu torneo.</string>
+    <string name="org_setup_notes_title">Para tener en cuenta</string>
+    <string name="org_setup_note_bye">Con un número impar de jugadores, uno recibe bye en cada ronda. El bye cuenta como victoria.</string>
+    <string name="org_setup_note_bye_bracket">Si no son 4, 8, 16…, la llave se completa con byes.</string>
+    <string name="org_setup_note_drop">Puedes retirar jugadores a mitad del torneo. Sus partidas terminadas siguen contando.</string>
+    <string name="org_setup_note_checkin_off">Marcar presentes es opcional. Si marcas a alguien, solo se emparejan los presentes.</string>
+    <string name="org_setup_note_checkin_on">Solo se emparejan los presentes. Quien no esté marcado se retira al empezar (puedes traerlo de vuelta después).</string>
+    <string name="org_setup_pair_round_1">Emparejar ronda 1</string>
+    <string name="org_setup_start_bracket">Iniciar la llave</string>
+    <string name="org_setup_need_two">Agrega al menos 2 jugadores para empezar.</string>
+    <string name="org_setup_need_two_checked_in">Marca al menos 2 jugadores presentes para empezar.</string>
+    <string name="org_setup_start_title">¿Empezar sin todos?</string>
+    <plurals name="org_setup_start_body">
+        <item quantity="one">%1$d jugador no está presente y no se emparejará. Puedes traerlo de vuelta después.</item>
+        <item quantity="many">%1$d jugadores no están presentes y no se emparejarán. Puedes traerlos de vuelta después.</item>
+        <item quantity="other">%1$d jugadores no están presentes y no se emparejarán. Puedes traerlos de vuelta después.</item>
+    </plurals>
+    <string name="org_setup_started_note">Este torneo ya empezó. Los jugadores se manejan desde la pantalla de rondas.</string>
+    <string name="org_setup_bye_points">Puntos del bye</string>
+    <string name="org_setup_bye_points_sub">Un bye cuenta como victoria %1$d–0 en la diferencia de puntos.</string>
+</resources>

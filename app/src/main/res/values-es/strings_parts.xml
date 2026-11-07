@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Piezas: lista, selector de fotos, Agregar pieza y Detalle de pieza. Los nombres de pestaña (Blades, Ratchets,
+     Bits, CX), los tipos de pieza, los tipos de Beyblade, las líneas de producto y los chips "Main" / "Assist" se
+     quedan en inglés y no están aquí. -->
+<resources>
+    <!-- Lista de piezas -->
+    <string name="parts_subtitle">Mi colección</string>
+    <string name="parts_add_part">Agregar pieza</string>
+    <string name="parts_search_x">Buscar %1$s</string>
+    <string name="parts_search_cx">Buscar piezas CX</string>
+    <string name="parts_filter_all">Todas</string>
+    <string name="parts_unused">Sin usar</string>
+    <plurals name="parts_in_combos">
+        <item quantity="one">En %1$d combo</item>
+        <item quantity="many">En %1$d combos</item>
+        <item quantity="other">En %1$d combos</item>
+    </plurals>
+    <string name="parts_empty_title">Aún no hay piezas</string>
+    <string name="parts_empty_body">Agrega tu primera pieza. Tómale una foto para reconocerla después.</string>
+    <string name="parts_empty_action">Agregar una pieza</string>
+    <string name="parts_nothing_here">No hay nada aquí</string>
+    <string name="parts_nothing_here_body">Prueba otra pestaña u otro filtro.</string>
+    <string name="parts_photo_of">Foto de %1$s</string>
+    <string name="parts_left_spin_dot">Giro a la izquierda ·</string>
+
+    <!-- Selector de fotos -->
+    <string name="parts_no_camera_app">No hay una app de cámara disponible. Elige una foto de la galería.</string>
+
+    <!-- Agregar pieza -->
+    <string name="parts_new_part">Nueva pieza</string>
+    <string name="parts_save_next">Guardar y otra</string>
+    <string name="parts_add_to_collection">Agregar a la colección</string>
+    <string name="parts_part_photo">Foto de la pieza</string>
+    <string name="parts_no_photo_yet">Aún sin foto</string>
+    <string name="parts_photo_saved">Foto guardada</string>
+    <string name="parts_photo_tip">Tómala desde arriba sobre un fondo liso</string>
+    <string name="parts_camera">Cámara</string>
+    <string name="parts_retake">Repetir</string>
+    <string name="parts_gallery">Galería</string>
+    <string name="parts_what_is_it">¿Qué es?</string>
+    <string name="parts_field_ratchet">Ratchet, ej. 9-60</string>
+    <string name="parts_field_name">Nombre</string>
+    <string name="parts_already_have">Ya tienes %1$s ×%2$d. Al guardar se suman las copias.</string>
+    <string name="parts_field_bit_code">Código corto, ej. GF</string>
+    <string name="parts_field_assist_letter">Letra, ej. S</string>
+    <string name="parts_code_hint">Se usa en nombres de combo como Phoenix Wing 9-60GF</string>
+    <string name="parts_type">Tipo</string>
+    <string name="parts_left_spin">Giro a la izquierda</string>
+    <string name="parts_copies">Copias</string>
+    <string name="parts_copies_label">copias</string>
+    <string name="parts_note_optional">Nota (opcional)</string>
+    <string name="parts_note_placeholder">Dónde la conseguiste, estado…</string>
+
+    <!-- Detalle de pieza -->
+    <string name="parts_part">Pieza</string>
+    <string name="parts_save_changes">Guardar cambios</string>
+    <string name="parts_delete_part">Eliminar pieza</string>
+    <string name="parts_build_with">Armar un combo con esta</string>
+    <string name="parts_unsaved">Cambios sin guardar. Toca ✓ arriba para guardar.</string>
+    <string name="parts_photo_of_retake">Foto de %1$s. Toca para repetirla.</string>
+    <string name="parts_take_photo">Tomar foto</string>
+    <string name="parts_copies_owned">Copias que tienes</string>
+    <plurals name="parts_used_in_combos">
+        <item quantity="one">Se usa en %1$d combo</item>
+        <item quantity="many">Se usa en %1$d combos</item>
+        <item quantity="other">Se usa en %1$d combos</item>
+    </plurals>
+    <plurals name="parts_n_copies">
+        <item quantity="one">%1$d copia</item>
+        <item quantity="many">%1$d copias</item>
+        <item quantity="other">%1$d copias</item>
+    </plurals>
+    <plurals name="parts_n_combos">
+        <item quantity="one">%1$d combo</item>
+        <item quantity="many">%1$d combos</item>
+        <item quantity="other">%1$d combos</item>
+    </plurals>
+    <!-- %1$s = "2 copias", %2$s = "3 combos" -->
+    <string name="parts_overused_warning">Tienes %1$s en %2$s. Sirve para practicar, pero solo una puede ir en un deck.</string>
+    <string name="parts_field_short_code">Código corto</string>
+    <string name="parts_weight">Peso (g)</string>
+    <string name="parts_line">Línea</string>
+    <string name="parts_source">Dónde la conseguiste</string>
+    <string name="parts_source_placeholder">Tienda, intercambio, set inicial…</string>
+    <string name="parts_note">Nota</string>
+    <string name="parts_used_in">Se usa en</string>
+    <string name="parts_not_in_combo">Aún no está en ningún combo.</string>
+    <string name="parts_not_in_combo_build">Aún no está en ningún combo. Arma uno en la pestaña Combos.</string>
+    <string name="parts_delete_title">¿Eliminar %1$s?</string>
+    <string name="parts_delete_photo_too">También se borra su foto.</string>
+    <plurals name="parts_delete_used_in">
+        <item quantity="one">Está en %1$d combo. Ese combo también se elimina. El historial de batallas se conserva.</item>
+        <item quantity="many">Está en %1$d combos. Esos combos también se eliminan. El historial de batallas se conserva.</item>
+        <item quantity="other">Está en %1$d combos. Esos combos también se eliminan. El historial de batallas se conserva.</item>
+    </plurals>
+    <string name="parts_builtin_ratchet">Ratchet incluido</string>
+    <string name="parts_builtin_ratchet_desc">Como Bullet Griffon. Los combos con esta blade no llevan ratchet.</string>
+    <string name="parts_builtin_bit">Incluye el bit</string>
+    <string name="parts_builtin_bit_desc">Como Turbo u Operate. Los combos con este ratchet no llevan bit.</string>
+    <string name="parts_field_ratchet_code">Código corto, ej. Tr</string>
+</resources>

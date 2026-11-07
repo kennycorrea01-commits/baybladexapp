@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stats and Settings screens. Finish names (Spin, Over, Burst, Xtreme), type names and file names are passed in
+     as arguments and stay in English. -->
+<resources>
+    <!-- Stats -->
+    <string name="stats_title">Stats</string>
+    <string name="stats_since">Since %1$s</string>
+    <string name="stats_no_season">No season start set, showing everything</string>
+    <string name="stats_sub_tournaments">Tournament matches only</string>
+    <string name="stats_sub_all">Everything you\'ve logged</string>
+    <string name="stats_empty_title">Nothing to show yet</string>
+    <string name="stats_empty_body">Log some matches and your stats build up here.</string>
+    <string name="stats_battle_win_rate">Battle win rate</string>
+    <string name="stats_matches_played">Matches played</string>
+    <string name="stats_best_finish">Best finish</string>
+    <string name="stats_best_finish_of">Best finish, of %1$d</string>
+    <string name="stats_how_you_score">How you score points</string>
+    <string name="stats_not_scored">You haven\'t scored yet.</string>
+    <!-- %1$s = finish name in English (Spin, Over, Burst, Xtreme), %2$d = percent -->
+    <string name="stats_worst_finish">Most points against you come from %1$s finishes (%2$d%%)</string>
+    <string name="stats_best_combos">Best combos</string>
+    <string name="stats_by_win_rate">By battle win rate</string>
+    <string name="stats_under_3">Under 3 battles</string>
+    <string name="stats_no_combo_battles">No battles with a combo logged yet.</string>
+    <string name="stats_no_combo_3">No combo has 3 battles yet. Turn on the switch to see them anyway.</string>
+    <!-- %1$s = record like "4W 1L", %2$d = percent -->
+    <string name="stats_record_rate">%1$s · %2$d%%</string>
+    <plurals name="stats_hidden_combos">
+        <item quantity="one">%1$d combo with fewer than 3 battles hidden</item>
+        <item quantity="other">%1$d combos with fewer than 3 battles hidden</item>
+    </plurals>
+    <string name="stats_vs_type">Vs opponent type</string>
+    <string name="stats_vs_type_sub">From the type you log for their combo each battle</string>
+    <!-- %1$d = percent, %2$d = wins, %3$d = battles -->
+    <string name="stats_rate_of">%1$d%% · %2$d/%3$d</string>
+    <string name="stats_no_battles">no battles</string>
+    <string name="stats_placings">Tournament placings</string>
+    <plurals name="stats_last_events">
+        <item quantity="one">Last %1$d event. Taller is better.</item>
+        <item quantity="other">Last %1$d events. Taller is better.</item>
+    </plurals>
+    <!-- %1$s = tournament name, %2$s = placing like "3rd of 24" -->
+    <string name="stats_placing_desc">%1$s: %2$s</string>
+
+    <!-- Settings -->
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_note">Game terms like Blade, Ratchet and Bit stay in English.</string>
+    <string name="settings_match_rules">Match rules</string>
+    <string name="settings_points_to_win">Points to win</string>
+    <string name="settings_points_to_win_default">Default for new matches</string>
+    <!-- Stepper label, read as "Less points to win" / "More points to win" -->
+    <string name="settings_points_to_win_label">points to win</string>
+    <string name="settings_points_per_finish">Points per finish</string>
+    <string name="settings_points_per_finish_sub">Used for new battles. Battles already logged keep their points.</string>
+    <!-- Stepper label, %1$s = finish name in English. Read as "Less Spin points" -->
+    <string name="settings_finish_points_label">%1$s points</string>
+    <string name="settings_season">Season</string>
+    <string name="settings_season_start">Season start</string>
+    <!-- %1$s = the "This season" period name -->
+    <string name="settings_season_note">\"%1$s\" on Battles and Stats counts matches from this day on. Leave it empty to count everything.</string>
+    <string name="settings_photos">Photos</string>
+    <string name="settings_your_data">Your data</string>
+    <string name="settings_backup">Back up collection</string>
+    <string name="settings_backup_sub">A .zip with your data and part photos</string>
+    <string name="settings_restore">Restore from backup</string>
+    <string name="settings_restore_sub">Replaces everything on this phone</string>
+    <string name="settings_export_csv">Export as CSV</string>
+    <string name="settings_export_csv_sub">parts.csv, combos.csv and matches.csv into a folder you pick</string>
+    <string name="settings_footer">Everything is stored on this phone, including part photos. Nothing is uploaded. Backups go wherever you save them.\n\nFont: Montserrat, licensed under the SIL Open Font License 1.1.</string>
+    <string name="settings_restore_title">Replace everything?</string>
+    <string name="settings_restore_body">Restoring deletes the parts, combos, decks, tournaments and matches on this phone and puts the backup\'s in their place. Make a backup first if you might want them back.</string>
+    <string name="settings_restore_confirm">Restore</string>
+    <string name="settings_backed_up">Backed up %1$d parts, %2$d combos and %3$d matches.</string>
+    <string name="settings_restored">Restored %1$d parts, %2$d combos and %3$d matches.</string>
+    <!-- %1$s = file names joined by ", " -->
+    <string name="settings_csv_saved">Saved %1$s.</string>
+    <string name="settings_backup_failed">Backup failed: %1$s</string>
+    <string name="settings_restore_failed">Restore failed: %1$s</string>
+    <string name="settings_export_failed">Export failed: %1$s</string>
+    <string name="settings_not_a_backup">That zip isn\'t a BX Tracker backup.</string>
+</resources>

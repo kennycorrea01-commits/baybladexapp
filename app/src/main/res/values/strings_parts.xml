@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Parts list, photo picker, Add part and Part detail. Tab names (Blades, Ratchets, Bits, CX), part kinds,
+     Beyblade types, product lines and the "Main" / "Assist" filter chips stay in English and are not here. -->
+<resources>
+    <!-- Parts list -->
+    <string name="parts_subtitle">My collection</string>
+    <string name="parts_add_part">Add part</string>
+    <string name="parts_search_x">Search %1$s</string>
+    <string name="parts_search_cx">Search CX parts</string>
+    <string name="parts_filter_all">All</string>
+    <string name="parts_unused">Unused</string>
+    <plurals name="parts_in_combos">
+        <item quantity="one">In %1$d combo</item>
+        <item quantity="other">In %1$d combos</item>
+    </plurals>
+    <string name="parts_empty_title">No parts yet</string>
+    <string name="parts_empty_body">Add your first part. Snap a photo so you can recognize it later.</string>
+    <string name="parts_empty_action">Add a part</string>
+    <string name="parts_nothing_here">Nothing here</string>
+    <string name="parts_nothing_here_body">Try another tab or filter.</string>
+    <string name="parts_photo_of">Photo of %1$s</string>
+    <string name="parts_left_spin_dot">Left spin ·</string>
+
+    <!-- Photo picker -->
+    <string name="parts_no_camera_app">No camera app is available. Pick a photo from the gallery instead.</string>
+
+    <!-- Add part -->
+    <string name="parts_new_part">New part</string>
+    <string name="parts_save_next">Save + next</string>
+    <string name="parts_add_to_collection">Add to collection</string>
+    <string name="parts_part_photo">Part photo</string>
+    <string name="parts_no_photo_yet">No photo yet</string>
+    <string name="parts_photo_saved">Photo saved</string>
+    <string name="parts_photo_tip">Shoot from the top on a plain background</string>
+    <string name="parts_camera">Camera</string>
+    <string name="parts_retake">Retake</string>
+    <string name="parts_gallery">Gallery</string>
+    <string name="parts_what_is_it">What is it?</string>
+    <string name="parts_field_ratchet">Ratchet, e.g. 9-60</string>
+    <string name="parts_field_name">Name</string>
+    <string name="parts_already_have">You already have %1$s ×%2$d. Saving adds copies to it.</string>
+    <string name="parts_field_bit_code">Short code, e.g. GF</string>
+    <string name="parts_field_assist_letter">Letter, e.g. S</string>
+    <string name="parts_code_hint">Used in combo names like Phoenix Wing 9-60GF</string>
+    <string name="parts_type">Type</string>
+    <string name="parts_left_spin">Left spin</string>
+    <string name="parts_copies">Copies</string>
+    <string name="parts_copies_label">copies</string>
+    <string name="parts_note_optional">Note (optional)</string>
+    <string name="parts_note_placeholder">Where you got it, condition…</string>
+
+    <!-- Part detail -->
+    <string name="parts_part">Part</string>
+    <string name="parts_save_changes">Save changes</string>
+    <string name="parts_delete_part">Delete part</string>
+    <string name="parts_build_with">Build a combo with this</string>
+    <string name="parts_unsaved">Unsaved changes. Tap ✓ at the top to save.</string>
+    <string name="parts_photo_of_retake">Photo of %1$s. Tap to retake.</string>
+    <string name="parts_take_photo">Take photo</string>
+    <string name="parts_copies_owned">Copies owned</string>
+    <plurals name="parts_used_in_combos">
+        <item quantity="one">Used in %1$d combo</item>
+        <item quantity="other">Used in %1$d combos</item>
+    </plurals>
+    <plurals name="parts_n_copies">
+        <item quantity="one">%1$d copy</item>
+        <item quantity="other">%1$d copies</item>
+    </plurals>
+    <plurals name="parts_n_combos">
+        <item quantity="one">%1$d combo</item>
+        <item quantity="other">%1$d combos</item>
+    </plurals>
+    <!-- %1$s = "2 copies", %2$s = "3 combos" -->
+    <string name="parts_overused_warning">You have %1$s in %2$s. Fine for practice, but only one can go in a deck.</string>
+    <string name="parts_field_short_code">Short code</string>
+    <string name="parts_weight">Weight (g)</string>
+    <string name="parts_line">Line</string>
+    <string name="parts_source">Got it from</string>
+    <string name="parts_source_placeholder">Shop, trade, starter set…</string>
+    <string name="parts_note">Note</string>
+    <string name="parts_used_in">Used in</string>
+    <string name="parts_not_in_combo">Not in any combo yet.</string>
+    <string name="parts_not_in_combo_build">Not in any combo yet. Build one from the Combos tab.</string>
+    <string name="parts_delete_title">Delete %1$s?</string>
+    <string name="parts_delete_photo_too">Its photo is deleted too.</string>
+    <plurals name="parts_delete_used_in">
+        <item quantity="one">It\'s used in %1$d combo. That combo is deleted too. Battle history stays.</item>
+        <item quantity="other">It\'s used in %1$d combos. Those combos are deleted too. Battle history stays.</item>
+    </plurals>
+    <string name="parts_builtin_ratchet">Built-in ratchet</string>
+    <string name="parts_builtin_ratchet_desc">Like Bullet Griffon. Combos with it skip the ratchet.</string>
+    <string name="parts_builtin_bit">Includes the bit</string>
+    <string name="parts_builtin_bit_desc">Like Turbo or Operate. Combos with it skip the bit.</string>
+    <string name="parts_field_ratchet_code">Short code, e.g. Tr</string>
+</resources>

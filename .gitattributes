@@ -1,0 +1,8 @@
+* text=auto
+# The Unix launcher must keep LF line endings; the Windows one CRLF.
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.ttf binary
+*.png binary
+*.jpg binary

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo organizador: marcador batalla por batalla de una partida entre otros dos jugadores. Los términos del juego
+     (Swiss, R1/QF/SF/F/3P, Spin/Over/Burst/Xtreme) llegan como argumentos y no se traducen. -->
+<resources>
+    <string name="org_score_title_missing">Partida</string>
+    <string name="org_score_title">%1$s vs %2$s · %3$s</string>
+    <plurals name="org_score_subtitle">
+        <item quantity="one">%1$s · a %2$d punto</item>
+        <item quantity="many">%1$s · a %2$d puntos</item>
+        <item quantity="other">%1$s · a %2$d puntos</item>
+    </plurals>
+    <string name="org_score_bye">Bye</string>
+    <string name="org_score_cd_undo">Deshacer última batalla</string>
+    <string name="org_score_cd_final">Ingresar marcador final</string>
+    <string name="org_score_battle_n">Batalla %1$d</string>
+    <string name="org_score_combo_label">Combo de %1$s (opcional)</string>
+    <string name="org_score_scored">%1$s anotó</string>
+    <string name="org_score_draw_button">Empate · sin puntos</string>
+    <string name="org_score_wins">Gana %1$s %2$d–%3$d</string>
+    <string name="org_score_saved_hint">Guardado. Toca deshacer si un punto quedó mal.</string>
+    <string name="org_score_manual_note">Este marcador se ingresó a mano (%1$d–%2$d), así que los botones de batalla están desactivados.</string>
+    <string name="org_score_back_to_battles">Volver a anotar por batalla</string>
+    <string name="org_score_this_match">Esta partida</string>
+    <string name="org_score_battle_short">B%1$d</string>
+    <string name="org_score_history_point">%1$s · %2$s +%3$d</string>
+    <string name="org_score_draw">Empate</string>
+    <string name="org_score_final_title">Marcador final</string>
+    <string name="org_score_final_body">Escribe el marcador final. Reemplaza las batallas anotadas hasta ahora.</string>
+</resources>

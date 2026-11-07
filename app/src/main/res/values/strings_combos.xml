@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Combos list, combo builder, decks list and deck editor. Game terms (part kinds, types, CX, 3on3) are passed in
+     as format args and stay in English. -->
+<resources>
+    <!-- Combos list -->
+    <plurals name="combo_list_subtitle">
+        <item quantity="one">%1$d saved · %2$s</item>
+        <item quantity="other">%1$d saved · %2$s</item>
+    </plurals>
+    <string name="combo_sort_cd">Sort combos</string>
+    <string name="combo_sort_current_cd">Current sort</string>
+    <string name="combo_sort_win_rate">Best win rate</string>
+    <string name="combo_sort_recent">Recently used</string>
+    <string name="combo_sort_name">Name</string>
+    <string name="combo_new">New combo</string>
+    <string name="combo_filter_all">All</string>
+    <string name="combo_filter_favorites">Favorites</string>
+    <string name="combo_empty_no_parts_title">Add parts first</string>
+    <string name="combo_empty_no_parts_body">Combos are built from the parts in your collection.</string>
+    <string name="combo_add_part">Add a part</string>
+    <string name="combo_empty_title">No combos yet</string>
+    <!-- %1$s = "Blade + Ratchet + Bit" -->
+    <string name="combo_empty_body">Build your first %1$s combo.</string>
+    <string name="combo_empty_filter_title">Nothing here</string>
+    <string name="combo_empty_filter_body">No combos match this filter.</string>
+    <!-- %1$s = short date, e.g. "Nov 7" -->
+    <string name="combo_tested">Tested %1$s</string>
+    <string name="combo_favorite_add_cd">Add to favorites</string>
+    <string name="combo_favorite_remove_cd">Remove from favorites</string>
+    <string name="combo_not_battled">Not battled yet</string>
+
+    <!-- Combo builder -->
+    <string name="combo_edit">Edit combo</string>
+    <string name="combo_favorite_cd">Favorite</string>
+    <string name="combo_delete_cd">Delete combo</string>
+    <!-- %1$s = combo name -->
+    <string name="combo_save_name">Save %1$s</string>
+    <string name="combo_pick_every_part">Pick every part to save</string>
+    <string name="combo_basic">Basic</string>
+    <!-- %1$s = lowercase part kind, e.g. "ratchet" -->
+    <string name="combo_choose_part">Choose a %1$s</string>
+    <!-- %1$s = lowercase plural part kind, e.g. "ratchets" -->
+    <string name="combo_your_parts">Your %1$s</string>
+    <!-- %1$s = lowercase part kind, e.g. "bit" -->
+    <string name="combo_add_new_part">Add a new %1$s</string>
+    <!-- %1$d = copies owned, %2$s = combo_free or combo_in_other_combos -->
+    <string name="combo_owned_line">×%1$d owned · %2$s</string>
+    <string name="combo_free">free</string>
+    <plurals name="combo_in_other_combos">
+        <item quantity="one">in %1$d other combo</item>
+        <item quantity="other">in %1$d other combos</item>
+    </plurals>
+    <string name="combo_selected_cd">Selected</string>
+    <string name="combo_type">Type</string>
+    <string name="combo_notes">Notes</string>
+    <string name="combo_notes_placeholder">What does it beat? What does it lose to?</string>
+    <string name="combo_delete_title">Delete this combo?</string>
+    <string name="combo_delete_body">It\'s removed from any deck. Your parts stay in the collection.</string>
+
+    <!-- Decks list -->
+    <!-- %1$s = "3on3" -->
+    <string name="deck_list_subtitle">%1$s · no repeated parts</string>
+    <string name="deck_default_name">Deck %1$d</string>
+    <string name="deck_new">New deck</string>
+    <string name="deck_empty_title">No decks yet</string>
+    <string name="deck_empty_body">Pick 3 combos for a tournament. The app warns you if a part repeats.</string>
+    <plurals name="deck_conflicts">
+        <item quantity="one">%1$d conflict</item>
+        <item quantity="other">%1$d conflicts</item>
+    </plurals>
+    <string name="deck_filled_of">%1$d of %2$d</string>
+    <string name="deck_ready">Ready</string>
+    <string name="deck_slot_empty">Empty</string>
+
+    <!-- Deck editor -->
+    <string name="deck_title">Deck</string>
+    <!-- %1$s = "3on3" -->
+    <string name="deck_edit_subtitle">%1$s deck</string>
+    <string name="deck_delete_cd">Delete deck</string>
+    <string name="deck_name">Deck name</string>
+    <!-- %1$s = part kind, %2$s = part name, %3$s = slot numbers joined with deck_list_and -->
+    <string name="deck_conflict_line">%1$s %2$s is in combos %3$s</string>
+    <!-- Joins the last item of a list: "1 and 2", "1, 2 and 3" -->
+    <string name="deck_list_and">%1$s and %2$s</string>
+    <!-- %1$s = "3on3" -->
+    <string name="deck_conflict_hint">A %1$s deck can\'t repeat a part. Swap one of them.</string>
+    <string name="deck_suggested_fix">Suggested fix</string>
+    <string name="deck_no_fix">No owned part can replace the repeat yet. Pick a different combo for that slot, or add a part.</string>
+    <!-- %1$d = slot, %2$s = lowercase part kind, %3$s = part being replaced, %4$s = replacement part -->
+    <string name="deck_fix_title">Slot %1$d: %2$s %3$s → %4$s</string>
+    <!-- %1$s = part, %2$d = copies, %3$s = one of the deck_fix_free_* / deck_fix_none_free texts -->
+    <string name="deck_fix_you_have">You have %1$s ×%2$d, %3$s.</string>
+    <string name="deck_fix_none_free">all in other combos (fine, the deck only needs one)</string>
+    <string name="deck_fix_free_one">free</string>
+    <string name="deck_fix_free_both">both free</string>
+    <string name="deck_fix_free_all">all free</string>
+    <string name="deck_fix_free_some">%1$d of %2$d free</string>
+    <string name="deck_fix_new_combo">Saves it as a new combo.</string>
+    <!-- %1$s = record like "4W 1L", %2$d = win percentage -->
+    <string name="deck_fix_already_built_record">Already built · %1$s · %2$d%%</string>
+    <string name="deck_fix_already_built_unbattled">Already built, not battled yet.</string>
+    <string name="deck_fix_apply">Swap into slot %1$d</string>
+    <!-- %1$s = part list, e.g. "Bit Ball, Blade Dran Sword" -->
+    <plurals name="deck_missing_parts">
+        <item quantity="one">You own 0 of %1$s. Get it before the event, or swap it out.</item>
+        <item quantity="other">You own 0 of %1$s. Get them before the event, or swap them out.</item>
+    </plurals>
+    <string name="deck_mix">Deck mix</string>
+    <!-- %1$d = count, %2$s = type (Attack, Defense…) -->
+    <string name="deck_mix_count">%1$d %2$s</string>
+    <string name="deck_choose_combo">Choose a combo</string>
+    <string name="deck_no_conflicts_cd">No conflicts</string>
+    <string name="deck_pick_combo">Pick combo %1$d</string>
+    <string name="deck_no_combos">Build some combos first.</string>
+    <!-- %1$s = part names -->
+    <string name="deck_repeats">Repeats %1$s</string>
+    <!-- %1$s = record like "4W 1L", %2$d = win percentage -->
+    <string name="deck_record_percent">%1$s · %2$d%%</string>
+    <string name="deck_in_slot_cd">In this slot</string>
+    <string name="deck_delete_title">Delete %1$s?</string>
+    <string name="deck_delete_body">Your combos and match history stay.</string>
+    <string name="combo_slot_built_in">built into %1$s</string>
+</resources>

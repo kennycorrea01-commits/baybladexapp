@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Organizer mode: battle-by-battle scoring of a match between two other players. Game terms (Swiss, R1/QF/SF/F/3P,
+     Spin/Over/Burst/Xtreme) are passed in as arguments, never stored here. -->
+<resources>
+    <string name="org_score_title_missing">Match</string>
+    <string name="org_score_title">%1$s vs %2$s · %3$s</string>
+    <plurals name="org_score_subtitle">
+        <item quantity="one">%1$s · first to %2$d</item>
+        <item quantity="other">%1$s · first to %2$d</item>
+    </plurals>
+    <string name="org_score_bye">Bye</string>
+    <string name="org_score_cd_undo">Undo last battle</string>
+    <string name="org_score_cd_final">Enter final score instead</string>
+    <string name="org_score_battle_n">Battle %1$d</string>
+    <string name="org_score_combo_label">%1$s\'s combo (optional)</string>
+    <string name="org_score_scored">%1$s scored</string>
+    <string name="org_score_draw_button">Draw · no points</string>
+    <string name="org_score_wins">%1$s wins %2$d–%3$d</string>
+    <string name="org_score_saved_hint">Saved. Tap undo if a point was wrong.</string>
+    <string name="org_score_manual_note">This score was typed in (%1$d–%2$d), so the battle buttons are off.</string>
+    <string name="org_score_back_to_battles">Score battle by battle instead</string>
+    <string name="org_score_this_match">This match</string>
+    <string name="org_score_battle_short">B%1$d</string>
+    <string name="org_score_history_point">%1$s · %2$s +%3$d</string>
+    <string name="org_score_draw">Draw</string>
+    <string name="org_score_final_title">Final score</string>
+    <string name="org_score_final_body">Type in the final score. It replaces the battles logged so far.</string>
+</resources>

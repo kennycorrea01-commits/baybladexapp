@@ -1,0 +1,482 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "00ff0dce45e539110a759d4b08ceeddd",
+    "entities": [
+      {
+        "tableName": "parts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `kind` TEXT NOT NULL, `name` TEXT NOT NULL, `code` TEXT NOT NULL, `type` TEXT, `leftSpin` INTEGER NOT NULL, `photoPath` TEXT, `copies` INTEGER NOT NULL, `weight` TEXT NOT NULL, `note` TEXT NOT NULL, `line` TEXT, `source` TEXT NOT NULL, `builtInRatchet` INTEGER NOT NULL DEFAULT 0, `builtInBit` INTEGER NOT NULL DEFAULT 0, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "leftSpin",
+            "columnName": "leftSpin",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "photoPath",
+            "columnName": "photoPath",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "copies",
+            "columnName": "copies",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weight",
+            "columnName": "weight",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "note",
+            "columnName": "note",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "line",
+            "columnName": "line",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "builtInRatchet",
+            "columnName": "builtInRatchet",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "builtInBit",
+            "columnName": "builtInBit",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "combos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `bladeId` INTEGER, `lockChipId` INTEGER, `mainBladeId` INTEGER, `metalBladeId` INTEGER, `overBladeId` INTEGER, `assistBladeId` INTEGER, `ratchetId` INTEGER, `bitId` INTEGER, `type` TEXT NOT NULL, `favorite` INTEGER NOT NULL, `notes` TEXT NOT NULL, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bladeId",
+            "columnName": "bladeId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "lockChipId",
+            "columnName": "lockChipId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "mainBladeId",
+            "columnName": "mainBladeId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "metalBladeId",
+            "columnName": "metalBladeId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "overBladeId",
+            "columnName": "overBladeId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "assistBladeId",
+            "columnName": "assistBladeId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "ratchetId",
+            "columnName": "ratchetId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bitId",
+            "columnName": "bitId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "favorite",
+            "columnName": "favorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "decks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `combo1Id` INTEGER, `combo2Id` INTEGER, `combo3Id` INTEGER, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "combo1Id",
+            "columnName": "combo1Id",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "combo2Id",
+            "columnName": "combo2Id",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "combo3Id",
+            "columnName": "combo3Id",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "tournaments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `date` INTEGER NOT NULL, `location` TEXT NOT NULL, `format` TEXT NOT NULL, `swissRounds` INTEGER NOT NULL, `topCut` INTEGER NOT NULL, `playerCount` INTEGER NOT NULL, `deckId` INTEGER, `placement` INTEGER, `notes` TEXT NOT NULL, `status` TEXT NOT NULL, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "location",
+            "columnName": "location",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "format",
+            "columnName": "format",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "swissRounds",
+            "columnName": "swissRounds",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "topCut",
+            "columnName": "topCut",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "playerCount",
+            "columnName": "playerCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deckId",
+            "columnName": "deckId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "placement",
+            "columnName": "placement",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "matches",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `opponent` TEXT NOT NULL, `tournamentId` INTEGER, `round` TEXT NOT NULL, `stage` TEXT, `deckId` INTEGER, `comboId` INTEGER, `pointsToWin` INTEGER NOT NULL, `finished` INTEGER NOT NULL, `startedAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "opponent",
+            "columnName": "opponent",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tournamentId",
+            "columnName": "tournamentId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "round",
+            "columnName": "round",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "stage",
+            "columnName": "stage",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "deckId",
+            "columnName": "deckId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "comboId",
+            "columnName": "comboId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "pointsToWin",
+            "columnName": "pointsToWin",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "finished",
+            "columnName": "finished",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAt",
+            "columnName": "startedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_matches_tournamentId",
+            "unique": false,
+            "columnNames": [
+              "tournamentId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_matches_tournamentId` ON `${TABLE_NAME}` (`tournamentId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "battle_points",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `matchId` INTEGER NOT NULL, `myComboId` INTEGER, `opponentCombo` TEXT NOT NULL, `opponentType` TEXT, `scorer` TEXT NOT NULL, `finish` TEXT, `points` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "matchId",
+            "columnName": "matchId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "myComboId",
+            "columnName": "myComboId",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "opponentCombo",
+            "columnName": "opponentCombo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "opponentType",
+            "columnName": "opponentType",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "scorer",
+            "columnName": "scorer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "finish",
+            "columnName": "finish",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "points",
+            "columnName": "points",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_battle_points_matchId",
+            "unique": false,
+            "columnNames": [
+              "matchId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_battle_points_matchId` ON `${TABLE_NAME}` (`matchId`)"
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '00ff0dce45e539110a759d4b08ceeddd')"
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Batallas, batalla rápida, marcador en vivo y torneos. Los términos del juego (Swiss, Top N, 3on3, R1/QF/SF/F,
+     Spin/Over/Burst/Xtreme, Attack/Defense/Stamina/Balance) llegan como argumentos y no se traducen. -->
+<resources>
+    <!-- Inicio de Batallas -->
+    <string name="battle_tab_overview">Resumen</string>
+    <string name="battle_tab_matches">Partidas</string>
+    <string name="battle_tab_tournaments">Torneos</string>
+    <string name="battle_header_season">%1$s esta temporada</string>
+    <string name="battle_header_all_time">%1$s en total</string>
+    <string name="battle_cd_stats">Estadísticas</string>
+    <string name="battle_quick">Batalla rápida</string>
+    <string name="battle_empty_title">Aún no hay partidas</string>
+    <string name="battle_empty_no_combos">Primero arma un combo y luego registra aquí tus partidas.</string>
+    <string name="battle_empty_body" formatted="false">Inicia una batalla rápida y toca quién anotó en cada batalla. El % de victorias se actualiza solo.</string>
+    <string name="battle_matches_empty_body">Aquí aparecen tus batallas rápidas y las rondas de torneo.</string>
+    <string name="battle_win_rate" formatted="false">% de victorias en batallas</string>
+    <string name="battle_how_you_score">Cómo sumas puntos</string>
+    <string name="battle_most_against">Más puntos en tu contra: por %1$s (%2$d%%)</string>
+    <string name="battle_best_combos">Mejores combos</string>
+    <string name="battle_all_stats">Ver estadísticas</string>
+    <string name="battle_recent_matches">Partidas recientes</string>
+    <string name="battle_see_all">Ver todas</string>
+    <string name="battle_quick_subtitle">Partida casual, fuera de torneos</string>
+    <string name="battle_deck_combo_count">%1$d de 3 combos</string>
+
+    <!-- Preparar batalla rápida -->
+    <string name="match_opponent">Rival</string>
+    <string name="match_label_hint">Etiqueta (opcional), p. ej. Juego 2</string>
+    <string name="match_points_to_win">Puntos para ganar</string>
+    <string name="match_points_unit">puntos</string>
+    <string name="match_mode_deck">Deck %1$s</string>
+    <string name="match_mode_single">Un solo combo</string>
+    <string name="match_no_decks">Aún no tienes decks. Crea uno en la pestaña Decks o juega con un solo combo.</string>
+    <string name="match_start">Iniciar partida</string>
+
+    <!-- Filas de partidas y marcador en vivo -->
+    <string name="match_title">Partida</string>
+    <string name="match_vs">vs %1$s</string>
+    <string name="match_x_vs_y">%1$s vs %2$s</string>
+    <plurals name="match_first_to">
+        <item quantity="one">a %1$d punto</item>
+        <item quantity="many">a %1$d puntos</item>
+        <item quantity="other">a %1$d puntos</item>
+    </plurals>
+    <string name="match_cd_undo">Deshacer última batalla</string>
+    <string name="match_cd_delete">Eliminar partida</string>
+    <string name="match_you">Tú</string>
+    <string name="match_battle_n">Batalla %1$d</string>
+    <string name="match_battle_short">B%1$d</string>
+    <string name="match_you_won">Ganaste %1$d–%2$d</string>
+    <string name="match_you_lost">Perdiste %1$d–%2$d</string>
+    <string name="match_saved_hint">Guardado. Toca deshacer si un punto quedó mal.</string>
+    <string name="match_your_combo">Tu combo en esta batalla</string>
+    <string name="match_playing">Juegas con %1$s</string>
+    <string name="match_their_combo">Combo del rival (opcional)</string>
+    <string name="match_their_type">Tipo del rival</string>
+    <string name="match_you_scored">Anotaste</string>
+    <string name="match_they_scored">Anotó el rival</string>
+    <string name="match_draw_button">Empate · sin puntos</string>
+    <string name="match_this_match">Esta partida</string>
+    <string name="match_point_you">%1$s · tú +%2$d</string>
+    <string name="match_point_them">%1$s · rival +%2$d</string>
+    <string name="match_draw">Empate</string>
+    <string name="match_delete_title">¿Eliminar esta partida?</string>
+    <string name="match_delete_body">Sus batallas se quitan del récord de tus combos.</string>
+
+    <!-- Torneos -->
+    <string name="tourn_new">Nuevo torneo</string>
+    <string name="tourn_edit">Editar torneo</string>
+    <string name="tourn_title">Torneo</string>
+    <string name="tourn_default_name">Torneo</string>
+    <string name="tourn_empty_title">Aún no hay torneos</string>
+    <string name="tourn_empty_body">Agrégalo antes del evento. Cada ronda que inicies se vuelve una partida con tu deck, llamada R1, R2… y luego QF, SF, F.</string>
+    <string name="tourn_live_badge">EN CURSO</string>
+    <string name="tourn_live_line">Ronda %1$d de %2$d · %3$s · vas %4$d–%5$d</string>
+    <string name="tourn_round_in_progress">Ronda en curso</string>
+    <string name="tourn_start_round_n">Iniciar ronda %1$d</string>
+    <string name="tourn_start_round">Iniciar %1$s</string>
+    <string name="tourn_start">Iniciar</string>
+    <string name="tourn_view">Ver</string>
+    <string name="tourn_placed">Quedaste %1$s</string>
+    <string name="tourn_no_deck_warning">Este torneo no tiene deck. Edítalo para elegir el deck que llevaste.</string>
+
+    <!-- Editar torneo -->
+    <string name="tourn_create">Crear torneo</string>
+    <string name="tourn_name">Nombre</string>
+    <string name="tourn_date">Fecha</string>
+    <string name="tourn_location">Lugar (opcional)</string>
+    <string name="tourn_format">Formato</string>
+    <string name="tourn_swiss_rounds">Rondas Swiss</string>
+    <string name="tourn_top_cut">Top cut</string>
+    <string name="tourn_top_cut_none">Ninguno</string>
+    <string name="tourn_top_n">Top %1$d</string>
+    <string name="tourn_players_optional">Número de jugadores (opcional)</string>
+    <string name="tourn_deck_bringing">Deck que vas a llevar</string>
+    <string name="tourn_no_decks">Aún no tienes decks. Puedes agregar uno después desde la pestaña Decks.</string>
+
+    <!-- Resultados del torneo -->
+    <string name="tourn_share_results">Compartir resultados</string>
+    <string name="tourn_cd_delete">Eliminar torneo</string>
+    <string name="tourn_stat_matches_wl">Partidas V–D</string>
+    <string name="tourn_stat_points">Puntos favor–contra</string>
+    <string name="tourn_finish">Terminar</string>
+    <plurals name="tourn_all_rounds_played">
+        <item quantity="one">Se jugó %1$d ronda. Toca Terminar para poner tu posición.</item>
+        <item quantity="many">Se jugaron las %1$d rondas. Toca Terminar para poner tu posición.</item>
+        <item quantity="other">Se jugaron las %1$d rondas. Toca Terminar para poner tu posición.</item>
+    </plurals>
+    <string name="tourn_change_placing">Cambiar posición</string>
+    <string name="tourn_rounds">Rondas</string>
+    <string name="tourn_no_rounds_title">Aún no hay rondas</string>
+    <string name="tourn_no_rounds_body">Inicia la ronda 1 cuando salgan los emparejamientos.</string>
+    <string name="tourn_deck_brought">Deck que llevaste</string>
+    <string name="tourn_no_deck_set">Sin deck.</string>
+    <string name="tourn_deck_no_combos">%1$s aún no tiene combos.</string>
+    <string name="tourn_pick_deck">Elegir deck</string>
+    <string name="tourn_change_deck">Cambiar deck</string>
+    <string name="tourn_combos_played">Combos jugados</string>
+    <string name="tourn_battles_won_per_combo">Batallas ganadas por combo</string>
+    <string name="tourn_notes">Notas</string>
+    <string name="tourn_notes_placeholder">Qué funcionó, qué cambiar y a quién vigilar</string>
+    <string name="tourn_save_note">Guardar nota</string>
+    <string name="tourn_delete_title">¿Eliminar %1$s?</string>
+    <plurals name="tourn_delete_body">
+        <item quantity="one">También se eliminan su %1$d ronda y sus batallas, así que dejan de contar en tus estadísticas.</item>
+        <item quantity="many">También se eliminan sus %1$d rondas y sus batallas, así que dejan de contar en tus estadísticas.</item>
+        <item quantity="other">También se eliminan sus %1$d rondas y sus batallas, así que dejan de contar en tus estadísticas.</item>
+    </plurals>
+
+    <!-- Texto para compartir -->
+    <string name="tourn_share_record">Récord %1$d–%2$d · puntos %3$d–%4$d · %5$s</string>
+    <string name="tourn_share_win">V</string>
+    <string name="tourn_share_loss">D</string>
+    <string name="tourn_share_round">%1$s %2$s vs %3$s %4$d–%5$d</string>
+    <string name="tourn_share_deck">Deck: %1$s</string>
+
+    <!-- Terminar torneo -->
+    <string name="tourn_finish_title">Terminar torneo</string>
+    <string name="tourn_finish_question">¿En qué lugar quedaste?</string>
+    <string name="tourn_placing">Posición</string>
+    <string name="tourn_players">Jugadores</string>
+    <string name="battle_cd_organize">Organizar un torneo</string>
+    <string name="tourn_organizing_badge">ORGANIZANDO</string>
+    <string name="tourn_open_event">Abrir evento</string>
+    <string name="tourn_managed_by_event">Tú organizas este evento. Las rondas, marcadores y posiciones se manejan desde la pantalla del evento.</string>
+</resources>

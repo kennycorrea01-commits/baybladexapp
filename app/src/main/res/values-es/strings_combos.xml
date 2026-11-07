@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Combos, armado de combos, decks y editor de deck. Los términos del juego (tipos de pieza, tipos, CX, 3on3)
+     llegan como argumentos y se quedan en inglés. -->
+<resources>
+    <!-- Lista de combos -->
+    <plurals name="combo_list_subtitle">
+        <item quantity="one">%1$d guardado · %2$s</item>
+        <item quantity="many">%1$d guardados · %2$s</item>
+        <item quantity="other">%1$d guardados · %2$s</item>
+    </plurals>
+    <string name="combo_sort_cd">Ordenar combos</string>
+    <string name="combo_sort_current_cd">Orden actual</string>
+    <string name="combo_sort_win_rate" formatted="false">Mejor % de victorias</string>
+    <string name="combo_sort_recent">Usados recientemente</string>
+    <string name="combo_sort_name">Nombre</string>
+    <string name="combo_new">Nuevo combo</string>
+    <string name="combo_filter_all">Todos</string>
+    <string name="combo_filter_favorites">Favoritos</string>
+    <string name="combo_empty_no_parts_title">Primero agrega piezas</string>
+    <string name="combo_empty_no_parts_body">Los combos se arman con las piezas de tu colección.</string>
+    <string name="combo_add_part">Agregar pieza</string>
+    <string name="combo_empty_title">Aún no hay combos</string>
+    <string name="combo_empty_body">Arma tu primer combo %1$s.</string>
+    <string name="combo_empty_filter_title">Nada por aquí</string>
+    <string name="combo_empty_filter_body">Ningún combo coincide con este filtro.</string>
+    <string name="combo_tested">Probado el %1$s</string>
+    <string name="combo_favorite_add_cd">Agregar a favoritos</string>
+    <string name="combo_favorite_remove_cd">Quitar de favoritos</string>
+    <string name="combo_not_battled">Aún sin batallas</string>
+
+    <!-- Armado de combos -->
+    <string name="combo_edit">Editar combo</string>
+    <string name="combo_favorite_cd">Favorito</string>
+    <string name="combo_delete_cd">Eliminar combo</string>
+    <string name="combo_save_name">Guardar %1$s</string>
+    <string name="combo_pick_every_part">Elige todas las piezas para guardar</string>
+    <string name="combo_basic">Básico</string>
+    <string name="combo_choose_part">Elige un %1$s</string>
+    <string name="combo_your_parts">Tus %1$s</string>
+    <string name="combo_add_new_part">Agregar un %1$s nuevo</string>
+    <string name="combo_owned_line">Tienes ×%1$d · %2$s</string>
+    <string name="combo_free">libre</string>
+    <plurals name="combo_in_other_combos">
+        <item quantity="one">en otro combo</item>
+        <item quantity="many">en otros %1$d combos</item>
+        <item quantity="other">en otros %1$d combos</item>
+    </plurals>
+    <string name="combo_selected_cd">Seleccionado</string>
+    <string name="combo_type">Tipo</string>
+    <string name="combo_notes">Notas</string>
+    <string name="combo_notes_placeholder">¿A qué le gana? ¿Contra qué pierde?</string>
+    <string name="combo_delete_title">¿Eliminar este combo?</string>
+    <string name="combo_delete_body">Se quitará de cualquier deck. Tus piezas se quedan en la colección.</string>
+
+    <!-- Lista de decks -->
+    <string name="deck_list_subtitle">%1$s · sin piezas repetidas</string>
+    <string name="deck_default_name">Deck %1$d</string>
+    <string name="deck_new">Nuevo deck</string>
+    <string name="deck_empty_title">Aún no hay decks</string>
+    <string name="deck_empty_body">Elige 3 combos para un torneo. La app te avisa si se repite una pieza.</string>
+    <plurals name="deck_conflicts">
+        <item quantity="one">%1$d conflicto</item>
+        <item quantity="many">%1$d conflictos</item>
+        <item quantity="other">%1$d conflictos</item>
+    </plurals>
+    <string name="deck_filled_of">%1$d de %2$d</string>
+    <string name="deck_ready">Listo</string>
+    <string name="deck_slot_empty">Vacío</string>
+
+    <!-- Editor de deck -->
+    <string name="deck_title">Deck</string>
+    <string name="deck_edit_subtitle">Deck %1$s</string>
+    <string name="deck_delete_cd">Eliminar deck</string>
+    <string name="deck_name">Nombre del deck</string>
+    <string name="deck_conflict_line">%1$s %2$s está en los combos %3$s</string>
+    <string name="deck_list_and">%1$s y %2$s</string>
+    <string name="deck_conflict_hint">Un deck %1$s no puede repetir piezas. Cambia una de ellas.</string>
+    <string name="deck_suggested_fix">Solución sugerida</string>
+    <string name="deck_no_fix">Aún no tienes una pieza que reemplace la repetida. Elige otro combo para ese espacio o agrega una pieza.</string>
+    <string name="deck_fix_title">Espacio %1$d: %2$s %3$s → %4$s</string>
+    <string name="deck_fix_you_have">Tienes %1$s ×%2$d, %3$s.</string>
+    <string name="deck_fix_none_free">todas en otros combos (está bien, el deck solo necesita una)</string>
+    <string name="deck_fix_free_one">libre</string>
+    <string name="deck_fix_free_both">ambas libres</string>
+    <string name="deck_fix_free_all">todas libres</string>
+    <string name="deck_fix_free_some">%1$d de %2$d libres</string>
+    <string name="deck_fix_new_combo">Se guarda como un combo nuevo.</string>
+    <string name="deck_fix_already_built_record">Ya armado · %1$s · %2$d%%</string>
+    <string name="deck_fix_already_built_unbattled">Ya armado, aún sin batallas.</string>
+    <string name="deck_fix_apply">Cambiar en el espacio %1$d</string>
+    <plurals name="deck_missing_parts">
+        <item quantity="one">No tienes ninguna copia de %1$s. Consíguela antes del evento o cámbiala.</item>
+        <item quantity="many">No tienes copias de %1$s. Consíguelas antes del evento o cámbialas.</item>
+        <item quantity="other">No tienes copias de %1$s. Consíguelas antes del evento o cámbialas.</item>
+    </plurals>
+    <string name="deck_mix">Mezcla del deck</string>
+    <string name="deck_mix_count">%1$d %2$s</string>
+    <string name="deck_choose_combo">Elige un combo</string>
+    <string name="deck_no_conflicts_cd">Sin conflictos</string>
+    <string name="deck_pick_combo">Elige el combo %1$d</string>
+    <string name="deck_no_combos">Primero arma algunos combos.</string>
+    <string name="deck_repeats">Repite %1$s</string>
+    <string name="deck_record_percent">%1$s · %2$d%%</string>
+    <string name="deck_in_slot_cd">En este espacio</string>
+    <string name="deck_delete_title">¿Eliminar %1$s?</string>
+    <string name="deck_delete_body">Tus combos y el historial de partidas se conservan.</string>
+    <string name="combo_slot_built_in">incluido en %1$s</string>
+</resources>

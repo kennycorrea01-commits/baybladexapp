@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Español latinoamericano (tuteo). Los términos del juego se quedan en inglés: Blade, Ratchet, Bit, Lock Chip,
+     Main Blade, Assist Blade, Attack/Defense/Stamina/Balance, Spin/Over/Burst/Xtreme, 3on3, Swiss. -->
+<resources>
+    <string name="app_name">BX Tracker</string>
+
+    <string name="tab_parts">Piezas</string>
+    <string name="tab_combos">Combos</string>
+    <string name="tab_decks">Decks</string>
+    <string name="tab_battles">Batallas</string>
+
+    <string name="back">Atrás</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Eliminar</string>
+    <string name="save">Guardar</string>
+    <string name="ok">Aceptar</string>
+    <string name="clear">Borrar</string>
+    <string name="done">Listo</string>
+    <string name="settings">Ajustes</string>
+    <string name="not_set">Sin definir</string>
+    <string name="choose_x">Elegir %1$s</string>
+    <string name="less_x">Menos %1$s</string>
+    <string name="more_x">Más %1$s</string>
+    <string name="no_photo">Sin foto</string>
+    <string name="photo_add">Agregar</string>
+    <string name="result_won">Ganado</string>
+    <string name="result_lost">Perdido</string>
+    <string name="result_in_progress">En curso</string>
+    <string name="default_opponent">Rival</string>
+    <string name="casual">Casual</string>
+    <string name="placing_of">%1$s de %2$d</string>
+    <string name="record_wl">%1$dV %2$dD</string>
+
+    <string name="status_planned">Planeado</string>
+    <string name="status_in_progress">En curso</string>
+    <string name="status_done">Terminado</string>
+
+    <string name="period_season">Esta temporada</string>
+    <string name="period_tournaments">Solo torneos</string>
+    <string name="period_all">Todo</string>
+
+    <string name="theme_system">Igual que el teléfono</string>
+    <string name="theme_system_desc">Sigue el tema oscuro de Android</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_light_desc">Se lee mejor al aire libre y en eventos</string>
+    <string name="theme_oled">Oscuro · negro puro</string>
+    <string name="theme_oled_desc">En pantallas OLED los píxeles negros se apagan, así ahorras batería</string>
+
+    <string name="photo_small">Pequeña</string>
+    <string name="photo_small_desc">Unos 720 px. Ocupa menos espacio.</string>
+    <string name="photo_standard">Estándar</string>
+    <string name="photo_standard_desc">Unos 1080 px. Más nitidez de cerca.</string>
+
+    <string name="language_system">Igual que el teléfono</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Español (Latinoamérica)</string>
+</resources>

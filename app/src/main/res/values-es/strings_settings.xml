@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estadísticas y Ajustes. Los nombres de finish (Spin, Over, Burst, Xtreme), de tipo y de archivos llegan como
+     argumentos y quedan en inglés. -->
+<resources>
+    <!-- Estadísticas -->
+    <string name="stats_title">Estadísticas</string>
+    <string name="stats_since">Desde el %1$s</string>
+    <string name="stats_no_season">Sin inicio de temporada, se muestra todo</string>
+    <string name="stats_sub_tournaments">Solo partidas de torneo</string>
+    <string name="stats_sub_all">Todo lo que registraste</string>
+    <string name="stats_empty_title">Aún no hay nada que mostrar</string>
+    <string name="stats_empty_body">Registra algunas partidas y aquí verás tus estadísticas.</string>
+    <string name="stats_battle_win_rate" formatted="false">% de victorias en batallas</string>
+    <string name="stats_matches_played">Partidas jugadas</string>
+    <string name="stats_best_finish">Mejor posición</string>
+    <string name="stats_best_finish_of">Mejor posición, de %1$d</string>
+    <string name="stats_how_you_score">Cómo sumas puntos</string>
+    <string name="stats_not_scored">Aún no has sumado puntos.</string>
+    <string name="stats_worst_finish">La mayoría de los puntos en tu contra son por %1$s Finish (%2$d%%)</string>
+    <string name="stats_best_combos">Mejores combos</string>
+    <string name="stats_by_win_rate" formatted="false">Por % de victorias en batallas</string>
+    <string name="stats_under_3">Menos de 3 batallas</string>
+    <string name="stats_no_combo_battles">Aún no hay batallas con un combo registrado.</string>
+    <string name="stats_no_combo_3">Ningún combo tiene 3 batallas aún. Activa el interruptor para verlos de todas formas.</string>
+    <string name="stats_record_rate">%1$s · %2$d%%</string>
+    <plurals name="stats_hidden_combos">
+        <item quantity="one">%1$d combo con menos de 3 batallas oculto</item>
+        <item quantity="many">%1$d combos con menos de 3 batallas ocultos</item>
+        <item quantity="other">%1$d combos con menos de 3 batallas ocultos</item>
+    </plurals>
+    <string name="stats_vs_type">Contra tipo de rival</string>
+    <string name="stats_vs_type_sub">Según el tipo que registras para su combo en cada batalla</string>
+    <string name="stats_rate_of">%1$d%% · %2$d/%3$d</string>
+    <string name="stats_no_battles">sin batallas</string>
+    <string name="stats_placings">Posiciones en torneos</string>
+    <plurals name="stats_last_events">
+        <item quantity="one">Último %1$d evento. Mientras más alta, mejor.</item>
+        <item quantity="many">Últimos %1$d eventos. Mientras más alta, mejor.</item>
+        <item quantity="other">Últimos %1$d eventos. Mientras más alta, mejor.</item>
+    </plurals>
+    <string name="stats_placing_desc">%1$s: %2$s</string>
+
+    <!-- Ajustes -->
+    <string name="settings_appearance">Apariencia</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_note">Los términos del juego como Blade, Ratchet y Bit quedan en inglés.</string>
+    <string name="settings_match_rules">Reglas de partida</string>
+    <string name="settings_points_to_win">Puntos para ganar</string>
+    <string name="settings_points_to_win_default">Valor inicial de las partidas nuevas</string>
+    <string name="settings_points_to_win_label">puntos para ganar</string>
+    <string name="settings_points_per_finish">Puntos por finish</string>
+    <string name="settings_points_per_finish_sub">Se usan en batallas nuevas. Las batallas ya registradas conservan sus puntos.</string>
+    <string name="settings_finish_points_label">puntos de %1$s</string>
+    <string name="settings_season">Temporada</string>
+    <string name="settings_season_start">Inicio de temporada</string>
+    <string name="settings_season_note">\"%1$s\" en Batallas y Estadísticas cuenta las partidas desde este día. Déjalo vacío para contar todo.</string>
+    <string name="settings_photos">Fotos</string>
+    <string name="settings_your_data">Tus datos</string>
+    <string name="settings_backup">Respaldar colección</string>
+    <string name="settings_backup_sub">Un .zip con tus datos y las fotos de las piezas</string>
+    <string name="settings_restore">Restaurar copia de seguridad</string>
+    <string name="settings_restore_sub">Reemplaza todo lo que hay en este teléfono</string>
+    <string name="settings_export_csv">Exportar como CSV</string>
+    <string name="settings_export_csv_sub">parts.csv, combos.csv y matches.csv en la carpeta que elijas</string>
+    <string name="settings_footer">Todo se guarda en este teléfono, incluidas las fotos de las piezas. No se sube nada. Las copias de seguridad quedan donde las guardes.\n\nFuente: Montserrat, con licencia SIL Open Font License 1.1.</string>
+    <string name="settings_restore_title">¿Reemplazar todo?</string>
+    <string name="settings_restore_body">Al restaurar se borran las piezas, combos, decks, torneos y partidas de este teléfono y se reemplazan por los de la copia de seguridad. Haz una copia antes si quizá los quieras recuperar.</string>
+    <string name="settings_restore_confirm">Restaurar</string>
+    <string name="settings_backed_up">Se respaldaron %1$d piezas, %2$d combos y %3$d partidas.</string>
+    <string name="settings_restored">Se restauraron %1$d piezas, %2$d combos y %3$d partidas.</string>
+    <string name="settings_csv_saved">Guardado: %1$s.</string>
+    <string name="settings_backup_failed">Falló la copia de seguridad: %1$s</string>
+    <string name="settings_restore_failed">Falló la restauración: %1$s</string>
+    <string name="settings_export_failed">Falló la exportación: %1$s</string>
+    <string name="settings_not_a_backup">Ese zip no es una copia de seguridad de BX Tracker.</string>
+</resources>

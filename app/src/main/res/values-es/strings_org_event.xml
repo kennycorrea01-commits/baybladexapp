@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modo organizador: el evento en curso (ronda, clasificación, llaves). Los términos del juego (Swiss, Top N, bye,
+     F/SF/QF/T16) no se traducen. -->
+<resources>
+    <!-- Pantalla, pestañas y barra superior -->
+    <string name="org_event_title">Evento</string>
+    <string name="org_event_tab_round">Ronda</string>
+    <string name="org_event_tab_standings">Clasificación</string>
+    <string name="org_event_tab_bracket">Llaves</string>
+    <string name="org_event_players">Jugadores</string>
+    <string name="org_event_share">Compartir resultados</string>
+    <string name="org_event_my_results">Mis resultados</string>
+    <string name="org_event_cd_more">Más opciones</string>
+    <string name="org_event_delete">Eliminar evento</string>
+    <string name="org_event_delete_title">¿Eliminar %1$s?</string>
+    <string name="org_event_delete_body">Se eliminan sus jugadores, emparejamientos y resultados. Tus partidas en este evento también dejan de contar en tus estadísticas.</string>
+
+    <!-- Subtítulo -->
+    <string name="org_event_sub_done">Terminado</string>
+    <string name="org_event_sub_setup">Agregando jugadores</string>
+    <string name="org_event_sub_swiss_cut">Ronda Swiss %1$d de %2$d · luego Top %3$d</string>
+    <string name="org_event_sub_swiss">Ronda Swiss %1$d de %2$d</string>
+    <string name="org_event_sub_rr">Ronda %1$d de %2$d</string>
+    <string name="org_event_sub_top">Top %1$d · %2$s</string>
+    <string name="org_event_sub_elim">Eliminación · %1$s</string>
+
+    <!-- Botón inferior: siguiente paso -->
+    <string name="org_event_add_players">Agregar jugadores</string>
+    <string name="org_event_pair_round">Emparejar ronda %1$d</string>
+    <string name="org_event_start_top">Iniciar Top %1$d</string>
+    <string name="org_event_start_bracket">Iniciar llaves</string>
+    <string name="org_event_pair_final">Emparejar la final</string>
+    <string name="org_event_pair_semis">Emparejar las semifinales</string>
+    <string name="org_event_pair_quarters">Emparejar los cuartos de final</string>
+    <string name="org_event_pair_t16">Emparejar los octavos de final</string>
+    <string name="org_event_pair_next">Emparejar la siguiente ronda</string>
+    <string name="org_event_finish">Terminar el evento</string>
+    <plurals name="org_event_wait_round">
+        <item quantity="one">Falta %1$d partida para emparejar la ronda %2$d</item>
+        <item quantity="many">Faltan %1$d partidas para emparejar la ronda %2$d</item>
+        <item quantity="other">Faltan %1$d partidas para emparejar la ronda %2$d</item>
+    </plurals>
+    <plurals name="org_event_wait_cut">
+        <item quantity="one">Falta %1$d partida para iniciar el Top %2$d</item>
+        <item quantity="many">Faltan %1$d partidas para iniciar el Top %2$d</item>
+        <item quantity="other">Faltan %1$d partidas para iniciar el Top %2$d</item>
+    </plurals>
+    <plurals name="org_event_wait_bracket">
+        <item quantity="one">Falta %1$d partida para emparejar la siguiente ronda</item>
+        <item quantity="many">Faltan %1$d partidas para emparejar la siguiente ronda</item>
+        <item quantity="other">Faltan %1$d partidas para emparejar la siguiente ronda</item>
+    </plurals>
+    <plurals name="org_event_wait_finish">
+        <item quantity="one">Falta %1$d partida para terminar el evento</item>
+        <item quantity="many">Faltan %1$d partidas para terminar el evento</item>
+        <item quantity="other">Faltan %1$d partidas para terminar el evento</item>
+    </plurals>
+
+    <!-- Nombres de ronda -->
+    <string name="org_event_round_n">Ronda %1$d</string>
+    <string name="org_event_swiss_round_n">Ronda Swiss %1$d</string>
+    <string name="org_event_round_final">Final</string>
+    <string name="org_event_round_semis">Semifinales</string>
+    <string name="org_event_round_quarters">Cuartos de final</string>
+    <string name="org_event_round_t16">Octavos de final</string>
+
+    <!-- Pestaña Ronda -->
+    <string name="org_event_progress">%1$d de %2$d terminadas</string>
+    <string name="org_event_swap_hint">Toca una partida sin empezar para cambiar jugadores.</string>
+    <string name="org_event_no_round_title">Aún no hay emparejamientos</string>
+    <string name="org_event_no_round_body">Agrega jugadores y luego empareja la ronda 1 desde Jugadores.</string>
+    <string name="org_event_table_n">Mesa %1$d</string>
+    <string name="org_event_third_place">Tercer lugar</string>
+    <string name="org_event_cd_match_menu">Opciones de la mesa %1$d</string>
+    <string name="org_event_swap_players">Cambiar jugadores</string>
+    <string name="org_event_enter_final">Escribir marcador final</string>
+    <string name="org_event_clear_typed">Borrar marcador escrito</string>
+    <string name="org_event_open_scoring">Abrir marcador</string>
+    <string name="org_event_typed_score">Marcador escrito a mano</string>
+    <string name="org_event_score_match">Anotar esta partida</string>
+    <string name="org_event_resume_scoring">Seguir anotando</string>
+    <string name="org_event_score_final">Anotar la final</string>
+    <string name="org_event_resume_final">Seguir con la final</string>
+    <string name="org_event_bye_line">Bye</string>
+    <string name="org_event_tbd">Por definir</string>
+    <string name="org_event_you">tú</string>
+    <string name="org_event_dropped">retirado</string>
+    <string name="org_event_status_bye">Bye</string>
+    <string name="org_event_status_done">Terminada</string>
+    <string name="org_event_status_live">En vivo</string>
+    <string name="org_event_live_battle">En vivo · batalla %1$d</string>
+    <string name="org_event_status_not_started">Sin empezar</string>
+    <string name="org_event_cd_seed">Cabeza de serie %1$d</string>
+
+    <!-- Cambiar jugadores -->
+    <string name="org_event_swap_title">Cambiar jugadores · mesa %1$d</string>
+    <string name="org_event_swap_pick_player">¿A quién quieres mover?</string>
+    <string name="org_event_swap_pick_other">Cambiar a %1$s con:</string>
+    <string name="org_event_swap_none">Ninguna otra partida de esta ronda sigue sin empezar.</string>
+    <string name="org_event_swap_candidate">Mesa %1$d · vs %2$s</string>
+
+    <!-- Posiciones finales y compartir -->
+    <string name="org_event_final_placings">Posiciones finales</string>
+    <string name="org_event_share_champion">Campeón: %1$s</string>
+    <string name="org_event_share_mine">Mi posición: %1$s</string>
+    <plurals name="org_event_players_count">
+        <item quantity="one">%1$d jugador</item>
+        <item quantity="many">%1$d jugadores</item>
+        <item quantity="other">%1$d jugadores</item>
+    </plurals>
+    <plurals name="org_event_format_swiss_cut">
+        <item quantity="one">%1$d ronda Swiss + Top %2$d</item>
+        <item quantity="many">%1$d rondas Swiss + Top %2$d</item>
+        <item quantity="other">%1$d rondas Swiss + Top %2$d</item>
+    </plurals>
+    <plurals name="org_event_format_swiss">
+        <item quantity="one">%1$d ronda Swiss</item>
+        <item quantity="many">%1$d rondas Swiss</item>
+        <item quantity="other">%1$d rondas Swiss</item>
+    </plurals>
+    <string name="org_event_format_elim">Eliminación directa</string>
+    <string name="org_event_format_rr">Todos contra todos</string>
+
+    <!-- Pestaña Clasificación -->
+    <string name="org_event_elim_standings_note">En eliminación directa no hay clasificación. Los jugadores aparecen por posición final, o por siembra mientras se juega.</string>
+    <string name="org_event_no_players_title">Aún no hay jugadores</string>
+    <string name="org_event_no_players_body">Agrega jugadores para ver la clasificación.</string>
+    <string name="org_event_col_rank">#</string>
+    <string name="org_event_col_player">Jugador</string>
+    <string name="org_event_col_wl">V–D</string>
+    <string name="org_event_col_diff">Pts ±</string>
+    <string name="org_event_col_opp" formatted="false">% riv.</string>
+    <string name="org_event_drop">Retirar</string>
+    <string name="org_event_undo_drop">Deshacer retiro</string>
+    <string name="org_event_cd_player_menu">Opciones de %1$s</string>
+    <string name="org_event_cut_line">Corte del Top %1$d</string>
+    <string name="org_event_tb_title">Desempates</string>
+    <string name="org_event_tb_line">%1$d. %2$s</string>
+    <string name="org_event_tb_1">Victorias en partidas</string>
+    <string name="org_event_tb_2">Diferencia de puntos (a favor menos en contra)</string>
+    <string name="org_event_tb_3" formatted="false">% de victorias de rivales (cada uno con mínimo 33%, sin contar byes)</string>
+    <string name="org_event_tb_4">Enfrentamiento directo</string>
+    <string name="org_event_tb_5">Puntos a favor</string>
+    <string name="org_event_tb_bye">Un bye cuenta como victoria %1$d–0.</string>
+    <string name="org_event_cut_title">Quién quedó fuera del corte</string>
+    <string name="org_event_cut_everyone">Todos los que siguen en el evento pasan el corte.</string>
+    <string name="org_event_cut_missed_wins">%1$s quedó fuera con %4$d victorias; %2$s (#%3$d) tiene %5$d.</string>
+    <string name="org_event_cut_missed_diff">%1$s tiene las mismas victorias que %2$s (#%3$d), pero menor diferencia de puntos (%4$s vs %5$s).</string>
+    <string name="org_event_cut_missed_opp">%1$s empata con %2$s (#%3$d) en victorias y diferencia de puntos, pero tiene menor %% de victorias de rivales (%4$d%% vs %5$d%%).</string>
+    <string name="org_event_cut_missed_h2h">%1$s empata con %2$s (#%3$d) en victorias, diferencia de puntos y %% de victorias de rivales, pero perdió el enfrentamiento directo.</string>
+    <string name="org_event_cut_missed_points">%1$s empata con %2$s (#%3$d) en todos los desempates hasta los puntos a favor (%4$d vs %5$d).</string>
+    <string name="org_event_cut_missed_order">%1$s empata con %2$s (#%3$d) en todos los desempates; decidió el orden de registro.</string>
+
+    <!-- Pestaña Llaves -->
+    <string name="org_event_bracket_empty_title">Aún no hay llaves</string>
+    <string name="org_event_bracket_empty_body">Las llaves se siembran con la clasificación después de la última ronda Swiss.</string>
+    <string name="org_event_bracket_empty_elim">Las llaves se arman al iniciar el evento.</string>
+    <string name="org_event_seed_title">Cómo se siembra</string>
+    <string name="org_event_seed_standings">Sembrado según la clasificación Swiss, el mejor contra el peor: %1$s. El ganador avanza solo.</string>
+    <string name="org_event_seed_pair">%1$d vs %2$d</string>
+    <string name="org_event_seed_random">Sembrado al azar. Si las llaves no se llenan, los primeros cabezas de serie reciben bye. El ganador avanza solo.</string>
+    <string name="org_event_seed_registration">Sembrado por orden de registro. Si las llaves no se llenan, los primeros cabezas de serie reciben bye. El ganador avanza solo.</string>
+    <string name="org_event_seed_third">Los perdedores de semifinales juegan por el tercer lugar.</string>
+    <string name="org_event_champion">Campeón</string>
+    <string name="org_event_champion_beat">Venció a %1$s %2$d–%3$d en la final</string>
+
+    <!-- Diálogo de marcador final -->
+    <string name="org_event_final_title">Marcador final</string>
+    <plurals name="org_event_first_to">
+        <item quantity="one">Gana quien llegue primero a %1$d punto.</item>
+        <item quantity="many">Gana quien llegue primero a %1$d puntos.</item>
+        <item quantity="other">Gana quien llegue primero a %1$d puntos.</item>
+    </plurals>
+    <string name="org_event_final_wins">Gana %1$s %2$d–%3$d</string>
+    <plurals name="org_event_final_hint">
+        <item quantity="one">Un jugador necesita %1$d punto y más que el otro.</item>
+        <item quantity="many">Un jugador necesita %1$d puntos y más que el otro.</item>
+        <item quantity="other">Un jugador necesita %1$d puntos y más que el otro.</item>
+    </plurals>
+</resources>
