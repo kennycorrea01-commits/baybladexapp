@@ -5,11 +5,11 @@
 Everything under "To build" is done, including the seed catalog (built from public web sources, see below).
 
 - **Languages (added after v0.2.0):** English and Latin American Spanish (`values/` and `values-es/`, one `strings_*.xml` per screen group). Settings › Language switches it (AppCompat per-app locales, so MainActivity is an AppCompatActivity with an AppCompat theme); Android 13+ also lists it in the system's app-language settings. Game terms stay in English in both: part kinds, types, finishes, 3on3, Swiss, R1/QF/SF/F. Dates and ordinals follow the UI language ("3rd of 24" / "3.º de 24"). CSV headers stay English. **New text must go into both string files.**
-- **Catalog:** `assets/catalog.json` has 95 blades, 40 ratchets, 53 bits, 28 lock chips, 16 main blades, 7 metal blades, 7 over blades and 19 assist blades, from the Beyblade Fandom wiki and Takara Tomy's official lineup pages (URLs in its `_sources` key). Takara Tomy names only; Hasbro-only names were left out. A unit test parses the real file, so a broken hand edit fails the tests.
+- **Catalog:** `assets/catalog.json` has 95 blades, 40 ratchets, 53 bits, 28 lock chips, 16 main blades, 7 metal blades, 7 over blades and 19 assist blades, from the Beyblade Fandom wiki and Takara Tomy's official lineup pages (URLs in its `_sources` key). Takara Tomy names are what gets saved; a `hasbro` field on parts and builds lets search accept Hasbro's names too. It also holds the `PRODUCTS` list (see Dave's section below). A unit test parses the real file, so a broken hand edit fails the tests.
 - **Combo shapes:** three shapes, picked at the top of the combo builder: Basic (Blade + Ratchet + Bit), CX (Lock Chip + Main Blade + Assist Blade + Ratchet + Bit) and CX Metal (Lock Chip + Metal Blade + Over Blade + Assist Blade + Ratchet + Bit, named like "Bahamut Blitz BK1-50I"). Blades can be flagged "built-in ratchet" (Bullet Griffon H) and ratchets "includes the bit" (Turbo, Operate: "Pegasus Blast ATr"); the builder then skips that slot. Turbo-style ratchets keep their own code ("Tr"). The rules live in `Logic.kt` (`ComboShape.slots`, `neededSlots`, `comboName`). The catalog includes Metal and Over Blades and the flags.
 
 - **Build:** moved to AGP 8.11.1, Gradle 8.14.3, Kotlin 2.2.0, KSP 2.2.0-2.0.2, Room 2.7.2, Compose BOM 2025.06.00, compileSdk/targetSdk 36 (only SDK 36/37 are installed here). Gradle 8.14 needs JDK 17–24, so use `~/.jdks/jbr-21`, not Android Studio's bundled JDK 25. The original code compiled with no source changes.
-- **Tests:** `gradlew testDebugUnitTest` runs 22 JVM tests: `LogicTest` (combo naming for all shapes, round labels, conflicts, swap suggestions, placings, records, the bundled catalog) and `TournamentEngineTest` (organizer rules).
+- **Tests:** `gradlew testDebugUnitTest` runs the JVM tests: `LogicTest` (combo naming for all shapes, round labels, conflicts, swap suggestions, placings, records, the bundled catalog), `TournamentEngineTest` (organizer rules) and `ProductsTest` (product search and matching, suggestion ranking, manual rows, the bundled products list).
 - **Checked on the API 37 emulator** with a restored test backup: restore, Battles overview, start round, live scoring with opponent type, finish with placing, share, Stats, deck suggested fix + swap, CX grid, in-app camera with crop, add-part suggestions, light theme.
 - **Schema:** version 3. v1 → v2 (combo shapes, part flags) and v2 → v3 (organizer mode) are Room auto-migrations; both were checked on the emulator by installing over existing data. All schemas are in `app/schemas/`. **Every future change needs a version bump and a migration.**
 - **Fixed along the way:** on form screens the keyboard covered the bottom Save buttons (IME padding now goes on the Scaffold).
@@ -21,6 +21,55 @@ Screens 15 to 19 are built and were run end to end on the emulator (5 players, 2
 - **Rules:** all in `data/TournamentEngine.kt` (pure Kotlin) with 11 tests in `TournamentEngineTest`: suggested rounds, random round 1, pairing by record with pair-down and no rematches (backtracking), byes, round robin (circle method), bracket seeding (1v4/2v3, 1v8/4v5/2v7/3v6), advancement, tiebreakers (wins, point diff, opponents' win % floored at 33% without byes, head-to-head, points scored) and final placings.
 - **Check-in:** if anyone is checked in when round 1 is paired, players who aren't get dropped (they can be un-dropped). If nobody is checked in, everyone plays.
 - **Also run on the emulator:** an Elimination event (5 players: seeds 1–3 get byes, an upset, semifinal losers placed by seed) and Round robin events with 4 players (one dropped at check-in) and 5 players (every pair meets once, one bye each). Bye points are set on the format screen (Swiss and round robin): they follow "First to" until changed, and the standings note shows the value.
+
+### NEW, 2026-11-12: tester feedback from Dave (built 2026-11-12)
+Dave has been testing the app. Three items, in this order.
+
+**What was built (no schema change, the database stays at version 3):**
+- **Bug 1:** there was no multi-row form before, so it couldn't be reproduced as described. The new Manual tab (20) holds its rows in an immutable `ManualRows` model (`data/Products.kt`); every row has a stable id used as the LazyColumn key, and every edit (kind, name, code, type, copies) goes through `update(id)`. `ProductsTest.manualRowsKeepTheirOwnFields` covers it, and it was checked on the emulator with 3 rows.
+- **Products:** `assets/catalog.json` has a `PRODUCTS` array (152 products: BX, UX and CX, 259 stock builds, release dates, every random booster and set build), from the Beyblade Fandom wiki, with CC BY-SA attribution in `_attribution`. Parts and builds carry a `hasbro` alias where Hasbro's name differs, so Dave's "Cursed Mummy" (Hasbro: Curse Mummy) finds Takara Tomy's Mummy Curse. Shatter Horus 9-65GB is a Hasbro-only release; its link finds the Takara Tomy Horus Shatter products by blade name. Pasted wiki links work.
+- **BX-00 / UX-00 / CX-00** are limited, event and collab releases (43 of them share "BX-00"). `Products.order` puts regular releases first, then oldest, so Dran Sword "comes in BX-01". Screens pass `Product.label` (code + name) between each other, not the code, because codes aren't unique.
+- **Screens:** Add parts tabs (20, 21), product lookup (22, from the search icon on Parts and from Part detail's "Came with" line), Suggest sheet (23, light bulb in the combo builder). Adding by product: owned parts get +1 copy, new parts get no photo and `source = "BX-xx Product name"`, and the camera doesn't open. The Camera tab and the camera screen have "Upload image" next to taking a photo.
+- **Logic:** `data/Products.kt` (search, ownership, came with) and `data/Suggestions.kt` (can build, best with, missing one), with tests in `ProductsTest`. Suggestions only use stock builds and my battle records.
+
+**Layout from the design (screens 20 to 23):**
+- **Add parts** has three tabs: Camera, By product and Manual.
+- **20 · Manual:** stacked cards, one per part. Each card has kind chips, a name field and a copies stepper, plus "+ Another part" and an "Add N parts" button.
+- **21 · By product:** a search field (name, stock combo or product code). The results are cards showing the product code, name and stock combo. The selected one expands to list its parts, each with an "Own ×N" or "New" badge, plus an "Also save the stock combo" checkbox. Button: "Add 3 parts from X", with the note "Parts you own get +1 copy. Photos can be added later." Below the results: "Not in the list? Add it manually".
+- **22 · Product lookup:** a "Lookup only" screen with the product code, name, stock combo and type. A "Came with" list shows each part with an Own, Missing or Add-photo placeholder, and "You own 2 of 3". Buttons: "Save combo" and "Add missing part". Part detail gets a line like "Came with: Dran Sword (BX-01), 2 more".
+- **23 · Suggest:** a bottom sheet over the combo builder with three sections: "You can build these" (busy parts marked, not hidden), "Best with <blade>" and, at the bottom, "Missing one part" with "Need: X · comes in BX-xx" and a "See product" button. Footer: "Parts already in a deck are still suggested and marked. Only stock builds and your own battle records, no tier lists."
+
+**1. Bug: the Name field is shared across items when adding manually**
+- When you add parts by hand, typing in one Name field fills the same text into every Name field.
+- Cause (Kenny's read): the field state lives at the list level instead of per item, from when the form was built for items and not for submitting a combo.
+- Fix:
+  - Give each row its own state, keyed by a stable item id (`key = item.id` in the LazyColumn, and `rememberSaveable(item.id)` or state held in the item model).
+  - Check the code, type and copies fields for the same bug.
+- Add a test or a manual check: add 3 parts, type different names, and each one must keep its own.
+
+**2. Add a Beyblade by product, with its stock parts (no photo needed)**
+Dave didn't keep the boxes and doesn't want to photograph every part. He wants to search a product, like "Cursed Mummy" or a wiki page such as https://beyblade.fandom.com/wiki/Shatter_Horus_9-65GB, and have the app add all the parts it came with.
+- **Product catalog:** extend `assets/catalog.json` with a `PRODUCTS` array, built from the same Beyblade Fandom wiki you already used.
+  - Each entry has: product code (e.g. BX-01, UX-…, CX-…), product name, stock combo name, shape (Basic, CX or CX Metal), and the list of stock parts (kind + name + code) pointing at the existing part entries.
+  - Also: release date, and the list of products for multi-packs and random boosters (pick one when adding).
+  - Keep the `_sources` URLs and CC BY-SA attribution. Don't bundle wiki images.
+- **"Add by product"** in Add part (a tab or a button next to the camera):
+  - Search by product name, stock combo name or product code.
+  - The result shows the stock combo and its parts. "Add all parts" adds each part with copies += 1, reusing the merge-by-name logic, with the photo left empty. Optionally it also creates the stock combo.
+- **Photo becomes optional.** Parts added this way show the "Add" photo placeholder, and the No photo filter still finds them. Don't auto-open the camera on this path.
+- **Lookup only ("manual query"):** a product search you can use without adding anything, to answer "what parts did Cursed Mummy come with?". Put it on Part detail ("Came with: …") too, by matching the part's name against stock builds.
+- Remember the product on each part (`Part.source = "BX-xx Product name"`, the field already exists).
+- If a product isn't in the bundled catalog, show "Not in the catalog" with an option to add it manually. No live network lookups for now. The app stays offline. A "refresh catalog" from the wiki can come later.
+
+**3. Combo suggestions from my whole collection (plus parts worth getting)**
+Dave asked whether the builder suggests combos from the parts you have. Add a "Suggest" action in the combo builder (screen 23). It uses the whole collection, not just free parts.
+- **You can build these:** stock builds and my best win-rate combos where I own every part. Parts already in a deck are still suggested and marked with a note like "9-60 is in Tournament deck" (in the warning color). They are not hidden.
+- **Best with <picked blade>:** once a Blade (or Lock Chip + Main Blade) is picked, rank the Ratchets and Bits I own by my own battle records with that blade. If there are no records, fall back to the stock pairing.
+- **Missing one part (bottom section, "worth getting"):** stock builds where I own everything except one part. Show "Need: <part> · comes in <product code>" and a "See product" button that opens the product lookup (22). Sort by how many of the other parts I own and by my records with them.
+- Explain each suggestion in one line.
+- Don't invent meta or tier lists. Only use stock builds from the catalog and my own records.
+
+New text goes into both string files (English and Spanish), and any schema change needs a version bump and a migration.
 
 ### Still open
 1. **Not tried on a real phone yet**, so real camera resolution, flash and haptics are unverified.

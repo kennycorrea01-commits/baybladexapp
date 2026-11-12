@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pestañas de Agregar piezas (Por producto, Manual), consulta de productos y "Venía con" en Detalle de pieza.
+     Los códigos y nombres de producto, los nombres de combo, los tipos de pieza y los tipos de Beyblade vienen
+     del catálogo y se quedan en inglés; no están aquí. -->
+<resources>
+    <!-- Agregar piezas: pestañas -->
+    <string name="prod_add_parts_title">Agregar piezas</string>
+    <string name="prod_tab_product">Por producto</string>
+    <string name="prod_tab_manual">Manual</string>
+
+    <!-- Agregar piezas › Manual (pantalla 20) -->
+    <string name="prod_manual_intro">Una tarjeta por pieza. No hace falta foto, puedes agregarla después.</string>
+    <string name="prod_manual_part_n">Pieza %1$d</string>
+    <string name="prod_manual_remove">Quitar pieza %1$d</string>
+    <string name="prod_manual_another">Otra pieza</string>
+    <plurals name="prod_add_n_parts">
+        <item quantity="one">Agregar %1$d pieza</item>
+        <item quantity="many">Agregar %1$d piezas</item>
+        <item quantity="other">Agregar %1$d piezas</item>
+    </plurals>
+    <plurals name="prod_added_parts">
+        <item quantity="one">Se agregó %1$d pieza</item>
+        <item quantity="many">Se agregaron %1$d piezas</item>
+        <item quantity="other">Se agregaron %1$d piezas</item>
+    </plurals>
+
+    <!-- Búsqueda de productos (pantallas 21 y 22) -->
+    <string name="prod_search_placeholder">Nombre, combo de fábrica o código</string>
+    <string name="prod_search_hint">Busca por nombre del producto, combo de fábrica o código, como Dran Sword o BX-01. También puedes pegar un enlace de la wiki.</string>
+    <string name="prod_clear_search">Borrar búsqueda</string>
+    <plurals name="prod_n_beys_pick_one">
+        <item quantity="one">%1$d Bey</item>
+        <item quantity="many">%1$d Beys — elige uno</item>
+        <item quantity="other">%1$d Beys — elige uno</item>
+    </plurals>
+    <string name="prod_pick_bey">¿Cuál Bey?</string>
+    <string name="prod_show_parts">Ver sus piezas</string>
+    <string name="prod_not_in_catalog">No está en el catálogo</string>
+    <string name="prod_no_match_body">Nada coincide con “%1$s”. La app funciona sin conexión, así que solo conoce los productos que trae.</string>
+    <string name="prod_catalog_empty_body">Esta versión aún no incluye la lista de productos.</string>
+    <string name="prod_unknown_code_body">%1$s no está en la lista de productos que trae la app.</string>
+    <string name="prod_not_in_list">¿No está en la lista? Agrégala a mano</string>
+    <string name="prod_add_manually">Agregarla a mano</string>
+
+    <!-- Insignias de posesión -->
+    <string name="prod_own_n">Tienes ×%1$d</string>
+    <string name="prod_new">Nueva</string>
+    <string name="prod_missing">Falta</string>
+
+    <!-- Agregar piezas › Por producto (pantalla 21) -->
+    <string name="prod_save_stock_combo">Guardar también el combo de fábrica</string>
+    <string name="prod_add_note">Las piezas que ya tienes suman +1 copia. Las fotos se pueden agregar después.</string>
+    <!-- %1$d = cantidad de piezas, %2$s = código del producto, como BX-01 -->
+    <plurals name="prod_add_from">
+        <item quantity="one">Agregar %1$d pieza de %2$s</item>
+        <item quantity="many">Agregar %1$d piezas de %2$s</item>
+        <item quantity="other">Agregar %1$d piezas de %2$s</item>
+    </plurals>
+    <plurals name="prod_added_from">
+        <item quantity="one">Se agregó %1$d pieza de %2$s</item>
+        <item quantity="many">Se agregaron %1$d piezas de %2$s</item>
+        <item quantity="other">Se agregaron %1$d piezas de %2$s</item>
+    </plurals>
+
+    <!-- Consulta de producto (pantalla 22) -->
+    <string name="prod_lookup_title">Buscar un producto</string>
+    <string name="prod_lookup_subtitle">Solo consulta, no se agrega nada</string>
+    <string name="prod_lookup_only">Solo consulta</string>
+    <string name="prod_open_product">Abrir producto</string>
+    <string name="prod_open_part">Abrir pieza</string>
+    <string name="prod_stock_combo_x">Combo de fábrica: %1$s</string>
+    <string name="prod_released_x">Salió el %1$s</string>
+    <string name="prod_came_with_label">Venía con</string>
+    <string name="prod_you_own_x_of_y">Tienes %1$d de %2$d</string>
+    <string name="prod_save_combo">Guardar combo</string>
+    <string name="prod_combo_already_saved">Combo guardado</string>
+    <string name="prod_combo_saved_toast">Se guardó %1$s</string>
+    <plurals name="prod_add_missing">
+        <item quantity="one">Agregar la que falta</item>
+        <item quantity="many">Agregar %1$d faltantes</item>
+        <item quantity="other">Agregar %1$d faltantes</item>
+    </plurals>
+    <string name="prod_nothing_missing">Las tienes todas</string>
+
+    <!-- Detalle de pieza: "Venía con: Dran Sword 3-60F (BX-01) y 2 más" -->
+    <string name="prod_came_with">Venía con: %1$s (%2$s)</string>
+    <plurals name="prod_came_with_more">
+        <item quantity="one">Venía con: %1$s (%2$s) y %3$d más</item>
+        <item quantity="many">Venía con: %1$s (%2$s) y %3$d más</item>
+        <item quantity="other">Venía con: %1$s (%2$s) y %3$d más</item>
+    </plurals>
+</resources>

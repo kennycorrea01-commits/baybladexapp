@@ -97,6 +97,29 @@ import com.bxtracker.app.ui.components.RecordBar
 import com.bxtracker.app.ui.components.TypeTag
 import com.bxtracker.app.ui.theme.warnColor
 import com.bxtracker.app.ui.theme.winColor
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material.icons.outlined.Lightbulb
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.runtime.produceState
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.style.TextOverflow
+import com.bxtracker.app.data.BattlePoint
+import com.bxtracker.app.data.BuildSuggestion
+import com.bxtracker.app.data.BusyPart
+import com.bxtracker.app.data.Deck
+import com.bxtracker.app.data.MissingOneSuggestion
+import com.bxtracker.app.data.PairingSuggestion
+import com.bxtracker.app.data.Product
+import com.bxtracker.app.data.StockBuild
+import com.bxtracker.app.data.Suggestions
+import com.bxtracker.app.ui.components.SectionLabel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @Composable
 fun CombosScreen(vm: AppViewModel, onNew: () -> Unit, onCombo: (Long) -> Unit, onAddPart: () -> Unit) {
@@ -275,9 +298,15 @@ fun ComboBuilderScreen(
     startPartId: Long?,
     onDone: () -> Unit,
     onAddPart: (PartKind) -> Unit,
+    onSeeProduct: (code: String, combo: String) -> Unit = { _, _ -> },
 ) {
     val parts by vm.parts.collectAsStateWithLifecycle()
     val combos by vm.combos.collectAsStateWithLifecycle()
+    val decks by vm.decks.collectAsStateWithLifecycle()
+    val points by vm.points.collectAsStateWithLifecycle()
+    // The catalog is parsed once, off the main thread. Null while loading; it may be empty.
+    val products by produceState<List<Product>?>(null) { value = withContext(Dispatchers.Default) { vm.products } }
+    var showSuggest by remember { mutableStateOf(false) }
     val partMap = remember(parts) { parts.associateBy { it.id } }
     val existing = comboId?.let { id -> combos.firstOrNull { it.id == id } }
 
@@ -306,7 +335,7 @@ fun ComboBuilderScreen(
     val slots = neededSlots(shape, draft(), partMap)
     fun firstEmpty(): PartKind? = neededSlots(shape, draft(), partMap).firstOrNull { slotValue(it) == null }
 
-    fun pick(k: PartKind, id: Long?) {
+    fun setSlot(k: PartKind, id: Long?) {
         when (k) {
             PartKind.BLADE -> blade = id
             PartKind.LOCK_CHIP -> lock = id
@@ -317,11 +346,24 @@ fun ComboBuilderScreen(
             PartKind.RATCHET -> ratchet = id
             PartKind.BIT -> bit = id
         }
+    }
+
+    fun pick(k: PartKind, id: Long?) {
+        setSlot(k, id)
         val part = id?.let { partMap[it] }
         // A built-in ratchet or bit means that slot is filled by this part.
         if (part?.builtInRatchet == true && k == PartKind.BLADE) ratchet = null
         if (part?.builtInBit == true && k == PartKind.RATCHET) bit = null
         if (part != null && type == null && k in listOf(PartKind.BLADE, PartKind.MAIN_BLADE, PartKind.METAL_BLADE)) type = part.type
+        active = firstEmpty()
+    }
+
+    // Suggest sheet: replaces every slot with the suggestion's parts (by kind), its shape and its type.
+    fun fill(s: BuildSuggestion) {
+        shape = s.shape
+        PartKind.entries.forEach { setSlot(it, null) }
+        s.parts.forEach { setSlot(it.kind, it.id) }
+        type = s.type ?: s.parts.firstOrNull { it.kind in HEAD_KINDS }?.type ?: type
         active = firstEmpty()
     }
 
@@ -358,6 +400,9 @@ fun ComboBuilderScreen(
         contentWindowInsets = NoInsets,
         topBar = {
             BxTopBar(stringResource(if (existing == null) R.string.combo_new else R.string.combo_edit), onBack = onDone, actions = {
+                IconButton(onClick = { showSuggest = true }) {
+                    Icon(Icons.Outlined.Lightbulb, contentDescription = stringResource(R.string.suggest_action_cd))
+                }
                 IconButton(onClick = { favorite = !favorite }) {
                     Icon(
                         if (favorite) Icons.Default.Star else Icons.Default.StarBorder,
@@ -525,5 +570,289 @@ fun ComboBuilderScreen(
             },
             dismissButton = { TextButton(onClick = { confirmDelete = false }) { Text(stringResource(R.string.cancel)) } },
         )
+    }
+
+    if (showSuggest) {
+        val headKind = headKindFor(shape)
+        SuggestSheet(
+            products = products,
+            parts = parts,
+            combos = combos,
+            decks = decks,
+            points = points,
+            head = slotValue(headKind)?.let { partMap[it] },
+            headKind = headKind,
+            offerRatchets = PartKind.RATCHET in slots,
+            offerBits = PartKind.BIT in slots,
+            pickedRatchet = ratchet,
+            pickedBit = bit,
+            onDismiss = { showSuggest = false },
+            onFill = { fill(it) },
+            onPick = { k, id -> pick(k, id) },
+            onSeeProduct = { p, b -> onSeeProduct(p.label, b.combo) },
+        )
+    }
+}
+
+/** The parts a combo is named after and paired with: the Blade (Basic), the Main Blade (CX) or the Metal Blade (CX Metal). */
+private val HEAD_KINDS = listOf(PartKind.BLADE, PartKind.MAIN_BLADE, PartKind.METAL_BLADE)
+
+private fun headKindFor(shape: ComboShape): PartKind = when (shape) {
+    ComboShape.BASIC -> PartKind.BLADE
+    ComboShape.CX -> PartKind.MAIN_BLADE
+    ComboShape.CX_METAL -> PartKind.METAL_BLADE
+}
+
+/**
+ * Screen 23: suggestions from the whole collection. Ranking comes from [Suggestions]; this only lays it out.
+ * Tapping a buildable combo fills the builder and closes the sheet; tapping a ratchet or bit picks it and keeps
+ * the sheet open, so you can pick both.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SuggestSheet(
+    products: List<Product>?,
+    parts: List<Part>,
+    combos: List<Combo>,
+    decks: List<Deck>,
+    points: List<BattlePoint>,
+    head: Part?,
+    headKind: PartKind,
+    offerRatchets: Boolean,
+    offerBits: Boolean,
+    pickedRatchet: Long?,
+    pickedBit: Long?,
+    onDismiss: () -> Unit,
+    onFill: (BuildSuggestion) -> Unit,
+    onPick: (PartKind, Long) -> Unit,
+    onSeeProduct: (Product, StockBuild) -> Unit,
+) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val scope = rememberCoroutineScope()
+    fun close(after: () -> Unit = {}) {
+        scope.launch { sheetState.hide() }.invokeOnCompletion { onDismiss(); after() }
+    }
+
+    val catalog = products.orEmpty()
+    val canBuild = remember(catalog, parts, combos, decks, points) { Suggestions.canBuild(catalog, parts, combos, decks, points) }
+    val best = remember(head, catalog, parts, combos, decks, points) {
+        head?.let { Suggestions.bestWith(it, catalog, parts, combos, decks, points) }
+    }
+    val missing = remember(catalog, parts, combos, points) { Suggestions.missingOne(catalog, parts, combos, points) }
+    val catalogEmpty = products != null && products.isEmpty()
+
+    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = sheetState) {
+        LazyColumn(Modifier.fillMaxWidth(), contentPadding = PaddingValues(bottom = 24.dp)) {
+            item {
+                Column(Modifier.padding(horizontal = 20.dp)) {
+                    Text(stringResource(R.string.suggest_title), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.suggest_subtitle), fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
+
+            // 1. You can build these
+            item { SectionLabel(stringResource(R.string.suggest_can_build), Modifier.padding(top = 8.dp)) }
+            if (canBuild.isEmpty()) {
+                item { SuggestNote(stringResource(R.string.suggest_can_build_empty)) }
+                if (catalogEmpty) item { SuggestNote(stringResource(R.string.suggest_catalog_empty)) }
+            }
+            itemsIndexed(canBuild) { _, s ->
+                SuggestBuildRow(s, Modifier.padding(horizontal = 16.dp, vertical = 5.dp)) { onFill(s); close() }
+            }
+
+            // 2. Best with <blade>
+            item {
+                SectionLabel(stringResource(R.string.suggest_best_with, head?.name ?: headKind.label), Modifier.padding(top = 12.dp))
+            }
+            if (head == null || best == null) {
+                item { SuggestNote(stringResource(R.string.suggest_best_pick_head, headKind.label)) }
+            } else {
+                val ratchets = if (offerRatchets) best.first else emptyList()
+                val bits = if (offerBits) best.second else emptyList()
+                if (ratchets.isEmpty() && bits.isEmpty()) {
+                    item { SuggestNote(stringResource(R.string.suggest_best_none, head.name)) }
+                }
+                listOf(PartKind.RATCHET to ratchets, PartKind.BIT to bits).forEach { (kind, list) ->
+                    if (list.isNotEmpty()) {
+                        item {
+                            Text(
+                                kind.plural,
+                                modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 2.dp),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 14.sp,
+                            )
+                        }
+                        itemsIndexed(list) { _, s ->
+                            val selected = s.part.id == (if (kind == PartKind.RATCHET) pickedRatchet else pickedBit)
+                            SuggestPairingRow(s, head.name, selected) { onPick(kind, s.part.id) }
+                        }
+                    }
+                }
+            }
+
+            // 3. Missing one part
+            item {
+                Column(Modifier.padding(top = 12.dp)) {
+                    SectionLabel(stringResource(R.string.suggest_missing))
+                    Text(
+                        stringResource(R.string.suggest_missing_hint),
+                        modifier = Modifier.padding(horizontal = 20.dp),
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Spacer(Modifier.height(4.dp))
+                }
+            }
+            if (missing.isEmpty()) {
+                item { SuggestNote(stringResource(if (catalogEmpty) R.string.suggest_catalog_empty else R.string.suggest_missing_empty)) }
+            }
+            itemsIndexed(missing) { _, s ->
+                SuggestMissingRow(s, Modifier.padding(horizontal = 16.dp, vertical = 5.dp)) { close { onSeeProduct(s.product, s.build) } }
+            }
+
+            item {
+                HorizontalDivider(Modifier.padding(horizontal = 20.dp, vertical = 12.dp), color = MaterialTheme.colorScheme.outlineVariant)
+                Text(
+                    stringResource(R.string.suggest_footer),
+                    modifier = Modifier.padding(horizontal = 20.dp),
+                    fontSize = 12.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun SuggestNote(text: String) {
+    Text(
+        text,
+        modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp),
+        fontSize = 13.sp,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+    )
+}
+
+/** "8W 2L (80%)" */
+@Composable
+private fun recordText(r: Record): String =
+    stringResource(R.string.suggest_record_rate, stringResource(R.string.record_wl, r.wins, r.losses), r.percent)
+
+/** "9-60 is in Tournament deck", in the warning color. */
+@Composable
+private fun BusyLine(b: BusyPart) {
+    Text(
+        pluralStringResource(R.plurals.suggest_busy, b.decks.size, b.part.name, b.decks.joinToString(", ")),
+        fontSize = 12.sp,
+        color = warnColor(),
+        maxLines = 1,
+        overflow = TextOverflow.Ellipsis,
+    )
+}
+
+@Composable
+private fun SuggestBuildRow(s: BuildSuggestion, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    val mine = (s.combo?.id ?: 0L) != 0L
+    val why = if (mine) {
+        listOfNotNull(
+            stringResource(R.string.suggest_why_mine),
+            s.product?.let { stringResource(R.string.suggest_why_stock_of, it.code) },
+            s.record?.let { recordText(it) } ?: stringResource(R.string.suggest_not_battled),
+        )
+    } else {
+        listOfNotNull(
+            s.product?.let { stringResource(R.string.suggest_why_stock, it.code) },
+            pluralStringResource(R.plurals.suggest_own_all, s.parts.size, s.parts.size),
+        )
+    }.joinToString(" · ")
+    val shape = RoundedCornerShape(16.dp)
+    AppCard(modifier.fillMaxWidth().clip(shape).clickable(onClickLabel = stringResource(R.string.suggest_fill_label), onClick = onClick)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(s.name, modifier = Modifier.weight(1f), fontFamily = Mono, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            Spacer(Modifier.width(8.dp))
+            TypeTag(s.type)
+        }
+        Spacer(Modifier.height(8.dp))
+        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            s.parts.forEach { p -> PartPhoto(p.photoPath, 32.dp, shape = RoundedCornerShape(8.dp), contentDescription = p.name) }
+        }
+        Spacer(Modifier.height(8.dp))
+        Text(why, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 2, overflow = TextOverflow.Ellipsis)
+        s.busy.forEach { BusyLine(it) }
+    }
+}
+
+@Composable
+private fun SuggestPairingRow(s: PairingSuggestion, headName: String, selected: Boolean, onClick: () -> Unit) {
+    val p = s.part
+    val why = s.record?.let { r ->
+        stringResource(R.string.suggest_pair_record, headName, stringResource(R.string.record_wl, r.wins, r.losses), r.percent)
+    } ?: s.stockProduct?.let { stringResource(R.string.suggest_pair_stock, it.code) }
+    Row(
+        Modifier.fillMaxWidth().heightIn(min = 48.dp)
+            .clickable(onClickLabel = stringResource(R.string.suggest_pick_label), onClick = onClick)
+            .padding(horizontal = 20.dp, vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        PartPhoto(p.photoPath, 36.dp, shape = RoundedCornerShape(8.dp))
+        Spacer(Modifier.width(12.dp))
+        Column(Modifier.weight(1f)) {
+            Text(
+                p.name + if (p.code.isNotBlank() && p.code != p.name) "  ${p.code}" else "",
+                fontWeight = FontWeight.SemiBold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            if (why != null) {
+                Text(why, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            }
+            s.busy?.let { BusyLine(it) }
+        }
+        if (selected) Icon(Icons.Default.Check, contentDescription = stringResource(R.string.combo_selected_cd), tint = MaterialTheme.colorScheme.secondary)
+    }
+}
+
+@Composable
+private fun SuggestMissingRow(s: MissingOneSuggestion, modifier: Modifier = Modifier, onSeeProduct: () -> Unit) {
+    AppCard(modifier.fillMaxWidth()) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(s.build.combo, modifier = Modifier.weight(1f), fontFamily = Mono, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            Spacer(Modifier.width(8.dp))
+            TypeTag(s.build.type)
+        }
+        Spacer(Modifier.height(6.dp))
+        Text(
+            stringResource(R.string.suggest_need, s.need.name, s.need.kind.label, s.product.code),
+            fontSize = 13.sp,
+            fontWeight = FontWeight.SemiBold,
+            color = warnColor(),
+        )
+        Spacer(Modifier.height(8.dp))
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                s.owned.forEach { p -> PartPhoto(p.photoPath, 28.dp, shape = RoundedCornerShape(6.dp), contentDescription = p.name) }
+            }
+            Spacer(Modifier.width(10.dp))
+            Text(
+                stringResource(R.string.suggest_own_of, s.owned.size, s.build.parts.size),
+                fontSize = 12.sp,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+        s.record?.let { r ->
+            Spacer(Modifier.height(4.dp))
+            Text(
+                stringResource(R.string.suggest_missing_record, stringResource(R.string.record_wl, r.wins, r.losses), r.percent),
+                fontSize = 12.sp,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+        }
+        Spacer(Modifier.height(4.dp))
+        Row(Modifier.fillMaxWidth()) {
+            Spacer(Modifier.weight(1f))
+            OutlinedButton(onClick = onSeeProduct, modifier = Modifier.heightIn(min = 44.dp)) { Text(stringResource(R.string.suggest_see_product)) }
+        }
     }
 }

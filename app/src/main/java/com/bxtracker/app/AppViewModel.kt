@@ -11,6 +11,11 @@ import com.bxtracker.app.data.BackupData
 import com.bxtracker.app.data.BattlePoint
 import com.bxtracker.app.data.Catalog
 import com.bxtracker.app.data.CatalogEntry
+import com.bxtracker.app.data.ManualRow
+import com.bxtracker.app.data.Product
+import com.bxtracker.app.data.Products
+import com.bxtracker.app.data.StockBuild
+import com.bxtracker.app.data.BeyType
 import com.bxtracker.app.data.Combo
 import com.bxtracker.app.data.Deck
 import com.bxtracker.app.data.DeckFix
@@ -60,6 +65,86 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     /** Bundled part names for autocomplete (assets/catalog.json). Loaded once. */
     val catalog: Map<PartKind, List<CatalogEntry>> by lazy { Catalog.load(app) }
+
+    /** Bundled products with their stock builds (assets/catalog.json, PRODUCTS). Loaded once. */
+    val products: List<Product> by lazy { Products.load(app) }
+
+    /** The catalog entry for a stock part, for its code, type and built-in flags. */
+    private fun catalogEntry(kind: PartKind, name: String): CatalogEntry? =
+        catalog[kind].orEmpty().firstOrNull { it.name.equals(name, ignoreCase = true) }
+
+    /**
+     * Adds a product's stock parts: parts I already have get +1 copy, new parts are added with no photo and
+     * the product in "Got it from". With [onlyMissing], only parts I don't own (or own 0 of) are added. With
+     * [saveCombo], the stock combo is saved too, unless I already have a combo with exactly those parts.
+     * [onDone] gets how many parts were added.
+     */
+    fun addProductBuild(product: Product, build: StockBuild, saveCombo: Boolean, onlyMissing: Boolean = false, onDone: (Int) -> Unit = {}) =
+        viewModelScope.launch {
+            var added = 0
+            val ids = linkedMapOf<PartKind, Long>()
+            build.parts.forEach { sp ->
+                val entry = catalogEntry(sp.kind, sp.name)
+                val existing = dao.findPart(sp.kind, sp.name)
+                if (onlyMissing && existing != null && existing.copies > 0) { ids[sp.kind] = existing.id; return@forEach }
+                if (existing != null) {
+                    dao.updatePart(existing.copy(copies = existing.copies + 1, source = existing.source.ifBlank { product.label }))
+                    ids[sp.kind] = existing.id
+                } else {
+                    val code = when (sp.kind) {
+                        PartKind.RATCHET -> entry?.takeIf { it.builtInBit }?.code.orEmpty().ifBlank { sp.name }
+                        else -> sp.code.ifBlank { entry?.code.orEmpty() }
+                    }
+                    ids[sp.kind] = dao.insertPart(
+                        Part(
+                            kind = sp.kind, name = entry?.name ?: sp.name, code = code,
+                            type = entry?.type ?: build.type.takeIf { sp.kind == PartKind.BLADE || sp.kind == PartKind.MAIN_BLADE || sp.kind == PartKind.METAL_BLADE },
+                            leftSpin = entry?.leftSpin == true,
+                            builtInRatchet = entry?.builtInRatchet == true, builtInBit = entry?.builtInBit == true,
+                            copies = 1, source = product.label,
+                        )
+                    )
+                }
+                added++
+            }
+            if (saveCombo && ids.size == build.parts.size) {
+                val combo = Combo(
+                    bladeId = ids[PartKind.BLADE], lockChipId = ids[PartKind.LOCK_CHIP], mainBladeId = ids[PartKind.MAIN_BLADE],
+                    metalBladeId = ids[PartKind.METAL_BLADE], overBladeId = ids[PartKind.OVER_BLADE], assistBladeId = ids[PartKind.ASSIST_BLADE],
+                    ratchetId = ids[PartKind.RATCHET], bitId = ids[PartKind.BIT], type = build.type ?: BeyType.BALANCE,
+                )
+                val same = dao.allCombos().any { it.partIds().sorted() == combo.partIds().sorted() }
+                if (!same) dao.insertCombo(combo)
+            }
+            onDone(added)
+        }
+
+    /** Adds the manual rows that have a name (screen 20). Same kind + name merges into copies, like a single add. */
+    fun addParts(rows: List<ManualRow>, onDone: (Int) -> Unit = {}) = viewModelScope.launch {
+        val ready = rows.filter { it.ready }
+        ready.forEach { r ->
+            val entry = catalogEntry(r.kind, r.name)
+            val name = r.name.trim()
+            val existing = dao.findPart(r.kind, name)
+            if (existing != null) {
+                dao.updatePart(existing.copy(copies = existing.copies + r.copies))
+            } else {
+                val hasType = r.kind == PartKind.BLADE || r.kind == PartKind.MAIN_BLADE || r.kind == PartKind.METAL_BLADE
+                dao.insertPart(
+                    Part(
+                        kind = r.kind, name = name,
+                        code = if (r.kind == PartKind.RATCHET) entry?.takeIf { it.builtInBit }?.code.orEmpty().ifBlank { name }
+                        else r.code.trim().ifBlank { entry?.code.orEmpty() },
+                        type = if (hasType) r.type ?: entry?.type else null,
+                        leftSpin = entry?.leftSpin == true,
+                        builtInRatchet = entry?.builtInRatchet == true, builtInBit = entry?.builtInBit == true,
+                        copies = r.copies,
+                    )
+                )
+            }
+        }
+        onDone(ready.size)
+    }
 
     // Parts
 

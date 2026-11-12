@@ -35,8 +35,6 @@
     <string name="parts_photo_saved">Foto guardada</string>
     <string name="parts_photo_tip">Tómala desde arriba sobre un fondo liso</string>
     <string name="parts_camera">Cámara</string>
-    <string name="parts_retake">Repetir</string>
-    <string name="parts_gallery">Galería</string>
     <string name="parts_what_is_it">¿Qué es?</string>
     <string name="parts_field_ratchet">Ratchet, ej. 9-60</string>
     <string name="parts_field_name">Nombre</string>
@@ -59,6 +57,7 @@
     <string name="parts_unsaved">Cambios sin guardar. Toca ✓ arriba para guardar.</string>
     <string name="parts_photo_of_retake">Foto de %1$s. Toca para repetirla.</string>
     <string name="parts_take_photo">Tomar foto</string>
+    <string name="parts_upload_image">Subir imagen</string>
     <string name="parts_copies_owned">Copias que tienes</string>
     <plurals name="parts_used_in_combos">
         <item quantity="one">Se usa en %1$d combo</item>

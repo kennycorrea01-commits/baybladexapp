@@ -1,5 +1,6 @@
 package com.bxtracker.app.ui
 
+import android.net.Uri
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.consumeWindowInsets
@@ -40,6 +41,8 @@ import com.bxtracker.app.ui.screens.MatchScreen
 import com.bxtracker.app.ui.screens.NewMatchScreen
 import com.bxtracker.app.ui.screens.PartDetailScreen
 import com.bxtracker.app.ui.screens.PartsScreen
+import com.bxtracker.app.ui.screens.ProductLookupScreen
+import com.bxtracker.app.ui.screens.ProductSearchScreen
 import com.bxtracker.app.ui.screens.SettingsScreen
 import com.bxtracker.app.ui.screens.StatsScreen
 import com.bxtracker.app.ui.screens.TournamentEditScreen
@@ -59,6 +62,10 @@ private val tabs = listOf(
     Tab("decks", R.string.tab_decks, Icons.Outlined.Style),
     Tab("battles", R.string.tab_battles, Icons.Outlined.EmojiEvents),
 )
+
+/** Route to the product lookup (screen 22). [combo] picks a Bey of a set or random booster; both are URL-encoded. */
+fun productRoute(code: String, combo: String? = null): String =
+    "product/${Uri.encode(code)}" + (combo?.let { "?combo=${Uri.encode(it)}" } ?: "")
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -101,6 +108,7 @@ fun BxApp(vm: AppViewModel) {
                     onPart = { nav.navigate("part/$it") },
                     onAdd = { nav.navigate("addPart") },
                     onSettings = { nav.navigate("settings") },
+                    onLookup = { nav.navigate("productSearch") },
                 )
             }
             composable(
@@ -117,6 +125,30 @@ fun BxApp(vm: AppViewModel) {
                     onBack = { nav.popBackStack() },
                     onCombo = { nav.navigate("combo?id=$it") },
                     onBuildWith = { nav.navigate("combo?part=$it") },
+                    onProduct = { code, combo -> nav.navigate(productRoute(code, combo)) },
+                )
+            }
+            // Product lookup (22): search, then one product with the parts it came with. Adds nothing by itself.
+            composable("productSearch") {
+                ProductSearchScreen(
+                    vm = vm,
+                    onBack = { nav.popBackStack() },
+                    onProduct = { code, combo -> nav.navigate(productRoute(code, combo)) },
+                )
+            }
+            composable(
+                "product/{code}?combo={combo}",
+                arguments = listOf(
+                    navArgument("code") { type = NavType.StringType },
+                    navArgument("combo") { type = NavType.StringType; nullable = true; defaultValue = null },
+                ),
+            ) { e ->
+                ProductLookupScreen(
+                    vm = vm,
+                    code = e.arguments?.getString("code").orEmpty(),
+                    combo = e.arguments?.getString("combo"),
+                    onBack = { nav.popBackStack() },
+                    onPart = { nav.navigate("part/$it") },
                 )
             }
             composable("combos") {
@@ -140,6 +172,7 @@ fun BxApp(vm: AppViewModel) {
                     startPartId = e.arguments?.getLong("part")?.takeIf { it > 0 },
                     onDone = { nav.popBackStack() },
                     onAddPart = { kind -> nav.navigate("addPart?kind=${kind.name}") },
+                    onSeeProduct = { code, combo -> nav.navigate(productRoute(code, combo)) },
                 )
             }
             composable("decks") {

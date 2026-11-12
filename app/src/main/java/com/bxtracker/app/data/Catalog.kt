@@ -18,6 +18,8 @@ data class CatalogEntry(
     val builtInRatchet: Boolean = false,
     /** Ratchets: the bit is built in, like Turbo (combos skip the bit). */
     val builtInBit: Boolean = false,
+    /** Hasbro's name for the same part, when it differs ("Cursed Mummy" for Mummy Curse). Search accepts it; the Takara Tomy name is what gets saved. */
+    val hasbro: String = "",
 )
 
 /**
@@ -45,8 +47,8 @@ object Catalog {
         val q = query.trim()
         if (q.isEmpty()) return emptyList()
         val list = catalog[kind].orEmpty()
-        val starts = list.filter { it.name.startsWith(q, true) || it.code.equals(q, true) }
-        val contains = list.filter { it !in starts && it.name.contains(q, true) }
+        val starts = list.filter { it.name.startsWith(q, true) || it.code.equals(q, true) || it.hasbro.startsWith(q, true) }
+        val contains = list.filter { it !in starts && (it.name.contains(q, true) || it.hasbro.contains(q, true)) }
         return (starts + contains).filterNot { it.name.equals(q, true) && it.code.isBlank() }.take(limit)
     }
 }

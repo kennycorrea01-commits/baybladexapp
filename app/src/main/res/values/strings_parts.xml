@@ -33,8 +33,6 @@
     <string name="parts_photo_saved">Photo saved</string>
     <string name="parts_photo_tip">Shoot from the top on a plain background</string>
     <string name="parts_camera">Camera</string>
-    <string name="parts_retake">Retake</string>
-    <string name="parts_gallery">Gallery</string>
     <string name="parts_what_is_it">What is it?</string>
     <string name="parts_field_ratchet">Ratchet, e.g. 9-60</string>
     <string name="parts_field_name">Name</string>
@@ -57,6 +55,7 @@
     <string name="parts_unsaved">Unsaved changes. Tap ✓ at the top to save.</string>
     <string name="parts_photo_of_retake">Photo of %1$s. Tap to retake.</string>
     <string name="parts_take_photo">Take photo</string>
+    <string name="parts_upload_image">Upload image</string>
     <string name="parts_copies_owned">Copies owned</string>
     <plurals name="parts_used_in_combos">
         <item quantity="one">Used in %1$d combo</item>

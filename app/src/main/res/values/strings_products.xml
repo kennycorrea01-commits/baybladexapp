@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Add parts tabs (By product, Manual), product lookup and "Came with" on Part detail. Product codes, product
+     names, combo names, part kinds and types come from the catalog and stay in English; they are not here. -->
+<resources>
+    <!-- Add parts: tabs -->
+    <string name="prod_add_parts_title">Add parts</string>
+    <string name="prod_tab_product">By product</string>
+    <string name="prod_tab_manual">Manual</string>
+
+    <!-- Add parts › Manual (screen 20) -->
+    <string name="prod_manual_intro">One card per part. No photo needed, you can add one later.</string>
+    <string name="prod_manual_part_n">Part %1$d</string>
+    <string name="prod_manual_remove">Remove part %1$d</string>
+    <string name="prod_manual_another">Another part</string>
+    <plurals name="prod_add_n_parts">
+        <item quantity="one">Add %1$d part</item>
+        <item quantity="other">Add %1$d parts</item>
+    </plurals>
+    <plurals name="prod_added_parts">
+        <item quantity="one">Added %1$d part</item>
+        <item quantity="other">Added %1$d parts</item>
+    </plurals>
+
+    <!-- Product search (screens 21 and 22) -->
+    <string name="prod_search_placeholder">Name, stock combo or code</string>
+    <string name="prod_search_hint">Search by product name, stock combo or code, like Dran Sword or BX-01. Pasting a wiki link works too.</string>
+    <string name="prod_clear_search">Clear search</string>
+    <plurals name="prod_n_beys_pick_one">
+        <item quantity="one">%1$d Bey</item>
+        <item quantity="other">%1$d Beys — pick one</item>
+    </plurals>
+    <string name="prod_pick_bey">Which Bey?</string>
+    <string name="prod_show_parts">Show its parts</string>
+    <string name="prod_not_in_catalog">Not in the catalog</string>
+    <string name="prod_no_match_body">Nothing matches “%1$s”. The app works offline, so it only knows the products it comes with.</string>
+    <string name="prod_catalog_empty_body">This version doesn\'t include the product list yet.</string>
+    <string name="prod_unknown_code_body">%1$s isn\'t in the product list that comes with the app.</string>
+    <string name="prod_not_in_list">Not in the list? Add it manually</string>
+    <string name="prod_add_manually">Add it manually</string>
+
+    <!-- Ownership badges -->
+    <string name="prod_own_n">Own ×%1$d</string>
+    <string name="prod_new">New</string>
+    <string name="prod_missing">Missing</string>
+
+    <!-- Add parts › By product (screen 21) -->
+    <string name="prod_save_stock_combo">Also save the stock combo</string>
+    <string name="prod_add_note">Parts you own get +1 copy. Photos can be added later.</string>
+    <!-- %1$d = number of parts, %2$s = product code like BX-01 -->
+    <plurals name="prod_add_from">
+        <item quantity="one">Add %1$d part from %2$s</item>
+        <item quantity="other">Add %1$d parts from %2$s</item>
+    </plurals>
+    <plurals name="prod_added_from">
+        <item quantity="one">Added %1$d part from %2$s</item>
+        <item quantity="other">Added %1$d parts from %2$s</item>
+    </plurals>
+
+    <!-- Product lookup (screen 22) -->
+    <string name="prod_lookup_title">Look up a product</string>
+    <string name="prod_lookup_subtitle">Lookup only, nothing is added</string>
+    <string name="prod_lookup_only">Lookup only</string>
+    <string name="prod_open_product">Open product</string>
+    <string name="prod_open_part">Open part</string>
+    <string name="prod_stock_combo_x">Stock combo: %1$s</string>
+    <string name="prod_released_x">Released %1$s</string>
+    <string name="prod_came_with_label">Came with</string>
+    <string name="prod_you_own_x_of_y">You own %1$d of %2$d</string>
+    <string name="prod_save_combo">Save combo</string>
+    <string name="prod_combo_already_saved">Combo saved</string>
+    <string name="prod_combo_saved_toast">Saved %1$s</string>
+    <plurals name="prod_add_missing">
+        <item quantity="one">Add missing part</item>
+        <item quantity="other">Add %1$d missing parts</item>
+    </plurals>
+    <string name="prod_nothing_missing">You have them all</string>
+
+    <!-- Part detail: "Came with: Dran Sword 3-60F (BX-01), 2 more" -->
+    <string name="prod_came_with">Came with: %1$s (%2$s)</string>
+    <plurals name="prod_came_with_more">
+        <item quantity="one">Came with: %1$s (%2$s), %3$d more</item>
+        <item quantity="other">Came with: %1$s (%2$s), %3$d more</item>
+    </plurals>
+</resources>

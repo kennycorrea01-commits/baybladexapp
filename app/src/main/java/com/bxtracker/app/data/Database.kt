@@ -19,6 +19,13 @@ interface BxDao {
     fun parts(): Flow<List<Part>>
 
     @Insert suspend fun insertPart(part: Part): Long
+
+    /** The part with this kind and name (case-insensitive), used to merge copies. */
+    @Query("SELECT * FROM parts WHERE kind = :kind AND name = :name COLLATE NOCASE LIMIT 1")
+    suspend fun findPart(kind: PartKind, name: String): Part?
+
+    @Query("SELECT * FROM combos")
+    suspend fun allCombos(): List<Combo>
     @Update suspend fun updatePart(part: Part)
     @Delete suspend fun deletePart(part: Part)
 

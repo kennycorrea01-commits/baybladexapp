@@ -1,6 +1,7 @@
 {
-  "_readme": "Part names for autocomplete in Add part. One array per kind: BLADE, RATCHET, BIT, LOCK_CHIP, MAIN_BLADE, ASSIST_BLADE, METAL_BLADE, OVER_BLADE. Each entry: name (required), code (ratchet like 9-60, bit like GF, assist blade letter like S, over blade letter like B), type (ATTACK, DEFENSE, STAMINA or BALANCE, blades, main blades and metal blades only), leftSpin (true or false), builtInRatchet (true on blades with an integrated ratchet, e.g. Bullet Griffon, whose combo has no ratchet: \"Bullet Griffon H\"), builtInBit (true on RATCHET entries that include the bit, e.g. Turbo \"Tr\", whose combo has no separate bit: \"Pegasus Blast ATr\"). CX combos use either a MAIN_BLADE or a METAL_BLADE + OVER_BLADE (Expand Blade), never both; Expand Blade combo order is Lock Chip + Metal Blade, then Over Blade code, Assist Blade code, ratchet, bit, e.g. \"Bahamut Blitz BK1-50I\". Example entry: {\"name\": \"Example Blade\", \"type\": \"ATTACK\"}. Keys starting with _ are ignored. Rebuild the app after editing.",
-  "_generated": "2026-11-07",
+  "_readme": "Part names for autocomplete in Add part. One array per kind: BLADE, RATCHET, BIT, LOCK_CHIP, MAIN_BLADE, ASSIST_BLADE, METAL_BLADE, OVER_BLADE. Each entry: name (required), code (ratchet like 9-60, bit like GF, assist blade letter like S, over blade letter like B), type (ATTACK, DEFENSE, STAMINA or BALANCE, blades, main blades and metal blades only), leftSpin (true or false), builtInRatchet (true on blades with an integrated ratchet, e.g. Bullet Griffon, whose combo has no ratchet: \"Bullet Griffon H\"), builtInBit (true on RATCHET entries that include the bit, e.g. Turbo \"Tr\", whose combo has no separate bit: \"Pegasus Blast ATr\"). CX combos use either a MAIN_BLADE or a METAL_BLADE + OVER_BLADE (Expand Blade), never both; Expand Blade combo order is Lock Chip + Metal Blade, then Over Blade code, Assist Blade code, ratchet, bit, e.g. \"Bahamut Blitz BK1-50I\". Example entry: {\"name\": \"Example Blade\", \"type\": \"ATTACK\"}. Keys starting with _ are ignored. Rebuild the app after editing. PRODUCTS: Takara Tomy Beyblade X products (BX-xx, UX-xx, CX-xx and BX-00/UX-00/CX-00 specials) that contain at least one Bey, sorted by code (BX, UX, CX, numerically; specials by release date). Each product: code, name (English name as the Beyblade Wiki lists it), released (ISO date, omitted if unknown), kind (STARTER, BOOSTER, RANDOM_BOOSTER, SET, DECK_SET or OTHER), builds. Each build is one stock Bey in the box (random boosters list every possible Bey): combo (official stock combo name, spaced like the part names), shape (BASIC = Blade + Ratchet + Bit; CX = Lock Chip + Main Blade + Assist Blade + Ratchet + Bit; CX_METAL = Lock Chip + Metal Blade + Over Blade + Assist Blade + Ratchet + Bit; no RATCHET part for builtInRatchet blades, no BIT part for builtInBit ratchets), type (ATTACK, DEFENSE, STAMINA or BALANCE, omitted if unclear), parts. Each part: kind (a part array name above), name (matches an entry of that kind, case-insensitive), code (bits, assist blades and over blades only). Launchers, stadiums, single-part prizes and loose parts in Customize Sets are not listed. hasbro (optional, part entries and PRODUCTS builds): the Hasbro name when the Beyblade Wiki gives a different one for the same part or the same stock combo (e.g. Mummy Curse = \"Curse Mummy\", Horus Shatter = \"Shatter Horus\", Dran Sword 3-60F = \"Sword Dran 3-60F\"); search should match it too, but name stays the Takara Tomy name. Hasbro-only parts and products are not listed.",
+  "_attribution": "Part and product data from the Beyblade Wiki (beyblade.fandom.com), licensed CC BY-SA 3.0, and Takara Tomy's official Beyblade X lineup pages.",
+  "_generated": "2026-11-12",
   "_sources": [
     "https://beyblade.fandom.com/wiki/List_of_Basic_Line_parts",
     "https://beyblade.fandom.com/wiki/List_of_Unique_Line_parts",
@@ -31,104 +32,170 @@
     "https://beyblade.takaratomy.co.jp/beyblade-x/lineup/cx17.html",
     "https://beyblade.takaratomy.co.jp/beyblade-x/lineup/cx18.html",
     "https://beyblade.takaratomy.co.jp/beyblade-x/lineup/cx19.html",
-    "https://beyblade.takaratomy.co.jp/beyblade-x/lineup/cx20.html"
+    "https://beyblade.takaratomy.co.jp/beyblade-x/lineup/cx20.html",
+    "https://beyblade.fandom.com/wiki/Start_Dash_Set",
+    "https://beyblade.fandom.com/wiki/3on3_Deck_Set",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._1",
+    "https://beyblade.fandom.com/wiki/Random_Booster_ViperTail_Select",
+    "https://beyblade.fandom.com/wiki/Battle_Entry_Set",
+    "https://beyblade.fandom.com/wiki/DranDagger_Deck_Set",
+    "https://beyblade.fandom.com/wiki/HellsChain_Deck_Set",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._2",
+    "https://beyblade.fandom.com/wiki/Random_Booster_SphinxCowl_Select",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._3",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._4",
+    "https://beyblade.fandom.com/wiki/Random_Booster_WhaleWave_Select",
+    "https://beyblade.fandom.com/wiki/Double_Xtreme_Stadium_Set",
+    "https://beyblade.fandom.com/wiki/Random_Booster_ShelterDrake_Select",
+    "https://beyblade.fandom.com/wiki/Battle_Entry_Set_Infinity",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._9",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._11",
+    "https://beyblade.fandom.com/wiki/All_In_One_Set",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._12",
+    "https://beyblade.fandom.com/wiki/Battle_Entry_Set_U",
+    "https://beyblade.fandom.com/wiki/Random_Booster_ShinobiShadow_Select",
+    "https://beyblade.fandom.com/wiki/PhoenixRudder_Deck_Set",
+    "https://beyblade.fandom.com/wiki/Customize_Set_U",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._5",
+    "https://beyblade.fandom.com/wiki/SharkScale_Deck_Set",
+    "https://beyblade.fandom.com/wiki/Random_Booster_ClockMirage_Select",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._8",
+    "https://beyblade.fandom.com/wiki/HellsNether_Deck_Set",
+    "https://beyblade.fandom.com/wiki/Battle_Entry_Set_C",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._6",
+    "https://beyblade.fandom.com/wiki/Random_Booster_FoxBrush_Select",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._7",
+    "https://beyblade.fandom.com/wiki/EmperorMight_Deck_Set",
+    "https://beyblade.fandom.com/wiki/Start_Dash_Set_C",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Vol._10",
+    "https://beyblade.fandom.com/wiki/Random_Booster_BrachioWhip_Select",
+    "https://beyblade.fandom.com/wiki/Random_Booster_CrocoTread_Select",
+    "https://beyblade.fandom.com/wiki/Customize_Set_C",
+    "https://beyblade.fandom.com/wiki/Random_Booster_Lightning_L-Drago_1-60F",
+    "https://beyblade.fandom.com/wiki/Dran_Deck_Starter",
+    "https://beyblade.fandom.com/wiki/Bey_Kick_Off_Set",
+    "https://beyblade.fandom.com/wiki/Beyblade_25th_Anniversary_Set",
+    "https://beyblade.fandom.com/wiki/Iron_Man_and_Thanos_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/Spider-Man_and_Venom_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/Luke_Skywalker_and_Darth_Vader_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/The_Mandalorian_and_Moff_Gideon_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/Optimus_Primal_and_Starscream_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/Optimus_Prime_and_Megatron_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/Spinosaurus_and_Quetzalcoatlus_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/T._Rex_and_Mosasaurus_Multipack_Set",
+    "https://beyblade.fandom.com/wiki/Evangelion_Deck_Set",
+    "https://beyblade.fandom.com/wiki/ValkyrieVolt_S4-70V",
+    "https://beyblade.fandom.com/wiki/VanishLucifer_WW",
+    "https://beyblade.fandom.com/wiki/Ratchet-Integrated_Blade_-_VanishLucifer",
+    "https://beyblade.fandom.com/wiki/Blade_-_Shatter_Horus",
+    "https://beyblade.fandom.com/wiki/Bit_-_Metal_Orb",
+    "https://beyblade.fandom.com/wiki/T._Rex_1-80GB",
+    "https://beyblade.fandom.com/wiki/Mosasaurus_9-60U",
+    "https://beyblade.fandom.com/wiki/Spinosaurus_3-85A",
+    "https://beyblade.fandom.com/wiki/Quetzalcoatlus_4-55D",
+    "https://beyblade.fandom.com/wiki/Blade_-_TyrannoBeat",
+    "https://beyblade.fandom.com/wiki/Blade_-_Roar_Tyranno",
+    "https://beyblade.fandom.com/wiki/Blade_-_Talon_Ptera",
+    "https://beyblade.fandom.com/wiki/Blade_-_TriceraSpiky"
   ],
   "BLADE": [
     {"name": "Aero Pegasus", "type": "ATTACK"},
-    {"name": "Bear Scratch", "type": "DEFENSE"},
-    {"name": "Black Shell", "type": "DEFENSE"},
-    {"name": "Bullet Griffon", "type": "BALANCE", "builtInRatchet": true},
+    {"name": "Bear Scratch", "type": "DEFENSE", "hasbro": "Savage Bear"},
+    {"name": "Black Shell", "type": "DEFENSE", "hasbro": "Obsidian Shell"},
+    {"name": "Bullet Griffon", "type": "BALANCE", "builtInRatchet": true, "hasbro": "Rocket Griffon"},
     {"name": "Captain America", "type": "ATTACK"},
     {"name": "Chewbacca", "type": "STAMINA"},
-    {"name": "Clock Mirage", "type": "STAMINA"},
+    {"name": "Clock Mirage", "type": "STAMINA", "hasbro": "Mirage Clock"},
     {"name": "Cobalt Dragoon", "type": "ATTACK", "leftSpin": true},
     {"name": "Cobalt Drake", "type": "ATTACK"},
-    {"name": "Crimson Garuda", "type": "BALANCE"},
-    {"name": "Croco Crunch", "type": "ATTACK"},
-    {"name": "Cyclops Eye", "type": "STAMINA"},
+    {"name": "Crimson Garuda", "type": "BALANCE", "hasbro": "Scarlet Garuda"},
+    {"name": "Croco Crunch", "type": "ATTACK", "hasbro": "Bite Croc"},
+    {"name": "Cyclops Eye", "type": "STAMINA", "hasbro": "Glare Cyclops"},
     {"name": "Darth Vader", "type": "DEFENSE"},
     {"name": "Draciel Shield", "type": "DEFENSE"},
     {"name": "Dragoon Storm", "type": "ATTACK", "leftSpin": true},
-    {"name": "Dran Buster", "type": "ATTACK"},
-    {"name": "Dran Dagger", "type": "ATTACK"},
-    {"name": "Dran Strike", "type": "ATTACK"},
-    {"name": "Dran Sword", "type": "ATTACK"},
+    {"name": "Dran Buster", "type": "ATTACK", "hasbro": "Buster Dran"},
+    {"name": "Dran Dagger", "type": "ATTACK", "hasbro": "Dagger Dran"},
+    {"name": "Dran Strike", "type": "ATTACK", "hasbro": "Strike Dran"},
+    {"name": "Dran Sword", "type": "ATTACK", "hasbro": "Sword Dran"},
     {"name": "Dranzer Spiral", "type": "BALANCE"},
     {"name": "Driger Slash", "type": "BALANCE"},
     {"name": "General Grievous", "type": "DEFENSE"},
-    {"name": "Ghost Circle", "type": "STAMINA"},
-    {"name": "Glory Valkyrie", "type": "ATTACK", "builtInRatchet": true},
-    {"name": "Goat Tackle", "type": "DEFENSE"},
-    {"name": "Golem Rock", "type": "DEFENSE"},
+    {"name": "Ghost Circle", "type": "STAMINA", "hasbro": "Circle Ghost"},
+    {"name": "Glory Valkyrie", "type": "ATTACK", "builtInRatchet": true, "hasbro": "Glory Valkerion"},
+    {"name": "Goat Tackle", "type": "DEFENSE", "hasbro": "Tackle Goat"},
+    {"name": "Golem Rock", "type": "DEFENSE", "hasbro": "Rock Golem"},
     {"name": "Green Goblin", "type": "STAMINA"},
-    {"name": "Heavens Ring", "type": "DEFENSE"},
-    {"name": "Hells Chain", "type": "BALANCE"},
-    {"name": "Hells Hammer", "type": "BALANCE"},
-    {"name": "Hells Nether", "type": "BALANCE", "builtInRatchet": true},
-    {"name": "Hells Scythe", "type": "BALANCE"},
+    {"name": "Heavens Ring", "type": "DEFENSE", "hasbro": "Ring Aether"},
+    {"name": "Hells Chain", "type": "BALANCE", "hasbro": "Chain Incendio"},
+    {"name": "Hells Hammer", "type": "BALANCE", "hasbro": "Hammer Incendio"},
+    {"name": "Hells Nether", "type": "BALANCE", "builtInRatchet": true, "hasbro": "Nether Incendio"},
+    {"name": "Hells Scythe", "type": "BALANCE", "hasbro": "Scythe Incendio"},
+    {"name": "Horus Shatter", "type": "STAMINA", "hasbro": "Shatter Horus"},
     {"name": "Impact Drake", "type": "ATTACK"},
     {"name": "Iron Man", "type": "DEFENSE"},
-    {"name": "Knight Lance", "type": "DEFENSE"},
-    {"name": "Knight Mail", "type": "DEFENSE"},
-    {"name": "Knight Shield", "type": "DEFENSE"},
-    {"name": "Leon Claw", "type": "BALANCE"},
-    {"name": "Leon Crest", "type": "DEFENSE"},
+    {"name": "Knight Lance", "type": "DEFENSE", "hasbro": "Lance Knight"},
+    {"name": "Knight Mail", "type": "DEFENSE", "hasbro": "Mail Knight"},
+    {"name": "Knight Shield", "type": "DEFENSE", "hasbro": "Helm Knight"},
+    {"name": "Leon Claw", "type": "BALANCE", "hasbro": "Claw Leon"},
+    {"name": "Leon Crest", "type": "DEFENSE", "hasbro": "Crest Leon"},
     {"name": "Lightning L-Drago (Rapid-Hit Type)", "type": "ATTACK", "leftSpin": true},
     {"name": "Lightning L-Drago (Upper Type)", "type": "ATTACK", "leftSpin": true},
     {"name": "Luke Skywalker", "type": "DEFENSE"},
     {"name": "Luster Dragoon", "type": "ATTACK", "leftSpin": true},
-    {"name": "Mammoth Tusk", "type": "BALANCE"},
+    {"name": "Mammoth Tusk", "type": "BALANCE", "hasbro": "Tusk Mammoth"},
     {"name": "Megatron", "type": "BALANCE"},
-    {"name": "Meteor Dragoon", "type": "ATTACK", "leftSpin": true},
+    {"name": "Meteor Dragoon", "type": "ATTACK", "leftSpin": true, "hasbro": "Meteoroid Dragoon"},
     {"name": "Miles Morales", "type": "STAMINA"},
     {"name": "Moff Gideon", "type": "BALANCE"},
-    {"name": "Mummy Curse", "type": "DEFENSE"},
+    {"name": "Mummy Curse", "type": "DEFENSE", "hasbro": "Curse Mummy"},
     {"name": "Obi-Wan Kenobi", "type": "DEFENSE"},
     {"name": "Optimus Primal", "type": "ATTACK"},
     {"name": "Optimus Prime", "type": "BALANCE"},
-    {"name": "Orochi Cluster", "type": "ATTACK"},
-    {"name": "Phoenix Feather", "type": "ATTACK"},
-    {"name": "Phoenix Rudder", "type": "STAMINA"},
-    {"name": "Phoenix Wing", "type": "ATTACK"},
-    {"name": "Ptera Swing", "type": "STAMINA"},
+    {"name": "Orochi Cluster", "type": "ATTACK", "hasbro": "Coil Orochi"},
+    {"name": "Phoenix Feather", "type": "ATTACK", "hasbro": "Feather Phoenix"},
+    {"name": "Phoenix Rudder", "type": "STAMINA", "hasbro": "Rudder Phoenix"},
+    {"name": "Phoenix Wing", "type": "ATTACK", "hasbro": "Soar Phoenix"},
+    {"name": "Ptera Swing", "type": "STAMINA", "hasbro": "Talon Ptera"},
     {"name": "Red Hulk", "type": "ATTACK"},
-    {"name": "Rhino Horn", "type": "DEFENSE"},
+    {"name": "Rhino Horn", "type": "DEFENSE", "hasbro": "Horn Rhino"},
     {"name": "Rock Leone", "type": "DEFENSE"},
-    {"name": "Samurai Calibur", "type": "BALANCE"},
-    {"name": "Samurai Saber", "type": "ATTACK"},
-    {"name": "Samurai Steel", "type": "BALANCE"},
-    {"name": "Scorpio Spear", "type": "BALANCE"},
-    {"name": "Shark Edge", "type": "ATTACK"},
-    {"name": "Shark Gill", "type": "STAMINA"},
-    {"name": "Shark Scale", "type": "ATTACK"},
+    {"name": "Samurai Calibur", "type": "BALANCE", "hasbro": "Calibur Samurai"},
+    {"name": "Samurai Saber", "type": "ATTACK", "hasbro": "Saber Samurai"},
+    {"name": "Samurai Steel", "type": "BALANCE", "hasbro": "Steel Samurai"},
+    {"name": "Scorpio Spear", "type": "BALANCE", "hasbro": "Spear Scorpio"},
+    {"name": "Shark Edge", "type": "ATTACK", "hasbro": "Keel Shark"},
+    {"name": "Shark Gill", "type": "STAMINA", "hasbro": "Gill Shark"},
+    {"name": "Shark Scale", "type": "ATTACK", "hasbro": "Scale Shark"},
     {"name": "Shelter Drake", "type": "BALANCE"},
-    {"name": "Shinobi Knife", "type": "DEFENSE"},
-    {"name": "Shinobi Shadow", "type": "DEFENSE"},
-    {"name": "Sieg Superion", "type": "BALANCE"},
-    {"name": "Silver Wolf", "type": "STAMINA"},
-    {"name": "Sphinx Cowl", "type": "DEFENSE"},
+    {"name": "Shinobi Knife", "type": "DEFENSE", "hasbro": "Knife Shinobi"},
+    {"name": "Shinobi Shadow", "type": "DEFENSE", "hasbro": "Shadow Shinobi"},
+    {"name": "Sieg Superion", "type": "BALANCE", "hasbro": "Suppress Superion"},
+    {"name": "Silver Wolf", "type": "STAMINA", "hasbro": "Sterling Wolf"},
+    {"name": "Sphinx Cowl", "type": "DEFENSE", "hasbro": "Cowl Sphinx"},
     {"name": "Spider-Man", "type": "STAMINA"},
     {"name": "Starscream", "type": "STAMINA"},
     {"name": "Storm Pegasis", "type": "ATTACK"},
-    {"name": "Storm Spriggan", "type": "BALANCE"},
+    {"name": "Storm Spriggan", "type": "BALANCE", "hasbro": "Storm Spryzen"},
     {"name": "Stormtrooper", "type": "DEFENSE"},
     {"name": "Thanos", "type": "DEFENSE"},
     {"name": "The Mandalorian", "type": "ATTACK"},
-    {"name": "Tricera Press", "type": "DEFENSE"},
-    {"name": "Tricera Spiky", "type": "DEFENSE"},
-    {"name": "Tyranno Beat", "type": "ATTACK"},
-    {"name": "Tyranno Roar", "type": "ATTACK"},
-    {"name": "Unicorn Sting", "type": "BALANCE"},
+    {"name": "Tricera Press", "type": "DEFENSE", "hasbro": "Brace Triceratops"},
+    {"name": "Tricera Spiky", "type": "DEFENSE", "hasbro": "Ridge Triceratops"},
+    {"name": "Tyranno Beat", "type": "ATTACK", "hasbro": "Beat Tyranno"},
+    {"name": "Tyranno Roar", "type": "ATTACK", "hasbro": "Roar Tyranno"},
+    {"name": "Unicorn Sting", "type": "BALANCE", "hasbro": "Sting Unicorn"},
+    {"name": "Vanish Lucifer", "type": "DEFENSE", "builtInRatchet": true},
     {"name": "Venom", "type": "ATTACK"},
     {"name": "Victory Valkyrie", "type": "ATTACK"},
-    {"name": "Viper Tail", "type": "STAMINA"},
-    {"name": "Weiss Tiger", "type": "BALANCE"},
-    {"name": "Whale Wave", "type": "BALANCE"},
-    {"name": "Wizard Arrow", "type": "STAMINA"},
-    {"name": "Wizard Rod", "type": "STAMINA"},
-    {"name": "Wyvern Gale", "type": "STAMINA"},
-    {"name": "Wyvern Hover", "type": "DEFENSE"},
-    {"name": "Xeno Xcalibur", "type": "ATTACK"}
+    {"name": "Viper Tail", "type": "STAMINA", "hasbro": "Tail Viper"},
+    {"name": "Weiss Tiger", "type": "BALANCE", "hasbro": "Pearl Tiger"},
+    {"name": "Whale Wave", "type": "BALANCE", "hasbro": "Tide Whale"},
+    {"name": "Wizard Arrow", "type": "STAMINA", "hasbro": "Arrow Wizard"},
+    {"name": "Wizard Rod", "type": "STAMINA", "hasbro": "Wand Wizard"},
+    {"name": "Wyvern Gale", "type": "STAMINA", "hasbro": "Gale Wyvern"},
+    {"name": "Wyvern Hover", "type": "DEFENSE", "hasbro": "Hover Wyvern"},
+    {"name": "Xeno Xcalibur", "type": "ATTACK", "hasbro": "Xeno Xcalius"}
   ],
   "RATCHET": [
     {"name": "0-60", "code": "0-60"},
@@ -205,6 +272,7 @@
     {"name": "Low Rush", "code": "LR"},
     {"name": "Merge", "code": "M"},
     {"name": "Metal Needle", "code": "MN"},
+    {"name": "Metal Orb", "code": "MO"},
     {"name": "Metal Taper", "code": "MT"},
     {"name": "Narrow", "code": "Nr"},
     {"name": "Needle", "code": "N"},
@@ -230,7 +298,7 @@
   "LOCK_CHIP": [
     {"name": "Bahamut"},
     {"name": "Brachio"},
-    {"name": "Bucks"},
+    {"name": "Bucks", "hasbro": "Stag"},
     {"name": "Cerberus"},
     {"name": "Croco"},
     {"name": "Drake"},
@@ -238,7 +306,7 @@
     {"name": "Emperor"},
     {"name": "Eva"},
     {"name": "Fox"},
-    {"name": "Hells"},
+    {"name": "Hells", "hasbro": "Incendio"},
     {"name": "Hornet"},
     {"name": "Kid"},
     {"name": "Knight"},
@@ -252,19 +320,19 @@
     {"name": "Sol"},
     {"name": "Tiga"},
     {"name": "Unicorn"},
-    {"name": "Valkyrie"},
+    {"name": "Valkyrie", "hasbro": "Valkerion"},
     {"name": "Whale"},
     {"name": "Wizard"},
     {"name": "Wolf"}
   ],
   "MAIN_BLADE": [
-    {"name": "Antlers", "type": "STAMINA"},
+    {"name": "Antlers", "type": "STAMINA", "hasbro": "Antler"},
     {"name": "Arc", "type": "STAMINA"},
     {"name": "Blast", "type": "ATTACK"},
-    {"name": "Brave", "type": "ATTACK"},
+    {"name": "Brave", "type": "ATTACK", "hasbro": "Courage"},
     {"name": "Brush", "type": "ATTACK"},
     {"name": "Dark", "type": "DEFENSE"},
-    {"name": "Eclipse", "type": "BALANCE"},
+    {"name": "Eclipse", "type": "BALANCE", "hasbro": "Umbra"},
     {"name": "Fang", "type": "ATTACK"},
     {"name": "Flame", "type": "STAMINA"},
     {"name": "Flare", "type": "DEFENSE"},
@@ -300,7 +368,7 @@
     {"name": "Blitz", "type": "ATTACK"},
     {"name": "Delta", "type": "BALANCE"},
     {"name": "Force"},
-    {"name": "Fortress", "type": "DEFENSE"},
+    {"name": "Fortress", "type": "DEFENSE", "hasbro": "Armor"},
     {"name": "Rage", "type": "STAMINA"},
     {"name": "Tread"},
     {"name": "Whip", "type": "STAMINA"}
@@ -313,5 +381,570 @@
     {"name": "Peak", "code": "P"},
     {"name": "Tough", "code": "T"},
     {"name": "Weight", "code": "W"}
+  ],
+  "PRODUCTS": [
+    {"code": "BX-00", "name": "Booster Dranzer Spiral 3-80T", "released": "2023-07-15", "kind": "BOOSTER", "builds": [
+      {"combo": "Dranzer Spiral 3-80T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Dranzer Spiral"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Hells Scythe 4-60T (Metal Coat: Gold)", "released": "2023-09-11", "kind": "BOOSTER", "builds": [
+      {"combo": "Hells Scythe 4-60T", "hasbro": "Scythe Incendio 4-60T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Scythe"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Cobalt Drake 4-60F (Metal Coat: Blue)", "kind": "BOOSTER", "builds": [
+      {"combo": "Cobalt Drake 4-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Cobalt Drake"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Dran Sword 3-60F (Metal Coat: Bronze)", "released": "2023-12-10", "kind": "OTHER", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Dran Sword 3-60F (Metal Coat: Gold)", "released": "2023-12-10", "kind": "OTHER", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Dran Sword 3-60F (Metal Coat: Silver)", "released": "2023-12-10", "kind": "OTHER", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Hells Scythe 3-80F (SP X Bey)", "released": "2024-01-27", "kind": "BOOSTER", "builds": [
+      {"combo": "Hells Scythe 3-80F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Hells Scythe"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Dran Sword 3-60F (Sushiro Ver.)", "released": "2024-02-14", "kind": "BOOSTER", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Leon Claw 5-60P (Metal Coat: Gold)", "released": "2024-02-22", "kind": "BOOSTER", "builds": [
+      {"combo": "Leon Claw 5-60P", "hasbro": "Claw Leon 5-60P", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Leon Claw"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Point", "code": "P"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Shark Edge 5-60GF (Metal Coat: Blue)", "released": "2024-03-23", "kind": "BOOSTER", "builds": [
+      {"combo": "Shark Edge 5-60GF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shark Edge"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Driger Slash 4-80P", "released": "2024-04-27", "kind": "BOOSTER", "builds": [
+      {"combo": "Driger Slash 4-80P", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Driger Slash"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Point", "code": "P"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Hells Chain 5-60HT (Metal Coat: Black)", "released": "2024-05-16", "kind": "BOOSTER", "builds": [
+      {"combo": "Hells Chain 5-60HT", "hasbro": "Chain Incendio 5-60HT", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Chain"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "High Taper", "code": "HT"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Dran Dagger 2-80GP (Metal Coat: Black Giants)", "released": "2024-08-03", "kind": "STARTER", "builds": [
+      {"combo": "Dran Dagger 2-80GP", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Dran Dagger"}, {"kind": "RATCHET", "name": "2-80"}, {"kind": "BIT", "name": "Gear Point", "code": "GP"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Dranzer Spiral 3-80T (Black Version)", "released": "2024-08-10", "kind": "BOOSTER", "builds": [
+      {"combo": "Dranzer Spiral 3-80T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Dranzer Spiral"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Cobalt Dragoon 2-60C (Metal Coat: Black)", "released": "2024-08-31", "kind": "STARTER", "builds": [
+      {"combo": "Cobalt Dragoon 2-60C", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Cobalt Dragoon"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Cyclone", "code": "C"}]}
+    ]},
+    {"code": "BX-00", "name": "Random Booster Lightning L-Drago 1-60F", "released": "2024-09-14", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Lightning L-Drago 1-60F (Upper Type)", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Lightning L-Drago (Upper Type)"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Lightning L-Drago 1-60F (Rapid-Hit Type)", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Lightning L-Drago (Rapid-Hit Type)"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Shinobi Knife 4-60LF (Metal Coat: Blue)", "released": "2024-11-14", "kind": "BOOSTER", "builds": [
+      {"combo": "Shinobi Knife 4-60LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shinobi Knife"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Phoenix Wing 9-80DB (Bladers Select Bey)", "released": "2024-11-18", "kind": "BOOSTER", "builds": [
+      {"combo": "Phoenix Wing 9-80DB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Phoenix Wing"}, {"kind": "RATCHET", "name": "9-80"}, {"kind": "BIT", "name": "Disk Ball", "code": "DB"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Cobalt Drake 4-60F (Clear Ver.)", "released": "2024-11-28", "kind": "BOOSTER", "builds": [
+      {"combo": "Cobalt Drake 4-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Cobalt Drake"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Mammoth Tusk 2-80E (Metal Coat: Black)", "released": "2024-12-27", "kind": "BOOSTER", "builds": [
+      {"combo": "Mammoth Tusk 2-80E", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Mammoth Tusk"}, {"kind": "RATCHET", "name": "2-80"}, {"kind": "BIT", "name": "Elevate", "code": "E"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Draciel Shield 7-60D", "released": "2024-12-28", "kind": "BOOSTER", "builds": [
+      {"combo": "Draciel Shield 7-60D", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Draciel Shield"}, {"kind": "RATCHET", "name": "7-60"}, {"kind": "BIT", "name": "Dot", "code": "D"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Croco Crunch 2-60Q", "released": "2025-02-05", "kind": "BOOSTER", "builds": [
+      {"combo": "Croco Crunch 2-60Q", "hasbro": "Bite Croc 2-60Q", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Croco Crunch"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Quake", "code": "Q"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Phoenix Wing 9-60GF (Metal Coat: Black Tatsuya Kitani Version)", "released": "2025-03-15", "kind": "STARTER", "builds": [
+      {"combo": "Phoenix Wing 9-60GF", "hasbro": "Soar Phoenix 9-60GF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Phoenix Wing"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]}
+    ]},
+    {"code": "BX-00", "name": "Beyblade 25th Anniversary Set", "released": "2025-03-21", "kind": "SET", "builds": [
+      {"combo": "Dragoon Storm 4-60RA", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dragoon Storm"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Rubber Accel", "code": "RA"}]},
+      {"combo": "Storm Pegasis 3-70RA", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Storm Pegasis"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Rubber Accel", "code": "RA"}]},
+      {"combo": "Victory Valkyrie 2-60RA", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Victory Valkyrie"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Rubber Accel", "code": "RA"}]},
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Xeno Xcalibur 3-60GF", "released": "2025-03-29", "kind": "STARTER", "builds": [
+      {"combo": "Xeno Xcalibur 3-60GF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Xeno Xcalibur"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]}
+    ]},
+    {"code": "BX-00", "name": "Iron Man and Thanos Multipack Set", "released": "2025-04-26", "kind": "SET", "builds": [
+      {"combo": "Iron Man 4-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Iron Man"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]},
+      {"combo": "Thanos 4-60P", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Thanos"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Point", "code": "P"}]}
+    ]},
+    {"code": "BX-00", "name": "Luke Skywalker and Darth Vader Multipack Set", "released": "2025-04-26", "kind": "SET", "builds": [
+      {"combo": "Luke Skywalker 4-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Luke Skywalker"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]},
+      {"combo": "Darth Vader 4-60P", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Darth Vader"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Point", "code": "P"}]}
+    ]},
+    {"code": "BX-00", "name": "Spider-Man and Venom Multipack Set", "released": "2025-04-26", "kind": "SET", "builds": [
+      {"combo": "Spider-Man 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Spider-Man"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Venom 3-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Venom"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "BX-00", "name": "The Mandalorian and Moff Gideon Multipack Set", "released": "2025-04-26", "kind": "SET", "builds": [
+      {"combo": "The Mandalorian 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "The Mandalorian"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Moff Gideon 3-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Moff Gideon"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "BX-00", "name": "Optimus Primal and Starscream Multipack Set", "released": "2025-05-17", "kind": "SET", "builds": [
+      {"combo": "Optimus Primal 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Optimus Primal"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Starscream 3-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Starscream"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "BX-00", "name": "Optimus Prime and Megatron Multipack Set", "released": "2025-05-17", "kind": "SET", "builds": [
+      {"combo": "Optimus Prime 4-60P", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Optimus Prime"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Point", "code": "P"}]},
+      {"combo": "Megatron 4-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Megatron"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Samurai Steel 5-70GF", "released": "2025-06-15", "kind": "BOOSTER", "builds": [
+      {"combo": "Samurai Steel 5-70GF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Samurai Steel"}, {"kind": "RATCHET", "name": "5-70"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Rock Leone 6-80GN", "released": "2025-07-19", "kind": "BOOSTER", "builds": [
+      {"combo": "Rock Leone 6-80GN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Rock Leone"}, {"kind": "RATCHET", "name": "6-80"}, {"kind": "BIT", "name": "Gear Needle", "code": "GN"}]}
+    ]},
+    {"code": "BX-00", "name": "Spinosaurus and Quetzalcoatlus Multipack Set", "released": "2025-07-19", "kind": "SET", "builds": [
+      {"combo": "Tyranno Roar 3-85A", "hasbro": "Spinosaurus 3-85A", "shape": "BASIC", "parts": [{"kind": "BLADE", "name": "Tyranno Roar"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Accel", "code": "A"}]},
+      {"combo": "Ptera Swing 4-55D", "hasbro": "Quetzalcoatlus 4-55D", "shape": "BASIC", "parts": [{"kind": "BLADE", "name": "Ptera Swing"}, {"kind": "RATCHET", "name": "4-55"}, {"kind": "BIT", "name": "Dot", "code": "D"}]}
+    ]},
+    {"code": "BX-00", "name": "T. Rex and Mosasaurus Multipack Set", "released": "2025-07-19", "kind": "SET", "builds": [
+      {"combo": "Tyranno Beat 1-80GB", "hasbro": "T. Rex 1-80GB", "shape": "BASIC", "parts": [{"kind": "BLADE", "name": "Tyranno Beat"}, {"kind": "RATCHET", "name": "1-80"}, {"kind": "BIT", "name": "Gear Ball", "code": "GB"}]},
+      {"combo": "Tricera Spiky 9-60U", "hasbro": "Mosasaurus 9-60U", "shape": "BASIC", "parts": [{"kind": "BLADE", "name": "Tricera Spiky"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Unite", "code": "U"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Dragoon Storm 4-60RA", "released": "2025-12-27", "kind": "BOOSTER", "builds": [
+      {"combo": "Dragoon Storm 4-60RA", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dragoon Storm"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Rubber Accel", "code": "RA"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Shark Edge 2-60GP (Metal Coat: Black Fishing Spirits Wonder Version)", "released": "2026-02-18", "kind": "BOOSTER", "builds": [
+      {"combo": "Shark Edge 2-60GP", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Shark Edge"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Gear Point", "code": "GP"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Whale Wave 1-80GF (Metal Coat: Blue Fishing Spirits Wonder Version)", "released": "2026-03-05", "kind": "BOOSTER", "builds": [
+      {"combo": "Whale Wave 1-80GF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Whale Wave"}, {"kind": "RATCHET", "name": "1-80"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Cobalt Dragoon 9-60F (Metal Coat: White J.League Ver.)", "released": "2026-03-14", "kind": "STARTER", "builds": [
+      {"combo": "Cobalt Dragoon 9-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Cobalt Dragoon"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Dran Sword 1-60V (Metal Coat: Black J.League Ver.)", "released": "2026-03-14", "kind": "STARTER", "builds": [
+      {"combo": "Dran Sword 1-60V", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Vortex", "code": "V"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Storm Spriggan 2-70M", "released": "2026-03-28", "kind": "STARTER", "builds": [
+      {"combo": "Storm Spriggan 2-70M", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Storm Spriggan"}, {"kind": "RATCHET", "name": "2-70"}, {"kind": "BIT", "name": "Merge", "code": "M"}]}
+    ]},
+    {"code": "BX-00", "name": "Starter Storm Pegasis 3-70RA", "released": "2026-07-11", "kind": "STARTER", "builds": [
+      {"combo": "Storm Pegasis 3-70RA", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Storm Pegasis"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Rubber Accel", "code": "RA"}]}
+    ]},
+    {"code": "BX-00", "name": "Booster Dran Sword 3-60F (Version 2.0)", "released": "2026-08-08", "kind": "BOOSTER", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-01", "name": "Starter Dran Sword 3-60F", "released": "2023-07-15", "kind": "STARTER", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-02", "name": "Starter Hells Scythe 4-60T", "released": "2023-07-15", "kind": "STARTER", "builds": [
+      {"combo": "Hells Scythe 4-60T", "hasbro": "Scythe Incendio 4-60T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Scythe"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "BX-03", "name": "Starter Wizard Arrow 4-80B", "released": "2023-07-15", "kind": "STARTER", "builds": [
+      {"combo": "Wizard Arrow 4-80B", "hasbro": "Arrow Wizard 4-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]}
+    ]},
+    {"code": "BX-04", "name": "Starter Knight Shield 3-80N", "released": "2023-07-15", "kind": "STARTER", "builds": [
+      {"combo": "Knight Shield 3-80N", "hasbro": "Helm Knight 3-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Knight Shield"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "BX-05", "name": "Booster Wizard Arrow 4-80B", "released": "2023-07-15", "kind": "BOOSTER", "builds": [
+      {"combo": "Wizard Arrow 4-80B", "hasbro": "Arrow Wizard 4-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]}
+    ]},
+    {"code": "BX-06", "name": "Booster Knight Shield 3-80N", "released": "2023-07-15", "kind": "BOOSTER", "builds": [
+      {"combo": "Knight Shield 3-80N", "hasbro": "Helm Knight 3-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Knight Shield"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "BX-07", "name": "Start Dash Set", "released": "2023-07-15", "kind": "SET", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-08", "name": "3on3 Deck Set", "released": "2023-07-15", "kind": "DECK_SET", "builds": [
+      {"combo": "Hells Scythe 3-80B", "hasbro": "Scythe Incendio 3-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Hells Scythe"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]},
+      {"combo": "Wizard Arrow 4-60N", "hasbro": "Arrow Wizard 4-60N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Needle", "code": "N"}]},
+      {"combo": "Knight Shield 4-80T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Knight Shield"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "BX-13", "name": "Booster Knight Lance 4-80HN", "released": "2023-08-10", "kind": "BOOSTER", "builds": [
+      {"combo": "Knight Lance 4-80HN", "hasbro": "Lance Knight 4-80HN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Knight Lance"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "High Needle", "code": "HN"}]}
+    ]},
+    {"code": "BX-14", "name": "Random Booster Vol. 1", "released": "2023-09-09", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Shark Edge 3-60LF", "hasbro": "Keel Shark 3-60LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shark Edge"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]},
+      {"combo": "Shark Edge 4-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Shark Edge"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]},
+      {"combo": "Dran Sword 3-80B", "hasbro": "Sword Dran 3-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]},
+      {"combo": "Hells Scythe 4-80LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Hells Scythe"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]},
+      {"combo": "Knight Shield 4-60LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Knight Shield"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]},
+      {"combo": "Wizard Arrow 3-60T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "BX-15", "name": "Starter Leon Claw 5-60P", "released": "2023-10-07", "kind": "STARTER", "builds": [
+      {"combo": "Leon Claw 5-60P", "hasbro": "Claw Leon 5-60P", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Leon Claw"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Point", "code": "P"}]}
+    ]},
+    {"code": "BX-16", "name": "Random Booster Viper Tail Select", "released": "2023-10-07", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Viper Tail 5-80O", "hasbro": "Tail Viper 5-80O", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Viper Tail"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Orb", "code": "O"}]},
+      {"combo": "Viper Tail 4-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Viper Tail"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Viper Tail 3-80HN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Viper Tail"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "High Needle", "code": "HN"}]}
+    ]},
+    {"code": "BX-17", "name": "Battle Entry Set", "released": "2023-10-07", "kind": "SET", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Wizard Arrow 4-80B", "hasbro": "Arrow Wizard 4-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]}
+    ]},
+    {"code": "BX-19", "name": "Booster Rhino Horn 3-80S", "released": "2023-11-02", "kind": "BOOSTER", "builds": [
+      {"combo": "Rhino Horn 3-80S", "hasbro": "Horn Rhino 3-80S", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Rhino Horn"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Spike", "code": "S"}]}
+    ]},
+    {"code": "BX-20", "name": "Dran Dagger Deck Set", "released": "2023-11-02", "kind": "DECK_SET", "builds": [
+      {"combo": "Dran Dagger 4-60R", "hasbro": "Dagger Dran 4-60R", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Dagger"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Rush", "code": "R"}]},
+      {"combo": "Knight Shield 5-80T", "hasbro": "Helm Knight 5-80T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Knight Shield"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Taper", "code": "T"}]},
+      {"combo": "Shark Edge 3-80F", "hasbro": "Keel Shark 3-80F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shark Edge"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-21", "name": "Hells Chain Deck Set", "released": "2023-11-02", "kind": "DECK_SET", "builds": [
+      {"combo": "Hells Chain 5-60HT", "hasbro": "Chain Incendio 5-60HT", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Chain"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "High Taper", "code": "HT"}]},
+      {"combo": "Knight Lance 3-60LF", "hasbro": "Lance Knight 3-60LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Knight Lance"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]},
+      {"combo": "Wizard Arrow 4-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "BX-22", "name": "Dran Sword 3-60F Entry Package", "released": "2023-12-02", "kind": "STARTER", "builds": [
+      {"combo": "Dran Sword 3-60F", "hasbro": "Sword Dran 3-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-23", "name": "Starter Phoenix Wing 9-60GF", "released": "2023-12-27", "kind": "STARTER", "builds": [
+      {"combo": "Phoenix Wing 9-60GF", "hasbro": "Soar Phoenix 9-60GF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Phoenix Wing"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]}
+    ]},
+    {"code": "BX-24", "name": "Random Booster Vol. 2", "released": "2023-12-27", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Wyvern Gale 5-80GB", "hasbro": "Gale Wyvern 5-80GB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wyvern Gale"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Gear Ball", "code": "GB"}]},
+      {"combo": "Wyvern Gale 3-60T", "hasbro": "Gale Wyvern 3-60T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Wyvern Gale"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Taper", "code": "T"}]},
+      {"combo": "Knight Lance 4-60GB", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Knight Lance"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Gear Ball", "code": "GB"}]},
+      {"combo": "Viper Tail 5-60F", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Viper Tail"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Leon Claw 3-80HN", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Leon Claw"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "High Needle", "code": "HN"}]},
+      {"combo": "Wizard Arrow 4-80GB", "hasbro": "Arrow Wizard 4-80GB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Gear Ball", "code": "GB"}]}
+    ]},
+    {"code": "BX-26", "name": "Booster Unicorn Sting 5-60GP", "released": "2024-01-27", "kind": "BOOSTER", "builds": [
+      {"combo": "Unicorn Sting 5-60GP", "hasbro": "Sting Unicorn 5-60GP", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Unicorn Sting"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Gear Point", "code": "GP"}]}
+    ]},
+    {"code": "BX-27", "name": "Random Booster Sphinx Cowl Select", "released": "2024-02-22", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Sphinx Cowl 9-80GN", "hasbro": "Cowl Sphinx 9-80GN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Sphinx Cowl"}, {"kind": "RATCHET", "name": "9-80"}, {"kind": "BIT", "name": "Gear Needle", "code": "GN"}]},
+      {"combo": "Sphinx Cowl 4-80HT", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Sphinx Cowl"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "High Taper", "code": "HT"}]},
+      {"combo": "Sphinx Cowl 5-60O", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Sphinx Cowl"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Orb", "code": "O"}]}
+    ]},
+    {"code": "BX-31", "name": "Random Booster Vol. 3", "released": "2024-04-27", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Tyranno Beat 4-70Q", "hasbro": "Beat Tyranno 4-70Q", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Tyranno Beat"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Quake", "code": "Q"}]},
+      {"combo": "Tyranno Beat 3-60S", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Tyranno Beat"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Spike", "code": "S"}]},
+      {"combo": "Hells Chain 9-80O", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Hells Chain"}, {"kind": "RATCHET", "name": "9-80"}, {"kind": "BIT", "name": "Orb", "code": "O"}]},
+      {"combo": "Dran Dagger 4-70P", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Dagger"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Point", "code": "P"}]},
+      {"combo": "Shark Edge 1-60Q", "hasbro": "Keel Shark 1-60Q", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shark Edge"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Quake", "code": "Q"}]},
+      {"combo": "Rhino Horn 5-80Q", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Rhino Horn"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Quake", "code": "Q"}]}
+    ]},
+    {"code": "BX-33", "name": "Booster Weiss Tiger 3-60U", "released": "2024-06-15", "kind": "BOOSTER", "builds": [
+      {"combo": "Weiss Tiger 3-60U", "hasbro": "Pearl Tiger 3-60U", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Weiss Tiger"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Unite", "code": "U"}]}
+    ]},
+    {"code": "BX-34", "name": "Starter Cobalt Dragoon 2-60C", "released": "2024-07-13", "kind": "STARTER", "builds": [
+      {"combo": "Cobalt Dragoon 2-60C", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Cobalt Dragoon"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Cyclone", "code": "C"}]}
+    ]},
+    {"code": "BX-35", "name": "Random Booster Vol. 4", "released": "2024-07-13", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Black Shell 4-60D", "hasbro": "Obsidian Shell 4-60D", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Black Shell"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Dot", "code": "D"}]},
+      {"combo": "Black Shell 9-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Black Shell"}, {"kind": "RATCHET", "name": "9-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]},
+      {"combo": "Unicorn Sting 3-70D", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Unicorn Sting"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Dot", "code": "D"}]},
+      {"combo": "Wizard Rod 1-60R", "hasbro": "Wand Wizard 1-60R", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Wizard Rod"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Rush", "code": "R"}]},
+      {"combo": "Phoenix Wing 5-80H", "hasbro": "Soar Phoenix 5-80H", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Phoenix Wing"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Hexa", "code": "H"}]},
+      {"combo": "Viper Tail 5-70D", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Viper Tail"}, {"kind": "RATCHET", "name": "5-70"}, {"kind": "BIT", "name": "Dot", "code": "D"}]}
+    ]},
+    {"code": "BX-36", "name": "Random Booster Whale Wave Select", "released": "2024-09-14", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Whale Wave 5-80E", "hasbro": "Tide Whale 5-80E", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Whale Wave"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Elevate", "code": "E"}]},
+      {"combo": "Whale Wave 4-70HN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Whale Wave"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "High Needle", "code": "HN"}]},
+      {"combo": "Whale Wave 3-80GB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Whale Wave"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Gear Ball", "code": "GB"}]}
+    ]},
+    {"code": "BX-37", "name": "Double Xtreme Stadium Set", "released": "2024-10-12", "kind": "SET", "builds": [
+      {"combo": "Bear Scratch 5-60F", "hasbro": "Savage Bear 5-60F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Bear Scratch"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]}
+    ]},
+    {"code": "BX-38", "name": "Booster Crimson Garuda 4-70TP", "released": "2024-11-02", "kind": "BOOSTER", "builds": [
+      {"combo": "Crimson Garuda 4-70TP", "hasbro": "Scarlet Garuda 4-70TP", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Crimson Garuda"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Trans Point", "code": "TP"}]}
+    ]},
+    {"code": "BX-39", "name": "Random Booster Shelter Drake Select", "released": "2025-02-15", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Shelter Drake 7-80GP", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Shelter Drake"}, {"kind": "RATCHET", "name": "7-80"}, {"kind": "BIT", "name": "Gear Point", "code": "GP"}]},
+      {"combo": "Shelter Drake 5-70O", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Shelter Drake"}, {"kind": "RATCHET", "name": "5-70"}, {"kind": "BIT", "name": "Orb", "code": "O"}]},
+      {"combo": "Shelter Drake 3-60D", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Shelter Drake"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Dot", "code": "D"}]}
+    ]},
+    {"code": "BX-44", "name": "Booster Tricera Press M-85BS", "released": "2025-06-28", "kind": "BOOSTER", "builds": [
+      {"combo": "Tricera Press M-85BS", "hasbro": "Brace Triceratops M-85BS", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Tricera Press"}, {"kind": "RATCHET", "name": "M-85"}, {"kind": "BIT", "name": "Bound Spike", "code": "BS"}]}
+    ]},
+    {"code": "BX-45", "name": "Booster Samurai Calibur 6-70M", "released": "2025-08-09", "kind": "BOOSTER", "builds": [
+      {"combo": "Samurai Calibur 6-70M", "hasbro": "Calibur Samurai 6-70M", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Samurai Calibur"}, {"kind": "RATCHET", "name": "6-70"}, {"kind": "BIT", "name": "Merge", "code": "M"}]}
+    ]},
+    {"code": "BX-46", "name": "Battle Entry Set Infinity", "released": "2025-10-11", "kind": "SET", "builds": [
+      {"combo": "Cobalt Drake 9-60R", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Cobalt Drake"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Rush", "code": "R"}]},
+      {"combo": "Goat Tackle 7-70T", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Goat Tackle"}, {"kind": "RATCHET", "name": "7-70"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "BX-48", "name": "Random Booster Vol. 9", "released": "2026-02-14", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Cobalt Dragoon 9-80F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Cobalt Dragoon"}, {"kind": "RATCHET", "name": "9-80"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Shark Edge 4-70E", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Shark Edge"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Elevate", "code": "E"}]},
+      {"combo": "Mammoth Tusk 7-60S", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Mammoth Tusk"}, {"kind": "RATCHET", "name": "7-60"}, {"kind": "BIT", "name": "Spike", "code": "S"}]},
+      {"combo": "Hells Scythe 3-85GB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Hells Scythe"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Gear Ball", "code": "GB"}]},
+      {"combo": "Dran Buster 2-80Q", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "2-80"}, {"kind": "BIT", "name": "Quake", "code": "Q"}]}
+    ]},
+    {"code": "BX-49", "name": "Starter Dran Strike 4-50FF", "released": "2026-05-16", "kind": "STARTER", "builds": [
+      {"combo": "Dran Strike 4-50FF", "hasbro": "Strike Dran 4-50FF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Strike"}, {"kind": "RATCHET", "name": "4-50"}, {"kind": "BIT", "name": "Free Flat", "code": "FF"}]}
+    ]},
+    {"code": "BX-50", "name": "Random Booster Vol. 11", "released": "2026-07-11", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Heavens Ring 0-80DS", "hasbro": "Ring Aether 0-80DS", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Heavens Ring"}, {"kind": "RATCHET", "name": "0-80"}, {"kind": "BIT", "name": "Disk Spike", "code": "DS"}]},
+      {"combo": "Heavens Ring 6-60TP", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Heavens Ring"}, {"kind": "RATCHET", "name": "6-60"}, {"kind": "BIT", "name": "Trans Point", "code": "TP"}]},
+      {"combo": "Impact Drake 7-55FB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Impact Drake"}, {"kind": "RATCHET", "name": "7-55"}, {"kind": "BIT", "name": "Free Ball", "code": "FB"}]},
+      {"combo": "Ghost Circle M-85DS", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Ghost Circle"}, {"kind": "RATCHET", "name": "M-85"}, {"kind": "BIT", "name": "Disk Spike", "code": "DS"}]},
+      {"combo": "Wolf Flame D9-65L", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Wolf"}, {"kind": "MAIN_BLADE", "name": "Flame"}, {"kind": "ASSIST_BLADE", "name": "Dual", "code": "D"}, {"kind": "RATCHET", "name": "9-65"}, {"kind": "BIT", "name": "Level", "code": "L"}]},
+      {"combo": "Cerberus Reaper B0-80WB", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Cerberus"}, {"kind": "MAIN_BLADE", "name": "Reaper"}, {"kind": "ASSIST_BLADE", "name": "Bumper", "code": "B"}, {"kind": "RATCHET", "name": "0-80"}, {"kind": "BIT", "name": "Wall Ball", "code": "WB"}]}
+    ]},
+    {"code": "BX-52", "name": "Starter Luster Dragoon 6-60LC", "released": "2026-10-10", "kind": "STARTER", "builds": [
+      {"combo": "Luster Dragoon 6-60LC", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Luster Dragoon"}, {"kind": "RATCHET", "name": "6-60"}, {"kind": "BIT", "name": "Low Cyclone", "code": "LC"}]}
+    ]},
+    {"code": "BX-53", "name": "All In One Set", "released": "2026-10-10", "kind": "SET", "builds": [
+      {"combo": "Aero Pegasus 3-70A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Aero Pegasus"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Accel", "code": "A"}]},
+      {"combo": "Wizard Arrow 4-80B", "hasbro": "Arrow Wizard 4-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wizard Arrow"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]},
+      {"combo": "Knight Shield 3-80N", "hasbro": "Helm Knight 3-80N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Knight Shield"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "BX-54", "name": "Booster Sieg Superion 0-70LP", "released": "2026-11-21", "kind": "BOOSTER", "builds": [
+      {"combo": "Sieg Superion 0-70LP", "hasbro": "Suppress Superion 0-70LP", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Sieg Superion"}, {"kind": "RATCHET", "name": "0-70"}, {"kind": "BIT", "name": "Low Point", "code": "LP"}]}
+    ]},
+    {"code": "BX-55", "name": "Random Booster Vol. 12", "released": "2026-12-26", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Horus Shatter 3-85MO", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Horus Shatter"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Metal Orb", "code": "MO"}]},
+      {"combo": "Horus Shatter 1-60BS", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Horus Shatter"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Bound Spike", "code": "BS"}]},
+      {"combo": "Leon Fang T9-65HT", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Leon"}, {"kind": "MAIN_BLADE", "name": "Fang"}, {"kind": "ASSIST_BLADE", "name": "Turn", "code": "T"}, {"kind": "RATCHET", "name": "9-65"}, {"kind": "BIT", "name": "High Taper", "code": "HT"}]},
+      {"combo": "Fox Blast R6-70A", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Fox"}, {"kind": "MAIN_BLADE", "name": "Blast"}, {"kind": "ASSIST_BLADE", "name": "Round", "code": "R"}, {"kind": "RATCHET", "name": "6-70"}, {"kind": "BIT", "name": "Accel", "code": "A"}]},
+      {"combo": "Tricera Press 4-60DS", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Tricera Press"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Disk Spike", "code": "DS"}]},
+      {"combo": "Clock Mirage 4-55MO", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Clock Mirage"}, {"kind": "RATCHET", "name": "4-55"}, {"kind": "BIT", "name": "Metal Orb", "code": "MO"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Dran Buster 1-60A (Metal Coat: Red)", "kind": "BOOSTER", "builds": [
+      {"combo": "Dran Buster 1-60A", "hasbro": "Buster Dran 1-60A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Aero Pegasus 3-70A", "released": "2024-07-30", "kind": "BOOSTER", "builds": [
+      {"combo": "Aero Pegasus 3-70A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Aero Pegasus"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "UX-00", "name": "Dran Deck Starter", "released": "2024-11-16", "kind": "DECK_SET", "builds": [
+      {"combo": "Dran Sword 4-80DB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Dran Sword"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Disk Ball", "code": "DB"}]},
+      {"combo": "Dran Dagger 9-60LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Dagger"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]},
+      {"combo": "Dran Buster 3-70N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Needle", "code": "N"}]}
+    ]},
+    {"code": "UX-00", "name": "Dran Buster 1-60A (Color Choice Booster)", "released": "2024-12-27", "kind": "BOOSTER", "builds": [
+      {"combo": "Dran Buster 1-60A", "hasbro": "Buster Dran 1-60A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "UX-00", "name": "Bey Kick Off Set (FC Barcelona Version)", "released": "2025-01-25", "kind": "SET", "builds": [
+      {"combo": "Hells Hammer 3-70H", "hasbro": "Hammer Incendio 3-70H", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Hammer"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Hexa", "code": "H"}]}
+    ]},
+    {"code": "UX-00", "name": "Starter Dran Buster 1-60A (Metal Coat: Blue FC Barcelona Version)", "released": "2025-01-25", "kind": "STARTER", "builds": [
+      {"combo": "Dran Buster 1-60A", "hasbro": "Buster Dran 1-60A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Knight Mail 3-85BS (Metal Coat: Navy)", "released": "2025-07-17", "kind": "BOOSTER", "builds": [
+      {"combo": "Knight Mail 3-85BS", "hasbro": "Mail Knight 3-85BS", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Knight Mail"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Bound Spike", "code": "BS"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Wyvern Hover 2-80GN", "released": "2025-10-24", "kind": "BOOSTER", "builds": [
+      {"combo": "Wyvern Hover 2-80GN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Wyvern Hover"}, {"kind": "RATCHET", "name": "2-80"}, {"kind": "BIT", "name": "Gear Needle", "code": "GN"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Wyvern Hover 2-80GN (Metal Coat: Violet)", "released": "2025-10-24", "kind": "BOOSTER", "builds": [
+      {"combo": "Wyvern Hover 2-80GN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Wyvern Hover"}, {"kind": "RATCHET", "name": "2-80"}, {"kind": "BIT", "name": "Gear Needle", "code": "GN"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Orochi Cluster 6-60LF", "released": "2026-01-21", "kind": "BOOSTER", "builds": [
+      {"combo": "Orochi Cluster 6-60LF", "hasbro": "Coil Orochi 6-60LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Orochi Cluster"}, {"kind": "RATCHET", "name": "6-60"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Samurai Saber 2-70L (Metal Coat: Orange)", "kind": "BOOSTER", "builds": [
+      {"combo": "Samurai Saber 2-70L", "hasbro": "Saber Samurai 2-70L", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Samurai Saber"}, {"kind": "RATCHET", "name": "2-70"}, {"kind": "BIT", "name": "Level", "code": "L"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Aero Pegasus 3-70A (Red Ver.)", "released": "2026-02-21", "kind": "BOOSTER", "builds": [
+      {"combo": "Aero Pegasus 3-70A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Aero Pegasus"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "UX-00", "name": "Booster Scorpio Spear 0-70Z (Metal Coat: Magenta)", "released": "2026-04-25", "kind": "BOOSTER", "builds": [
+      {"combo": "Scorpio Spear 0-70Z", "hasbro": "Spear Scorpio 0-70Z", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Scorpio Spear"}, {"kind": "RATCHET", "name": "0-70"}, {"kind": "BIT", "name": "Zap", "code": "Z"}]}
+    ]},
+    {"code": "UX-00", "name": "Starter Samurai Saber 5-60K (Metal Coat: Samurai Blue Japan National Football Team Ver.)", "released": "2026-06-13", "kind": "STARTER", "builds": [
+      {"combo": "Samurai Saber 5-60K", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Samurai Saber"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Kick", "code": "K"}]}
+    ]},
+    {"code": "UX-00", "name": "Starter Glory Valkyrie LF (Metal Coat: Blue)", "released": "2026-08-29", "kind": "STARTER", "builds": [
+      {"combo": "Glory Valkyrie LF", "hasbro": "Glory Valkerion LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Glory Valkyrie"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]}
+    ]},
+    {"code": "UX-01", "name": "Starter Dran Buster 1-60A", "released": "2024-03-30", "kind": "STARTER", "builds": [
+      {"combo": "Dran Buster 1-60A", "hasbro": "Buster Dran 1-60A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "UX-02", "name": "Starter Hells Hammer 3-70H", "released": "2024-03-30", "kind": "STARTER", "builds": [
+      {"combo": "Hells Hammer 3-70H", "hasbro": "Hammer Incendio 3-70H", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Hammer"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Hexa", "code": "H"}]}
+    ]},
+    {"code": "UX-03", "name": "Booster Wizard Rod 5-70DB", "released": "2024-03-30", "kind": "BOOSTER", "builds": [
+      {"combo": "Wizard Rod 5-70DB", "hasbro": "Wand Wizard 5-70DB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wizard Rod"}, {"kind": "RATCHET", "name": "5-70"}, {"kind": "BIT", "name": "Disk Ball", "code": "DB"}]}
+    ]},
+    {"code": "UX-04", "name": "Battle Entry Set U", "released": "2024-04-27", "kind": "SET", "builds": [
+      {"combo": "Dran Buster 1-60A", "hasbro": "Buster Dran 1-60A", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Accel", "code": "A"}]},
+      {"combo": "Wizard Rod 5-70DB", "hasbro": "Wand Wizard 5-70DB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wizard Rod"}, {"kind": "RATCHET", "name": "5-70"}, {"kind": "BIT", "name": "Disk Ball", "code": "DB"}]}
+    ]},
+    {"code": "UX-05", "name": "Random Booster Shinobi Shadow Select", "released": "2024-05-18", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Shinobi Shadow 1-80MN", "hasbro": "Shadow Shinobi 1-80MN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Shinobi Shadow"}, {"kind": "RATCHET", "name": "1-80"}, {"kind": "BIT", "name": "Metal Needle", "code": "MN"}]},
+      {"combo": "Shinobi Shadow 9-60LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shinobi Shadow"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]},
+      {"combo": "Shinobi Shadow 3-70GP", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Shinobi Shadow"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Gear Point", "code": "GP"}]}
+    ]},
+    {"code": "UX-06", "name": "Booster Leon Crest 7-60GN", "released": "2024-08-10", "kind": "BOOSTER", "builds": [
+      {"combo": "Leon Crest 7-60GN", "hasbro": "Crest Leon 7-60GN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Leon Crest"}, {"kind": "RATCHET", "name": "7-60"}, {"kind": "BIT", "name": "Gear Needle", "code": "GN"}]}
+    ]},
+    {"code": "UX-07", "name": "Phoenix Rudder Deck Set", "released": "2024-08-10", "kind": "DECK_SET", "builds": [
+      {"combo": "Phoenix Rudder 9-70G", "hasbro": "Rudder Phoenix 9-70G", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Phoenix Rudder"}, {"kind": "RATCHET", "name": "9-70"}, {"kind": "BIT", "name": "Glide", "code": "G"}]},
+      {"combo": "Sphinx Cowl 1-80GF", "hasbro": "Cowl Sphinx 1-80GF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Sphinx Cowl"}, {"kind": "RATCHET", "name": "1-80"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]},
+      {"combo": "Wyvern Gale 2-60S", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Wyvern Gale"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Spike", "code": "S"}]}
+    ]},
+    {"code": "UX-08", "name": "Starter Silver Wolf 3-80FB", "released": "2024-10-12", "kind": "STARTER", "builds": [
+      {"combo": "Silver Wolf 3-80FB", "hasbro": "Sterling Wolf 3-80FB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Silver Wolf"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Free Ball", "code": "FB"}]}
+    ]},
+    {"code": "UX-09", "name": "Starter Samurai Saber 2-70L", "released": "2024-11-02", "kind": "STARTER", "builds": [
+      {"combo": "Samurai Saber 2-70L", "hasbro": "Saber Samurai 2-70L", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Samurai Saber"}, {"kind": "RATCHET", "name": "2-70"}, {"kind": "BIT", "name": "Level", "code": "L"}]}
+    ]},
+    {"code": "UX-10", "name": "Customize Set U", "released": "2024-11-02", "kind": "SET", "builds": [
+      {"combo": "Knight Mail 3-85BS", "hasbro": "Mail Knight 3-85BS", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Knight Mail"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Bound Spike", "code": "BS"}]}
+    ]},
+    {"code": "UX-11", "name": "Starter Impact Drake 9-60LR", "released": "2024-12-28", "kind": "STARTER", "builds": [
+      {"combo": "Impact Drake 9-60LR", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Impact Drake"}, {"kind": "RATCHET", "name": "9-60"}, {"kind": "BIT", "name": "Low Rush", "code": "LR"}]}
+    ]},
+    {"code": "UX-12", "name": "Random Booster Vol. 5", "released": "2024-12-28", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Ghost Circle 0-80GB", "hasbro": "Circle Ghost 0-80GB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Ghost Circle"}, {"kind": "RATCHET", "name": "0-80"}, {"kind": "BIT", "name": "Gear Ball", "code": "GB"}]},
+      {"combo": "Ghost Circle 4-60H", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Ghost Circle"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Hexa", "code": "H"}]},
+      {"combo": "Shinobi Shadow 3-80F", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shinobi Shadow"}, {"kind": "RATCHET", "name": "3-80"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Leon Claw 0-80E", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Leon Claw"}, {"kind": "RATCHET", "name": "0-80"}, {"kind": "BIT", "name": "Elevate", "code": "E"}]},
+      {"combo": "Phoenix Feather 2-60N", "hasbro": "Feather Phoenix 2-60N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Phoenix Feather"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Needle", "code": "N"}]},
+      {"combo": "Wyvern Gale 0-80C", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Wyvern Gale"}, {"kind": "RATCHET", "name": "0-80"}, {"kind": "BIT", "name": "Cyclone", "code": "C"}]}
+    ]},
+    {"code": "UX-13", "name": "Booster Golem Rock 1-60UN", "released": "2025-01-25", "kind": "BOOSTER", "builds": [
+      {"combo": "Golem Rock 1-60UN", "hasbro": "Rock Golem 1-60UN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Golem Rock"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Under Needle", "code": "UN"}]}
+    ]},
+    {"code": "UX-14", "name": "Starter Scorpio Spear 0-70Z", "released": "2025-04-26", "kind": "STARTER", "builds": [
+      {"combo": "Scorpio Spear 0-70Z", "hasbro": "Spear Scorpio 0-70Z", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Scorpio Spear"}, {"kind": "RATCHET", "name": "0-70"}, {"kind": "BIT", "name": "Zap", "code": "Z"}]}
+    ]},
+    {"code": "UX-15", "name": "Shark Scale Deck Set", "released": "2025-08-09", "kind": "DECK_SET", "builds": [
+      {"combo": "Shark Scale 4-50UF", "hasbro": "Scale Shark 4-50UF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Shark Scale"}, {"kind": "RATCHET", "name": "4-50"}, {"kind": "BIT", "name": "Under Flat", "code": "UF"}]},
+      {"combo": "Tyranno Roar 1-70L", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Tyranno Roar"}, {"kind": "RATCHET", "name": "1-70"}, {"kind": "BIT", "name": "Level", "code": "L"}]},
+      {"combo": "Hells Brave J3-60GF", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Hells"}, {"kind": "MAIN_BLADE", "name": "Brave"}, {"kind": "ASSIST_BLADE", "name": "Jaggy", "code": "J"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Gear Flat", "code": "GF"}]}
+    ]},
+    {"code": "UX-16", "name": "Random Booster Clock Mirage Select", "released": "2025-10-11", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Clock Mirage 9-65B", "hasbro": "Mirage Clock 9-65B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Clock Mirage"}, {"kind": "RATCHET", "name": "9-65"}, {"kind": "BIT", "name": "Ball", "code": "B"}]}
+    ]},
+    {"code": "UX-17", "name": "Starter Meteor Dragoon 3-70J", "released": "2025-12-27", "kind": "STARTER", "builds": [
+      {"combo": "Meteor Dragoon 3-70J", "hasbro": "Meteoroid Dragoon 3-70J", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Meteor Dragoon"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Jolt", "code": "J"}]}
+    ]},
+    {"code": "UX-18", "name": "Random Booster Vol. 8", "released": "2025-12-27", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Mummy Curse 7-55W", "hasbro": "Curse Mummy 7-55W", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Mummy Curse"}, {"kind": "RATCHET", "name": "7-55"}, {"kind": "BIT", "name": "Wedge", "code": "W"}]},
+      {"combo": "Mummy Curse 4-60C", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Mummy Curse"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Cyclone", "code": "C"}]},
+      {"combo": "Pegasus Brush M3-85W", "shape": "CX", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Pegasus"}, {"kind": "MAIN_BLADE", "name": "Brush"}, {"kind": "ASSIST_BLADE", "name": "Massive", "code": "M"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Wedge", "code": "W"}]},
+      {"combo": "Sol Brave C9-70TP", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Sol"}, {"kind": "MAIN_BLADE", "name": "Brave"}, {"kind": "ASSIST_BLADE", "name": "Charge", "code": "C"}, {"kind": "RATCHET", "name": "9-70"}, {"kind": "BIT", "name": "Trans Point", "code": "TP"}]},
+      {"combo": "Dran Dagger 7-55G", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Dran Dagger"}, {"kind": "RATCHET", "name": "7-55"}, {"kind": "BIT", "name": "Glide", "code": "G"}]},
+      {"combo": "Weiss Tiger 4-80LR", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Weiss Tiger"}, {"kind": "RATCHET", "name": "4-80"}, {"kind": "BIT", "name": "Low Rush", "code": "LR"}]}
+    ]},
+    {"code": "UX-19", "name": "Starter Bullet Griffon H", "released": "2026-04-25", "kind": "STARTER", "builds": [
+      {"combo": "Bullet Griffon H", "hasbro": "Rocket Griffon H", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Bullet Griffon"}, {"kind": "BIT", "name": "Hexa", "code": "H"}]}
+    ]},
+    {"code": "UX-20", "name": "Starter Glory Valkyrie LF", "released": "2026-07-11", "kind": "STARTER", "builds": [
+      {"combo": "Glory Valkyrie LF", "hasbro": "Glory Valkerion LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Glory Valkyrie"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]}
+    ]},
+    {"code": "UX-21", "name": "Hells Nether Deck Set", "released": "2026-08-08", "kind": "DECK_SET", "builds": [
+      {"combo": "Hells Nether Z", "hasbro": "Nether Incendio Z", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Nether"}, {"kind": "BIT", "name": "Zap", "code": "Z"}]},
+      {"combo": "Silver Wolf 9-70R", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Silver Wolf"}, {"kind": "RATCHET", "name": "9-70"}, {"kind": "BIT", "name": "Rush", "code": "R"}]},
+      {"combo": "Wyvern Hover 8-80B", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Wyvern Hover"}, {"kind": "RATCHET", "name": "8-80"}, {"kind": "BIT", "name": "Ball", "code": "B"}]}
+    ]},
+    {"code": "UX-22", "name": "Starter Vanish Lucifer WW", "released": "2026-12-26", "kind": "STARTER", "builds": [
+      {"combo": "Vanish Lucifer WW", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Vanish Lucifer"}, {"kind": "BIT", "name": "Wall Wedge", "code": "WW"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Valkyrie Volt S4-70V (Metal Coat: Gold)", "released": "2025-07-17", "kind": "BOOSTER", "builds": [
+      {"combo": "Valkyrie Volt S4-70V", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Valkyrie"}, {"kind": "MAIN_BLADE", "name": "Volt"}, {"kind": "ASSIST_BLADE", "name": "Slash", "code": "S"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Vortex", "code": "V"}]}
+    ]},
+    {"code": "CX-00", "name": "Starter Pegasus Blast ATr (Metal Coat: Red)", "released": "2025-08-03", "kind": "STARTER", "builds": [
+      {"combo": "Pegasus Blast ATr", "hasbro": "Blast Pegasus A Tr", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Pegasus"}, {"kind": "MAIN_BLADE", "name": "Blast"}, {"kind": "ASSIST_BLADE", "name": "Assault", "code": "A"}, {"kind": "RATCHET", "name": "Turbo"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Wizard Arc R4-55LO (Metal Coat: Black)", "released": "2025-08-09", "kind": "BOOSTER", "builds": [
+      {"combo": "Wizard Arc R4-55LO", "hasbro": "Arc Wizard R 4-55LO", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Wizard"}, {"kind": "MAIN_BLADE", "name": "Arc"}, {"kind": "ASSIST_BLADE", "name": "Round", "code": "R"}, {"kind": "RATCHET", "name": "4-55"}, {"kind": "BIT", "name": "Low Orb", "code": "LO"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Leon Fang T4-60A (Red Ver.)", "released": "2025-11-13", "kind": "BOOSTER", "builds": [
+      {"combo": "Leon Fang T4-60A", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Leon"}, {"kind": "MAIN_BLADE", "name": "Fang"}, {"kind": "ASSIST_BLADE", "name": "Turn", "code": "T"}, {"kind": "RATCHET", "name": "4-60"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Dran Brave S6-60V (Metal Coat: Black)", "released": "2026-05-30", "kind": "BOOSTER", "builds": [
+      {"combo": "Dran Brave S6-60V", "hasbro": "Courage Dran S 6-60V", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Dran"}, {"kind": "MAIN_BLADE", "name": "Brave"}, {"kind": "ASSIST_BLADE", "name": "Slash", "code": "S"}, {"kind": "RATCHET", "name": "6-60"}, {"kind": "BIT", "name": "Vortex", "code": "V"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Dran Arc S2-70K (Metal Coat: Blue)", "kind": "BOOSTER", "builds": [
+      {"combo": "Dran Arc S2-70K", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Dran"}, {"kind": "MAIN_BLADE", "name": "Arc"}, {"kind": "ASSIST_BLADE", "name": "Slash", "code": "S"}, {"kind": "RATCHET", "name": "2-70"}, {"kind": "BIT", "name": "Kick", "code": "K"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Bucks Antlers B2-60D (Metal Coat: Orange)", "released": "2026-07-09", "kind": "BOOSTER", "builds": [
+      {"combo": "Bucks Antlers B2-60D", "shape": "CX", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Bucks"}, {"kind": "MAIN_BLADE", "name": "Antlers"}, {"kind": "ASSIST_BLADE", "name": "Bumper", "code": "B"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Dot", "code": "D"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Drake Brave G4-70I (Metal Coat: Blue)", "released": "2026-07-09", "kind": "BOOSTER", "builds": [
+      {"combo": "Drake Brave G4-70I", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Drake"}, {"kind": "MAIN_BLADE", "name": "Brave"}, {"kind": "ASSIST_BLADE", "name": "Gravity", "code": "G"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Ignition", "code": "I"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Hornet Fort R7-60T (Metal Coat: Yellow)", "released": "2026-07-09", "kind": "BOOSTER", "builds": [
+      {"combo": "Hornet Fort R7-60T", "hasbro": "Fort Hornet R 7-60T", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Hornet"}, {"kind": "MAIN_BLADE", "name": "Fort"}, {"kind": "ASSIST_BLADE", "name": "Round", "code": "R"}, {"kind": "RATCHET", "name": "7-60"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Kraken Wriggle S3-70O (Metal Coat: Blue)", "released": "2026-07-09", "kind": "BOOSTER", "builds": [
+      {"combo": "Kraken Wriggle S3-70O", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Kraken"}, {"kind": "MAIN_BLADE", "name": "Wriggle"}, {"kind": "ASSIST_BLADE", "name": "Slash", "code": "S"}, {"kind": "RATCHET", "name": "3-70"}, {"kind": "BIT", "name": "Orb", "code": "O"}]}
+    ]},
+    {"code": "CX-00", "name": "Evangelion Deck Set", "released": "2026-08-29", "kind": "DECK_SET", "builds": [
+      {"combo": "Eva Arc B0-70E", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Eva"}, {"kind": "MAIN_BLADE", "name": "Arc"}, {"kind": "ASSIST_BLADE", "name": "Bumper", "code": "B"}, {"kind": "RATCHET", "name": "0-70"}, {"kind": "BIT", "name": "Elevate", "code": "E"}]},
+      {"combo": "Eva Brave A1-70V", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Eva"}, {"kind": "MAIN_BLADE", "name": "Brave"}, {"kind": "ASSIST_BLADE", "name": "Assault", "code": "A"}, {"kind": "RATCHET", "name": "1-70"}, {"kind": "BIT", "name": "Vortex", "code": "V"}]},
+      {"combo": "Eva Brush T2-70A", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Eva"}, {"kind": "MAIN_BLADE", "name": "Brush"}, {"kind": "ASSIST_BLADE", "name": "Turn", "code": "T"}, {"kind": "RATCHET", "name": "2-70"}, {"kind": "BIT", "name": "Accel", "code": "A"}]}
+    ]},
+    {"code": "CX-00", "name": "Starter Tiga Rage FT3-60T", "released": "2026-09-12", "kind": "STARTER", "builds": [
+      {"combo": "Tiga Rage FT3-60T", "shape": "CX_METAL", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Tiga"}, {"kind": "METAL_BLADE", "name": "Rage"}, {"kind": "OVER_BLADE", "name": "Flow", "code": "F"}, {"kind": "ASSIST_BLADE", "name": "Turn", "code": "T"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Taper", "code": "T"}]}
+    ]},
+    {"code": "CX-00", "name": "Booster Valkyrie Volt S4-70V (Gunmetal Version)", "released": "2026-11-05", "kind": "BOOSTER", "builds": [
+      {"combo": "Valkyrie Volt S4-70V", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Valkyrie"}, {"kind": "MAIN_BLADE", "name": "Volt"}, {"kind": "ASSIST_BLADE", "name": "Slash", "code": "S"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Vortex", "code": "V"}]}
+    ]},
+    {"code": "CX-01", "name": "Starter Dran Brave S6-60V", "released": "2025-03-29", "kind": "STARTER", "builds": [
+      {"combo": "Dran Brave S6-60V", "hasbro": "Courage Dran S 6-60V", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Dran"}, {"kind": "MAIN_BLADE", "name": "Brave"}, {"kind": "ASSIST_BLADE", "name": "Slash", "code": "S"}, {"kind": "RATCHET", "name": "6-60"}, {"kind": "BIT", "name": "Vortex", "code": "V"}]}
+    ]},
+    {"code": "CX-02", "name": "Starter Wizard Arc R4-55LO", "released": "2025-03-29", "kind": "STARTER", "builds": [
+      {"combo": "Wizard Arc R4-55LO", "hasbro": "Arc Wizard R 4-55LO", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Wizard"}, {"kind": "MAIN_BLADE", "name": "Arc"}, {"kind": "ASSIST_BLADE", "name": "Round", "code": "R"}, {"kind": "RATCHET", "name": "4-55"}, {"kind": "BIT", "name": "Low Orb", "code": "LO"}]}
+    ]},
+    {"code": "CX-03", "name": "Booster Perseus Dark B6-80W", "released": "2025-03-29", "kind": "BOOSTER", "builds": [
+      {"combo": "Perseus Dark B6-80W", "hasbro": "Dark Perseus B 6-80W", "shape": "CX", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Perseus"}, {"kind": "MAIN_BLADE", "name": "Dark"}, {"kind": "ASSIST_BLADE", "name": "Bumper", "code": "B"}, {"kind": "RATCHET", "name": "6-80"}, {"kind": "BIT", "name": "Wedge", "code": "W"}]}
+    ]},
+    {"code": "CX-04", "name": "Battle Entry Set C", "released": "2025-03-29", "kind": "SET", "builds": [
+      {"combo": "Dran Brave S6-60V", "hasbro": "Courage Dran S 6-60V", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Dran"}, {"kind": "MAIN_BLADE", "name": "Brave"}, {"kind": "ASSIST_BLADE", "name": "Slash", "code": "S"}, {"kind": "RATCHET", "name": "6-60"}, {"kind": "BIT", "name": "Vortex", "code": "V"}]},
+      {"combo": "Perseus Dark B6-80W", "hasbro": "Dark Perseus B 6-80W", "shape": "CX", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Perseus"}, {"kind": "MAIN_BLADE", "name": "Dark"}, {"kind": "ASSIST_BLADE", "name": "Bumper", "code": "B"}, {"kind": "RATCHET", "name": "6-80"}, {"kind": "BIT", "name": "Wedge", "code": "W"}]}
+    ]},
+    {"code": "CX-05", "name": "Random Booster Vol. 6", "released": "2025-04-26", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Hells Reaper T4-70K", "hasbro": "Reaper Incendio T 4-70K", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Hells"}, {"kind": "MAIN_BLADE", "name": "Reaper"}, {"kind": "ASSIST_BLADE", "name": "Turn", "code": "T"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Kick", "code": "K"}]},
+      {"combo": "Rhino Reaper C4-55D", "hasbro": "Reaper Rhino C4-55D", "shape": "CX", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Rhino"}, {"kind": "MAIN_BLADE", "name": "Reaper"}, {"kind": "ASSIST_BLADE", "name": "Charge", "code": "C"}, {"kind": "RATCHET", "name": "4-55"}, {"kind": "BIT", "name": "Dot", "code": "D"}]},
+      {"combo": "Hells Arc T3-85O", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Hells"}, {"kind": "MAIN_BLADE", "name": "Arc"}, {"kind": "ASSIST_BLADE", "name": "Turn", "code": "T"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Orb", "code": "O"}]},
+      {"combo": "Leon Crest 9-80K", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Leon Crest"}, {"kind": "RATCHET", "name": "9-80"}, {"kind": "BIT", "name": "Kick", "code": "K"}]},
+      {"combo": "Phoenix Rudder 4-70LF", "hasbro": "Rudder Phoenix 4-70LF", "shape": "BASIC", "type": "ATTACK", "parts": [{"kind": "BLADE", "name": "Phoenix Rudder"}, {"kind": "RATCHET", "name": "4-70"}, {"kind": "BIT", "name": "Low Flat", "code": "LF"}]},
+      {"combo": "Whale Wave 7-60K", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Whale Wave"}, {"kind": "RATCHET", "name": "7-60"}, {"kind": "BIT", "name": "Kick", "code": "K"}]}
+    ]},
+    {"code": "CX-06", "name": "Random Booster Fox Brush Select", "released": "2025-05-17", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Fox Brush J9-70GR", "hasbro": "Brush Fox J9-70GR", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Fox"}, {"kind": "MAIN_BLADE", "name": "Brush"}, {"kind": "ASSIST_BLADE", "name": "Jaggy", "code": "J"}, {"kind": "RATCHET", "name": "9-70"}, {"kind": "BIT", "name": "Gear Rush", "code": "GR"}]},
+      {"combo": "Fox Brush J0-80DB", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Fox"}, {"kind": "MAIN_BLADE", "name": "Brush"}, {"kind": "ASSIST_BLADE", "name": "Jaggy", "code": "J"}, {"kind": "RATCHET", "name": "0-80"}, {"kind": "BIT", "name": "Disk Ball", "code": "DB"}]},
+      {"combo": "Fox Brush J2-60U", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Fox"}, {"kind": "MAIN_BLADE", "name": "Brush"}, {"kind": "ASSIST_BLADE", "name": "Jaggy", "code": "J"}, {"kind": "RATCHET", "name": "2-60"}, {"kind": "BIT", "name": "Unite", "code": "U"}]}
+    ]},
+    {"code": "CX-07", "name": "Starter Pegasus Blast ATr", "released": "2025-07-19", "kind": "STARTER", "builds": [
+      {"combo": "Pegasus Blast ATr", "hasbro": "Blast Pegasus A Tr", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Pegasus"}, {"kind": "MAIN_BLADE", "name": "Blast"}, {"kind": "ASSIST_BLADE", "name": "Assault", "code": "A"}, {"kind": "RATCHET", "name": "Turbo"}]}
+    ]},
+    {"code": "CX-08", "name": "Random Booster Vol. 7", "released": "2025-07-19", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Cerberus Flame W5-80WB", "hasbro": "Flame Cerberus W 5-80WB", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Cerberus"}, {"kind": "MAIN_BLADE", "name": "Flame"}, {"kind": "ASSIST_BLADE", "name": "Wheel", "code": "W"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Wall Ball", "code": "WB"}]},
+      {"combo": "Whale Flame M3-85HT", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Whale"}, {"kind": "MAIN_BLADE", "name": "Flame"}, {"kind": "ASSIST_BLADE", "name": "Massive", "code": "M"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "High Taper", "code": "HT"}]},
+      {"combo": "Cerberus Dark W1-60F", "shape": "CX", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Cerberus"}, {"kind": "MAIN_BLADE", "name": "Dark"}, {"kind": "ASSIST_BLADE", "name": "Wheel", "code": "W"}, {"kind": "RATCHET", "name": "1-60"}, {"kind": "BIT", "name": "Flat", "code": "F"}]},
+      {"combo": "Dran Buster 5-80MN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Dran Buster"}, {"kind": "RATCHET", "name": "5-80"}, {"kind": "BIT", "name": "Metal Needle", "code": "MN"}]},
+      {"combo": "Black Shell 7-70WB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Black Shell"}, {"kind": "RATCHET", "name": "7-70"}, {"kind": "BIT", "name": "Wall Ball", "code": "WB"}]},
+      {"combo": "Cobalt Dragoon 4-55WB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Cobalt Dragoon"}, {"kind": "RATCHET", "name": "4-55"}, {"kind": "BIT", "name": "Wall Ball", "code": "WB"}]}
+    ]},
+    {"code": "CX-09", "name": "Starter Sol Eclipse D5-70TK", "released": "2025-09-27", "kind": "STARTER", "builds": [
+      {"combo": "Sol Eclipse D5-70TK", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Sol"}, {"kind": "MAIN_BLADE", "name": "Eclipse"}, {"kind": "ASSIST_BLADE", "name": "Dual", "code": "D"}, {"kind": "RATCHET", "name": "5-70"}, {"kind": "BIT", "name": "Trans Kick", "code": "TK"}]}
+    ]},
+    {"code": "CX-10", "name": "Booster Wolf Hunt F0-60DB", "released": "2025-11-01", "kind": "BOOSTER", "builds": [
+      {"combo": "Wolf Hunt F0-60DB", "shape": "CX", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Wolf"}, {"kind": "MAIN_BLADE", "name": "Hunt"}, {"kind": "ASSIST_BLADE", "name": "Free", "code": "F"}, {"kind": "RATCHET", "name": "0-60"}, {"kind": "BIT", "name": "Disk Ball", "code": "DB"}]}
+    ]},
+    {"code": "CX-11", "name": "Emperor Might Deck Set", "released": "2025-11-01", "kind": "DECK_SET", "builds": [
+      {"combo": "Emperor Might HOp", "hasbro": "Might Emperor H Op", "shape": "CX", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Emperor"}, {"kind": "MAIN_BLADE", "name": "Might"}, {"kind": "ASSIST_BLADE", "name": "Heavy", "code": "H"}, {"kind": "RATCHET", "name": "Operate"}]},
+      {"combo": "Golem Rock M-85HN", "hasbro": "Rock Golem M-85HN", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Golem Rock"}, {"kind": "RATCHET", "name": "M-85"}, {"kind": "BIT", "name": "High Needle", "code": "HN"}]},
+      {"combo": "Shark Gill 5-60FB", "hasbro": "Gill Shark 5-60FB", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Shark Gill"}, {"kind": "RATCHET", "name": "5-60"}, {"kind": "BIT", "name": "Free Ball", "code": "FB"}]}
+    ]},
+    {"code": "CX-12", "name": "Booster Phoenix Flare Z9-80WW", "released": "2026-01-24", "kind": "BOOSTER", "builds": [
+      {"combo": "Phoenix Flare Z9-80WW", "shape": "CX", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Phoenix"}, {"kind": "MAIN_BLADE", "name": "Flare"}, {"kind": "ASSIST_BLADE", "name": "Zillion", "code": "Z"}, {"kind": "RATCHET", "name": "9-80"}, {"kind": "BIT", "name": "Wall Wedge", "code": "WW"}]}
+    ]},
+    {"code": "CX-13", "name": "Starter Bahamut Blitz BK1-50I", "released": "2026-03-28", "kind": "STARTER", "builds": [
+      {"combo": "Bahamut Blitz BK1-50I", "hasbro": "Blitz Bahamut BK 1-50I", "shape": "CX_METAL", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Bahamut"}, {"kind": "METAL_BLADE", "name": "Blitz"}, {"kind": "OVER_BLADE", "name": "Break", "code": "B"}, {"kind": "ASSIST_BLADE", "name": "Knuckle", "code": "K"}, {"kind": "RATCHET", "name": "1-50"}, {"kind": "BIT", "name": "Ignition", "code": "I"}]}
+    ]},
+    {"code": "CX-14", "name": "Starter Knight Fortress GV8-70UN", "released": "2026-03-28", "kind": "STARTER", "builds": [
+      {"combo": "Knight Fortress GV8-70UN", "hasbro": "Armor Knight GV 8-70UN", "shape": "CX_METAL", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Knight"}, {"kind": "METAL_BLADE", "name": "Fortress"}, {"kind": "OVER_BLADE", "name": "Guard", "code": "G"}, {"kind": "ASSIST_BLADE", "name": "Vertical", "code": "V"}, {"kind": "RATCHET", "name": "8-70"}, {"kind": "BIT", "name": "Under Needle", "code": "UN"}]}
+    ]},
+    {"code": "CX-15", "name": "Booster Ragna Rage FE4-55Y", "released": "2026-03-28", "kind": "BOOSTER", "builds": [
+      {"combo": "Ragna Rage FE4-55Y", "hasbro": "Rage Ragna FE 4-55Y", "shape": "CX_METAL", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Ragna"}, {"kind": "METAL_BLADE", "name": "Rage"}, {"kind": "OVER_BLADE", "name": "Flow", "code": "F"}, {"kind": "ASSIST_BLADE", "name": "Erase", "code": "E"}, {"kind": "RATCHET", "name": "4-55"}, {"kind": "BIT", "name": "Yielding", "code": "Y"}]}
+    ]},
+    {"code": "CX-16", "name": "Start Dash Set C", "released": "2026-03-28", "kind": "SET", "builds": [
+      {"combo": "Bahamut Blitz BK1-50I", "hasbro": "Blitz Bahamut BK 1-50I", "shape": "CX_METAL", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Bahamut"}, {"kind": "METAL_BLADE", "name": "Blitz"}, {"kind": "OVER_BLADE", "name": "Break", "code": "B"}, {"kind": "ASSIST_BLADE", "name": "Knuckle", "code": "K"}, {"kind": "RATCHET", "name": "1-50"}, {"kind": "BIT", "name": "Ignition", "code": "I"}]}
+    ]},
+    {"code": "CX-17", "name": "Random Booster Vol. 10", "released": "2026-04-25", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Unicorn Delta PO3-60GU", "hasbro": "Delta Unicorn PO 3-60GU", "shape": "CX_METAL", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Unicorn"}, {"kind": "METAL_BLADE", "name": "Delta"}, {"kind": "OVER_BLADE", "name": "Peak", "code": "P"}, {"kind": "ASSIST_BLADE", "name": "Odd", "code": "O"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Gear Unite", "code": "GU"}]},
+      {"combo": "Unicorn Delta PO1-80GR", "shape": "CX_METAL", "type": "ATTACK", "parts": [{"kind": "LOCK_CHIP", "name": "Unicorn"}, {"kind": "METAL_BLADE", "name": "Delta"}, {"kind": "OVER_BLADE", "name": "Peak", "code": "P"}, {"kind": "ASSIST_BLADE", "name": "Odd", "code": "O"}, {"kind": "RATCHET", "name": "1-80"}, {"kind": "BIT", "name": "Gear Rush", "code": "GR"}]},
+      {"combo": "Samurai Saber 9-65LO", "shape": "BASIC", "type": "STAMINA", "parts": [{"kind": "BLADE", "name": "Samurai Saber"}, {"kind": "RATCHET", "name": "9-65"}, {"kind": "BIT", "name": "Low Orb", "code": "LO"}]},
+      {"combo": "Hells Hammer 3-85GU", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Hells Hammer"}, {"kind": "RATCHET", "name": "3-85"}, {"kind": "BIT", "name": "Gear Unite", "code": "GU"}]},
+      {"combo": "Tyranno Beat 3-60N", "shape": "BASIC", "type": "DEFENSE", "parts": [{"kind": "BLADE", "name": "Tyranno Beat"}, {"kind": "RATCHET", "name": "3-60"}, {"kind": "BIT", "name": "Needle", "code": "N"}]},
+      {"combo": "Crimson Garuda 7-80GU", "shape": "BASIC", "type": "BALANCE", "parts": [{"kind": "BLADE", "name": "Crimson Garuda"}, {"kind": "RATCHET", "name": "7-80"}, {"kind": "BIT", "name": "Gear Unite", "code": "GU"}]}
+    ]},
+    {"code": "CX-18", "name": "Random Booster Brachio Whip Select", "released": "2026-06-13", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Brachio Whip OW5-70Nr", "hasbro": "Whip Brachio OW 5-70Nr", "shape": "CX_METAL", "type": "STAMINA", "parts": [{"kind": "LOCK_CHIP", "name": "Brachio"}, {"kind": "METAL_BLADE", "name": "Whip"}, {"kind": "OVER_BLADE", "name": "Outer", "code": "O"}, {"kind": "ASSIST_BLADE", "name": "Wheel", "code": "W"}, {"kind": "RATCHET", "name": "5-70"}, {"kind": "BIT", "name": "Narrow", "code": "Nr"}]}
+    ]},
+    {"code": "CX-19", "name": "Random Booster Croco Tread Select", "released": "2026-09-12", "kind": "RANDOM_BOOSTER", "builds": [
+      {"combo": "Croco Tread TQ5-50GN", "hasbro": "Tread Croc TQ 5-50GN", "shape": "CX_METAL", "type": "DEFENSE", "parts": [{"kind": "LOCK_CHIP", "name": "Croco"}, {"kind": "METAL_BLADE", "name": "Tread"}, {"kind": "OVER_BLADE", "name": "Tough", "code": "T"}, {"kind": "ASSIST_BLADE", "name": "Quell", "code": "Q"}, {"kind": "RATCHET", "name": "5-50"}, {"kind": "BIT", "name": "Gear Needle", "code": "GN"}]}
+    ]},
+    {"code": "CX-20", "name": "Customize Set C", "released": "2026-11-21", "kind": "SET", "builds": [
+      {"combo": "Phoenix Force WHM-65MT", "shape": "CX_METAL", "type": "BALANCE", "parts": [{"kind": "LOCK_CHIP", "name": "Phoenix"}, {"kind": "METAL_BLADE", "name": "Force"}, {"kind": "OVER_BLADE", "name": "Weight", "code": "W"}, {"kind": "ASSIST_BLADE", "name": "Heavy", "code": "H"}, {"kind": "RATCHET", "name": "M-65"}, {"kind": "BIT", "name": "Metal Taper", "code": "MT"}]}
+    ]}
   ]
 }

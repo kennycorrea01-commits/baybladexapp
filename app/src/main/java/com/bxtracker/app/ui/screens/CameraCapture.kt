@@ -73,8 +73,10 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import com.bxtracker.app.R
 import com.bxtracker.app.data.PartKind
+import com.bxtracker.app.ui.components.FitText
 import com.bxtracker.app.data.PhotoStore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -255,10 +257,22 @@ private fun CameraContent(
             }
             Row(Modifier.fillMaxWidth().padding(horizontal = 24.dp), verticalAlignment = Alignment.CenterVertically) {
                 Box(Modifier.weight(1f), contentAlignment = Alignment.CenterStart) {
-                    IconButton(
-                        onClick = onGallery,
-                        modifier = Modifier.size(52.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.1f)),
-                    ) { Icon(Icons.Outlined.PhotoLibrary, contentDescription = stringResource(R.string.camera_pick_gallery), tint = CamText) }
+                    // "Upload image": the icon button plus a visible label, so it doesn't read as a thumbnail.
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        IconButton(
+                            onClick = onGallery,
+                            modifier = Modifier.size(52.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.1f)),
+                        ) { Icon(Icons.Outlined.PhotoLibrary, contentDescription = stringResource(R.string.camera_pick_gallery), tint = CamText) }
+                        Spacer(Modifier.height(4.dp))
+                        FitText(
+                            stringResource(R.string.parts_upload_image),
+                            // The button above already announces it.
+                            modifier = Modifier.clearAndSetSemantics {},
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = CamText,
+                        )
+                    }
                 }
                 val canShoot = granted && error == null && !saving
                 Box(

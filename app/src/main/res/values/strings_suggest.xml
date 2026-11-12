@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Suggest sheet in the combo builder (screen 23). Combo names, part names, part kinds, types and product codes
+     are passed in as format args and stay in English. Records reuse record_wl ("8W 2L"). -->
+<resources>
+    <string name="suggest_action_cd">Suggest combos</string>
+    <string name="suggest_title">Suggestions</string>
+    <string name="suggest_subtitle">From your whole collection</string>
+
+    <!-- You can build these -->
+    <string name="suggest_can_build">You can build these</string>
+    <string name="suggest_can_build_empty">Nothing complete yet. Save a combo, or add every part of a stock build.</string>
+    <string name="suggest_catalog_empty">No stock builds in the catalog yet</string>
+    <string name="suggest_why_mine">Your combo</string>
+    <!-- %1$s = product code, e.g. "BX-01". Follows "Your combo · " -->
+    <string name="suggest_why_stock_of">stock build of %1$s</string>
+    <!-- %1$s = product code, e.g. "BX-01" -->
+    <string name="suggest_why_stock">Stock build of %1$s</string>
+    <!-- Follows "Stock build of BX-01 · " -->
+    <plurals name="suggest_own_all">
+        <item quantity="one">you own %1$d part</item>
+        <item quantity="other">you own all %1$d parts</item>
+    </plurals>
+    <string name="suggest_not_battled">not battled yet</string>
+    <!-- %1$s = record, e.g. "8W 2L"; %2$d = win percent -->
+    <string name="suggest_record_rate">%1$s (%2$d%%)</string>
+    <!-- %1$s = part name, e.g. "9-60"; %2$s = deck name(s) -->
+    <plurals name="suggest_busy">
+        <item quantity="one">%1$s is in %2$s deck</item>
+        <item quantity="other">%1$s is in %2$s decks</item>
+    </plurals>
+    <string name="suggest_fill_label">Fill the builder</string>
+
+    <!-- Best with <blade> -->
+    <!-- %1$s = blade name, e.g. "Dran Sword" (or the part kind before one is picked) -->
+    <string name="suggest_best_with">Best with %1$s</string>
+    <!-- %1$s = part kind, e.g. "Blade", "Main Blade" -->
+    <string name="suggest_best_pick_head">Pick a %1$s to see what pairs best</string>
+    <!-- %1$s = blade name -->
+    <string name="suggest_best_none">No battles with %1$s yet, and you don\'t own its stock pairing.</string>
+    <!-- %1$s = blade name; %2$s = record, e.g. "4W 0L"; %3$d = win percent -->
+    <string name="suggest_pair_record">With %1$s: %2$s (%3$d%%)</string>
+    <!-- %1$s = product code, e.g. "BX-01" -->
+    <string name="suggest_pair_stock">Stock pairing (%1$s)</string>
+    <string name="suggest_pick_label">Pick this part</string>
+
+    <!-- Missing one part -->
+    <string name="suggest_missing">Missing one part</string>
+    <string name="suggest_missing_hint">Worth getting: you own everything else.</string>
+    <string name="suggest_missing_empty">No stock build is one part away.</string>
+    <!-- %1$s = part name; %2$s = part kind, e.g. "Bit"; %3$s = product code -->
+    <string name="suggest_need">Need: %1$s (%2$s) · comes in %3$s</string>
+    <!-- %1$d = parts owned; %2$d = parts in the stock build -->
+    <string name="suggest_own_of">You own %1$d of %2$d</string>
+    <!-- %1$s = record, e.g. "8W 2L"; %2$d = win percent -->
+    <string name="suggest_missing_record">Your combos with these parts: %1$s (%2$d%%)</string>
+    <string name="suggest_see_product">See product</string>
+
+    <string name="suggest_footer">Parts already in a deck are still suggested and marked. Only stock builds and your own battle records, no tier lists.</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hoja Sugerir del armado de combos (pantalla 23). Nombres de combos y piezas, tipos de pieza, tipos y códigos de
+     producto llegan como argumentos y se quedan en inglés. Los récords usan record_wl ("8V 2D"). -->
+<resources>
+    <string name="suggest_action_cd">Sugerir combos</string>
+    <string name="suggest_title">Sugerencias</string>
+    <string name="suggest_subtitle">De toda tu colección</string>
+
+    <!-- Puedes armar estos -->
+    <string name="suggest_can_build">Puedes armar estos</string>
+    <string name="suggest_can_build_empty">Aún no tienes nada completo. Guarda un combo o agrega todas las piezas de un combo de fábrica.</string>
+    <string name="suggest_catalog_empty">Aún no hay combos de fábrica en el catálogo</string>
+    <string name="suggest_why_mine">Tu combo</string>
+    <string name="suggest_why_stock_of">combo de fábrica de %1$s</string>
+    <string name="suggest_why_stock">Combo de fábrica de %1$s</string>
+    <plurals name="suggest_own_all">
+        <item quantity="one">tienes %1$d pieza</item>
+        <item quantity="many">tienes las %1$d piezas</item>
+        <item quantity="other">tienes las %1$d piezas</item>
+    </plurals>
+    <string name="suggest_not_battled">aún sin batallas</string>
+    <string name="suggest_record_rate">%1$s (%2$d%%)</string>
+    <plurals name="suggest_busy">
+        <item quantity="one">%1$s está en el deck %2$s</item>
+        <item quantity="many">%1$s está en los decks %2$s</item>
+        <item quantity="other">%1$s está en los decks %2$s</item>
+    </plurals>
+    <string name="suggest_fill_label">Llenar el armado</string>
+
+    <!-- Mejor con <blade> -->
+    <string name="suggest_best_with">Mejor con %1$s</string>
+    <string name="suggest_best_pick_head">Elige un %1$s para ver con qué combina mejor</string>
+    <string name="suggest_best_none">Aún sin batallas con %1$s, y no tienes las piezas de su combo de fábrica.</string>
+    <string name="suggest_pair_record">Con %1$s: %2$s (%3$d%%)</string>
+    <string name="suggest_pair_stock">Combo de fábrica (%1$s)</string>
+    <string name="suggest_pick_label">Elegir esta pieza</string>
+
+    <!-- Te falta una pieza -->
+    <string name="suggest_missing">Te falta una pieza</string>
+    <string name="suggest_missing_hint">Vale la pena conseguirla: ya tienes todo lo demás.</string>
+    <string name="suggest_missing_empty">Ningún combo de fábrica está a una pieza.</string>
+    <string name="suggest_need">Te falta: %1$s (%2$s) · viene en %3$s</string>
+    <string name="suggest_own_of">Tienes %1$d de %2$d</string>
+    <string name="suggest_missing_record">Tus combos con estas piezas: %1$s (%2$d%%)</string>
+    <string name="suggest_see_product">Ver producto</string>
+
+    <string name="suggest_footer">Las piezas que ya están en un deck igual se sugieren y se marcan. Solo combos de fábrica y tus propios récords de batalla, sin tier lists.</string>
+</resources>
